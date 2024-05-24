@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="RidersForCoverage_1c7sinr" name="RidersForCoverage" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="decision_0xe7rvk" name="RidersForCoverage">
+        <informationRequirement id="InformationRequirement_1iu9js7">
+            <requiredInput href="#InputData_0cejmsv"/>
+        </informationRequirement>
+        <decisionTable id="decisionTable_0zw0igc" hitPolicy="COLLECT">
+            <input id="input1">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>
+                        coverageKey
+                    </text>
+                </inputExpression>
+            </input>
+            <output id="output1" name="riderKey" typeRef="string"/>
+            <output id="OutputClause_0tf2v49" name="customMapping" typeRef="string">
+                <description>
+                    Flag if custom mapping should be defined for this rider
+                </description>
+            </output>
+            <output id="OutputClause_00vavf5" name="group" typeRef="string"/>
+            <annotation name="annotation"/>
+            <rule id="DecisionRule_0u1v5ib">
+                <inputEntry id="UnaryTests_04l8v1a">
+                    <text>
+                        "mtpl"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0pik5cm">
+                    <text>
+                        "activityDamageExtension"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0oqt606">
+                    <text></text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_07ucaes">
+                    <text>
+                        "CoverageExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1jlwsac">
+                <inputEntry id="UnaryTests_02iaff2">
+                    <text>
+                        "casco", "combinationB", "combinationD", "combinationE", "combinationH", "combinationJ", "combinationK", "cascoCollision"
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_0e0iw4z">
+                    <text>
+                        "additionalEquipmentCoverages"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_152o19w">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1h0o97o">
+                    <text></text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1ekcubg">
+                <inputEntry id="UnaryTests_0bxgi2a">
+                    <text>
+                        "casco", "combinationB", "combinationD", "combinationE", "combinationH", "combinationJ", "combinationK", "cascoCollision"
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1gbbvvi">
+                    <text>
+                        "outsideEuAreaExtension"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1f7mktk">
+                    <text></text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1po0ddt">
+                    <text>
+                        "CoverageExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0r22jla">
+                <inputEntry id="UnaryTests_0mg7up7">
+                    <text>
+                        "casco", "combinationB", "combinationD", "combinationE", "combinationH", "combinationJ", "combinationK", "cascoCollision"
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_06285qz">
+                    <text>
+                        "participationInRacesExtension"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1impkcv">
+                    <text></text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0gk0rx8">
+                    <text>
+                        "CoverageExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1tcgx7e">
+                <inputEntry id="UnaryTests_0hgrg1v">
+                    <text>
+                        "casco", "combinationB", "combinationD", "combinationE", "combinationH", "combinationJ", "combinationK", "cascoCollision"
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1c1po2d">
+                    <text>
+                        "waterEntrapmentExtension"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_07xdkgw">
+                    <text></text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1xqh0xn">
+                    <text>
+                        "CoverageExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1k46jr3">
+                <inputEntry id="UnaryTests_1tu7qdb">
+                    <text>
+                        "casco", "combinationB", "combinationD", "combinationE", "combinationH", "combinationJ", "combinationK", "cascoCollision"
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_0zvprec">
+                    <text>
+                        "vehicleSinkingExtension"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_03zm1j4">
+                    <text></text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_18h07eo">
+                    <text>
+                        "CoverageExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0x53imk">
+                <inputEntry id="UnaryTests_1xva3d1">
+                    <text>
+                        "casco", "combinationB", "combinationD", "combinationE", "combinationH", "combinationJ", "combinationK", "cascoCollision"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0ghng89">
+                    <text>
+                        "sanationAvalanchesAndLandslidesExtension"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_13z5ca0">
+                    <text></text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0xprg7a">
+                    <text>
+                        "CoverageExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <inputData id="InputData_0cejmsv" name="coverageKey"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="decisionTable_0zw0igc">
+                        <adiDMNDI:ElementWidth dmnElementRef="input1" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="output1" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0tf2v49" value="293"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_00vavf5" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="annotation" value="200"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_1d2dh4y" dmnElementRef="decision_0xe7rvk">
+                <dc:Bounds height="80" width="180" x="410" y="110"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0k4m3wp" dmnElementRef="InputData_0cejmsv">
+                <dc:Bounds height="45" width="125" x="437" y="237"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0uw4epk" dmnElementRef="InformationRequirement_1iu9js7">
+                <di:waypoint x="500" y="237"/>
+                <di:waypoint x="500" y="210"/>
+                <di:waypoint x="500" y="190"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

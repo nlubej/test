@@ -1,0 +1,130 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "ConditionalSection",
+            "label": "Mtpl",
+            "value": {
+                "$ref": "#/mtpl/properties/isSelected"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/mtpl/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "MtplTemporaryPlatesCoverage",
+                            "value": {
+                                "$ref": "#/mtpl/properties/mtplCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "MtplPlus",
+            "value": {
+                "$ref": "#/mtplPlus/properties/isSelected"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/mtplPlus/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "MtplPlusTemporaryPlatesCoverage",
+                            "value": {
+                                "$ref": "#/mtplPlus/properties/mtplPlusCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "Casco",
+            "value": {
+                "$ref": "#/casco/properties/isSelected"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/casco/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CascoTemporaryPlatesCoverage",
+                            "value": {
+                                "$ref": "#/casco/properties/cascoCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "Accident Insurance",
+            "value": {
+                "$ref": "#/accident/properties/isSelected"
+            },
+            "onValueChanged": "preselectSumInsured",
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/accident/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "AccidentTemporaryPlatesCoverage",
+                            "value": {
+                                "$ref": "#/accident/properties/accidentCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

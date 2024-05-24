@@ -1,0 +1,182 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "SelectWithDetails",
+            "disableCollapsing": true,
+            "multiple": false,
+            "value": {
+                "$ref": "#/properties/selectedPackage"
+            },
+            "onLoad": "getCoveragePackages",
+            "onValueChanged": [
+                {
+                    "commandType": "executeAction",
+                    "actionName": "packageChanged"
+                },
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "sectionLevel": 2,
+            "rowDefinitions": [
+                {
+                    "title": "Mtpl",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/mtpl"
+                        }
+                    }
+                },
+                {
+                    "title": "MtplPlus",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/mtplPlus"
+                        }
+                    }
+                },
+                {
+                    "title": "Casco",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/casco"
+                        }
+                    }
+                },
+                {
+                    "title": "CombinationB",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/combinationB"
+                        }
+                    }
+                },
+                {
+                    "title": "CombinationD",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/combinationD"
+                        }
+                    }
+                },
+                {
+                    "title": "CombinationE",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/combinationE"
+                        }
+                    }
+                },
+                {
+                    "title": "CombinationH",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/combinationH"
+                        }
+                    }
+                },
+                {
+                    "title": "CombinationJ",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/combinationJ"
+                        }
+                    }
+                },
+                {
+                    "title": "CombinationK",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/combinationK"
+                        }
+                    }
+                },
+                {
+                    "title": "Casco Crash Basic",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/cascoCrashBasic"
+                        }
+                    }
+                },
+                {
+                    "title": "Casco Crash Plus",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/cascoCrashPlus"
+                        }
+                    }
+                },
+                {
+                    "title": "Car Assistance",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/carAssistance"
+                        }
+                    }
+                },
+                {
+                    "title": "Legal Protection",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/legalProtection"
+                        }
+                    }
+                },
+                {
+                    "title": "Car And Legal Protection",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/carAndLegalProtection"
+                        }
+                    }
+                },
+                {
+                    "title": "Accident Insurance For The Driver And Passengers",
+                    "cellContent": {
+                        "type": "Icon",
+                        "iconStyleFunction": "setIcon",
+                        "value": {
+                            "$ref": "#/properties/accidentInsurance"
+                        }
+                    }
+                }
+            ],
+            "customCSSStyle": {
+                "--select-with-details-border": "0px"
+            }
+        }
+    ]
+}

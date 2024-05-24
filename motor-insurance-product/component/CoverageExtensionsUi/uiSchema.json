@@ -1,0 +1,433 @@
+{
+    "type": "GridLayout",
+    "numberOfColumns": 12,
+    "width": 12,
+    "elements": [
+        {
+            "type": "Group",
+            "metadata": {
+                "autogenerate": true
+            },
+            "width": 12,
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "Boolean",
+                    "label": "Staying outside EU geographical area",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": false,
+                    "value": {
+                        "$ref": "#/properties/outsideEuAreaExtension/properties/isSelected"
+                    },
+                    "width": 3,
+                    "onValueChanged": "clearCoverageExtensionData"
+                },
+                {
+                    "type": "Currency",
+                    "currencyValue": {
+                        "$ref": "#/properties/ClientViewModel/currency",
+                        "isAbsolutePath": true
+                    },
+                    "decimalPlaces": 2,
+                    "label": "Premium",
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/outsideEuAreaExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": false,
+                    "value": {
+                        "$ref": "#/properties/outsideEuAreaExtension/properties/premiumAmount"
+                    },
+                    "width": 3
+                },
+                {
+                    "type": "Group",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "width": 12,
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/outsideEuAreaExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "ManualValidity",
+                            "value": {
+                                "$ref": "#/properties/outsideEuAreaExtension/properties/manualValidity"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "GroupSeparator",
+            "metadata": {
+                "autogenerate": true
+            }
+        },
+        {
+            "type": "Group",
+            "metadata": {
+                "autogenerate": true
+            },
+            "width": 12,
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "Boolean",
+                    "label": "Participation in races",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": false,
+                    "value": {
+                        "$ref": "#/properties/participationInRacesExtension/properties/isSelected"
+                    },
+                    "width": 3,
+                    "onValueChanged": "clearCoverageExtensionData"
+                },
+                {
+                    "type": "Currency",
+                    "currencyValue": {
+                        "$ref": "#/properties/ClientViewModel/currency",
+                        "isAbsolutePath": true
+                    },
+                    "decimalPlaces": 2,
+                    "label": "Premium",
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/participationInRacesExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/participationInRacesExtension/properties/premiumAmount"
+                    },
+                    "width": 3
+                },
+                {
+                    "type": "Group",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "width": 12,
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/participationInRacesExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "ManualValidity",
+                            "value": {
+                                "$ref": "#/properties/participationInRacesExtension/properties/manualValidity"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "GroupSeparator",
+            "metadata": {
+                "autogenerate": true
+            }
+        },
+        {
+            "type": "Group",
+            "metadata": {
+                "autogenerate": true
+            },
+            "width": 12,
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "Boolean",
+                    "label": "Water entrapment in watercourse area",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": false,
+                    "value": {
+                        "$ref": "#/properties/waterEntrapmentExtension/properties/isSelected"
+                    },
+                    "width": 3,
+                    "onValueChanged": "clearCoverageExtensionData"
+                },
+                {
+                    "type": "Currency",
+                    "currencyValue": {
+                        "$ref": "#/properties/ClientViewModel/currency",
+                        "isAbsolutePath": true
+                    },
+                    "decimalPlaces": 2,
+                    "label": "Premium",
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/waterEntrapmentExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/waterEntrapmentExtension/properties/premiumAmount"
+                    },
+                    "width": 3
+                },
+                {
+                    "type": "Group",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "width": 12,
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/waterEntrapmentExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "metadata": {
+                                "autogenerate": true
+                            },
+                            "width": 12,
+                            "elements": [
+                                {
+                                    "type": "Dropdown",
+                                    "label": "Risk",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "useParentScope": true,
+                                    "value": {
+                                        "$ref": "#/properties/waterEntrapmentExtension/properties/riskCode"
+                                    },
+                                    "width": 4,
+                                    "showAsRequired": true
+                                },
+                                {
+                                    "type": "Component",
+                                    "name": "ManualValidity",
+                                    "value": {
+                                        "$ref": "#/properties/waterEntrapmentExtension/properties/manualValidity"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "GroupSeparator",
+            "metadata": {
+                "autogenerate": true
+            }
+        },
+        {
+            "type": "Group",
+            "metadata": {
+                "autogenerate": true
+            },
+            "width": 12,
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "Boolean",
+                    "label": "Vehicle sinking",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": false,
+                    "value": {
+                        "$ref": "#/properties/vehicleSinkingExtension/properties/isSelected"
+                    },
+                    "width": 3,
+                    "onValueChanged": "clearCoverageExtensionData"
+                },
+                {
+                    "type": "Currency",
+                    "currencyValue": {
+                        "$ref": "#/properties/ClientViewModel/currency",
+                        "isAbsolutePath": true
+                    },
+                    "decimalPlaces": 2,
+                    "label": "Premium",
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/vehicleSinkingExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/vehicleSinkingExtension/properties/premiumAmount"
+                    },
+                    "width": 3
+                },
+                {
+                    "type": "Group",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "width": 12,
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/vehicleSinkingExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "ManualValidity",
+                            "value": {
+                                "$ref": "#/properties/vehicleSinkingExtension/properties/manualValidity"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "GroupSeparator",
+            "metadata": {
+                "autogenerate": true
+            }
+        },
+        {
+            "type": "Group",
+            "metadata": {
+                "autogenerate": true
+            },
+            "width": 12,
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "Boolean",
+                    "label": "Sanation of avalanches and landslides",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": false,
+                    "value": {
+                        "$ref": "#/properties/sanationAvalanchesAndLandslidesExtension/properties/isSelected"
+                    },
+                    "width": 3,
+                    "onValueChanged": "clearCoverageExtensionData"
+                },
+                {
+                    "type": "Currency",
+                    "currencyValue": {
+                        "$ref": "#/properties/ClientViewModel/currency",
+                        "isAbsolutePath": true
+                    },
+                    "decimalPlaces": 2,
+                    "label": "Premium",
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/sanationAvalanchesAndLandslidesExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/sanationAvalanchesAndLandslidesExtension/properties/premiumAmount"
+                    },
+                    "width": 3
+                },
+                {
+                    "type": "Group",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "width": 12,
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/sanationAvalanchesAndLandslidesExtension/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "ManualValidity",
+                            "value": {
+                                "$ref": "#/properties/sanationAvalanchesAndLandslidesExtension/properties/manualValidity"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

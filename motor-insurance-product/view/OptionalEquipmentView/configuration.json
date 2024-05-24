@@ -1,0 +1,10 @@
+{
+    "entityType": "Contract",
+    "hideFromDashboard": true,
+    "actors": [
+        {
+            "actor": "Agent"
+        }
+    ],
+    "version": "1"
+}

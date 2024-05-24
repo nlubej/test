@@ -1,0 +1,88 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "Group",
+            "elements": [
+                {
+                    "type": "Component",
+                    "name": "CoveragePackageVehicleCar",
+                    "value": {
+                        "$ref": "#/properties/vehicleCar/properties/coveragePackage"
+                    }
+                }
+            ],
+            "rule": {
+                "effect": "SHOW",
+                "condition": {
+                    "type": "LEAF",
+                    "expectedValue": "vehicleCar",
+                    "value": {
+                        "$ref": "#/properties/selectedSubtype"
+                    }
+                }
+            }
+        },
+        {
+            "type": "Group",
+            "elements": [
+                {
+                    "type": "Component",
+                    "name": "CoveragePackageVehicleTruck",
+                    "value": {
+                        "$ref": "#/properties/vehicleTruck/properties/coveragePackage"
+                    }
+                }
+            ],
+            "rule": {
+                "effect": "SHOW",
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "showVehicleTruckCoveragePackage",
+                    "value": [
+                        {
+                            "$ref": "#"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Group",
+            "elements": [
+                {
+                    "type": "OutputText",
+                    "template": "{{#i18n}}PremiumGroupIsEmpty{{/i18n}}",
+                    "rule": {
+                        "effect": "SHOW",
+                        "condition": {
+                            "type": "FUNC",
+                            "ruleFunction": "showPremiumGroupEmpty",
+                            "value": [
+                                {
+                                    "$ref": "#"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "template": "{{#i18n}}VehicleMassIsEmpty{{/i18n}}",
+                    "rule": {
+                        "effect": "SHOW",
+                        "condition": {
+                            "type": "FUNC",
+                            "ruleFunction": "showVehicleMassEmpty",
+                            "value": [
+                                {
+                                    "$ref": "#"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

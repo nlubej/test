@@ -1,0 +1,3 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DataSchema	FindVehicleModelsTypeDataSourceInputSchema	field-title	idMake	idMake	Manufacturer	Proizvajalec
+DataSchema	FindVehicleModelsTypeDataSourceInputSchema	field-title	idModel	idModel	Model	Model

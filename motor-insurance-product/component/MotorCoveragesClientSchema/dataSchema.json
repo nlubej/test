@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Simple party",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+        "mtplPlus": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sumInsured": {
+                    "type": "integer"
+                }
+            }
+        },
+        "mtpl": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "materialDamageSumInsured": {
+                    "type": "integer"
+                },
+                "nonMaterialDamageSumInsured": {
+                    "type": "integer"
+                }
+            }
+        },
+        "activityDamageExtension": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sumInsured": {
+                    "type": "integer"
+                },
+                "deductible": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

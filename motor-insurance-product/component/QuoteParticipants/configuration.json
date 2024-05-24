@@ -1,0 +1,7 @@
+{
+    "components": [
+        "NonLifePolicyholder",
+        "NonLifeInsuredPerson",
+        "OtherParticipants"
+    ]
+}

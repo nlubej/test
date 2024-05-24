@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "anyOf": [
+        {
+            "required": [
+                "vinNumber"
+            ]
+        },
+        {
+            "required": [
+                "regNumber"
+            ]
+        }
+    ],
+    "properties": {
+        "vinNumber": {
+            "type": "string",
+            "description": "Vehicle VIN number"
+        },
+        "regNumber": {
+            "type": "string",
+            "description": "Vehicle registration number"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "typeOfVehicle": {
+      "type": "integer"
+    },
+    "idMake": {
+      "type": "integer"
+    },
+    "idModel": {
+      "type": "integer"
+    },
+    "idType": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "typeOfVehicle",
+    "idMake",
+    "idModel",
+    "idType"
+  ]
+}

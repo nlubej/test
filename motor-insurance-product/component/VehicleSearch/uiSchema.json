@@ -1,0 +1,323 @@
+{
+    "type": "GridLayout",
+    "numberOfColumns": 8,
+    "width": 8,
+    "elements": [
+        {
+            "type": "Group",
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "String",
+                    "label": "LicencePlate",
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/licensePlate"
+                    },
+                    "onValueChanged": {
+                        "commandType": "executeAction",
+                        "actionName": "getVehicleData"
+                    },
+                    "width": 2,
+                    "showAsRequired": false
+                },
+                {
+                    "type": "Input",
+                    "control": "String",
+                    "label": "VIN",
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/vinCode"
+                    },
+                    "onValueChanged": {
+                        "commandType": "executeAction",
+                        "actionName": "getVehicleData"
+                    },
+                    "width": 2,
+                    "showAsRequired": false
+                },
+                {
+                    "type": "Group",
+                    "width": 2,
+                    "stackContent": "Left",
+                    "elements": [
+                        {
+                            "type": "Button",
+                            "backgroundColor": "Primary",
+                            "fill": "Outline",
+                            "labelColor": "Primary",
+                            "icon": {
+                                "name": "Times",
+                                "color": "Primary",
+                                "size": "Medium"
+                            },
+                            "onClick": "clearResults"
+                        },
+                        {
+                            "type": "Lookup",
+                            "value": {
+                                "$ref": "#/properties/vehicleBrand"
+                            },
+                            "dialogButton": {
+                                "label": "SelectFromCatalogue",
+                                "icon": {
+                                    "name": "Search",
+                                    "color": "BackgroundColor",
+                                    "size": "Medium"
+                                }
+                            },
+                            "dialog": {
+                                "title": "ManualVehicleSelection",
+                                "onLoad": "preVehicleSelect",
+                                "size": "ExtraLarge",
+                                "viewReference": {
+                                    "configurationCodeName": "VehicleBrandSelectionView",
+                                    "configurationConceptType": "SearchView",
+                                    "configurationVersion": "1"
+                                }
+                            },
+                            "onSelected": "onVehicleSelected"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Section",
+            "label": "Details",
+            "sectionLevel": 2,
+            "collapsing": {
+                "initial": true,
+                "enabled": true
+            },
+            "elements": [
+                {
+                    "type": "TabLayout",
+                    "elements": [
+                        {
+                            "type": "Tab",
+                            "title": "VehicleDetails",
+                            "elementId": "tab-vehicle-details",
+                            "elements": [
+                                {
+                                    "type": "Group",
+                                    "elements": [
+                                        {
+                                            "type": "OutputText",
+                                            "label": "Type",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/vehicleGroup"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "OutputText",
+                                            "label": "Brand",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/vehicleBrand"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "OutputText",
+                                            "label": "Model",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/vehicleModel"
+                                            },
+                                            "width": 4
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Group",
+                                    "elements": [
+                                        {
+                                            "type": "OutputText",
+                                            "label": "EnginePower",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/enginePower"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "OutputText",
+                                            "label": "EngineVolume",
+                                            "useParentScope": true,
+                                            "template": "{{expr engineDisplacement}}",
+                                            "value": {
+                                                "$ref": "#"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "OutputText",
+                                            "label": "Weight",
+                                            "useParentScope": true,
+                                            "template": "{{expr vehicleMass}}",
+                                            "value": {
+                                                "$ref": "#"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "OutputText",
+                                            "label": "Seats",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/numberOfSeats"
+                                            },
+                                            "width": 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Group",
+                                    "elements": [
+                                        {
+                                            "type": "OutputText",
+                                            "label": "Value",
+                                            "useParentScope": true,
+                                            "template": "{{expr vehicleValue 'n:2'}} EUR",
+                                            "value": {
+                                                "$ref": "#"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "OutputText",
+                                            "label": "AdditionalEquipment",
+                                            "useParentScope": true,
+                                            "template": "{{expr value 'n:2'}} EUR",
+                                            "value": {
+                                                "$ref": "#/properties/optionalEquipment",
+                                                "mapping": "sumAdditionalEquipment"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "OutputText",
+                                            "label": "emrvlCode",
+                                            "useParentScope": true,
+                                            "template": "{{expr mrvlCode}}",
+                                            "value": {
+                                                "$ref": "#"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "OutputText",
+                                            "label": "CatalogueNumber",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/catalogueNumber"
+                                            },
+                                            "width": 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Group",
+                                    "elements": [
+                                        {
+                                            "type": "Input",
+                                            "label": "FuelType",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/fuelType"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "Year",
+                                            "label": "YearOfManufacture",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/yearOfManufacture"
+                                            },
+                                            "width": 2
+                                        },
+                                        {
+                                            "type": "Input",
+                                            "label": "FirstRegistrationDate",
+                                            "useParentScope": true,
+                                            "value": {
+                                                "$ref": "#/properties/firstRegistrationDate"
+                                            },
+                                            "width": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Tab",
+                            "title": "BasicEquipment",
+                            "elementId": "tab-basic-equipment",
+                            "elements": [
+                                {
+                                    "type": "InlineView",
+                                    "showContainerActions": false,
+                                    "views": [
+                                        {
+                                            "viewReference": {
+                                                "configurationCodeName": "BasicEquipmentView",
+                                                "configurationVersion": "1",
+                                                "configurationConceptType": "SearchView"
+                                            },
+                                            "onViewInitialized": "initBasicEquipmentView",
+                                            "viewType": "Search"
+                                        }
+                                    ],
+                                    "value": {
+                                        "$ref": "#"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Tab",
+                            "title": "OptionalEquipment",
+                            "elementId": "tab-optional-equipment",
+                            "elements": [
+                                {
+                                    "type": "InlineView",
+                                    "showContainerActions": false,
+                                    "views": [
+                                        {
+                                            "viewReference": {
+                                                "configurationCodeName": "OptionalEquipmentView",
+                                                "configurationVersion": "1",
+                                                "configurationConceptType": "SearchView"
+                                            },
+                                            "onViewInitialized": "initOptEquipmentView",
+                                            "viewType": "Search"
+                                        }
+                                    ],
+                                    "value": {
+                                        "$ref": "#"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "rule": {
+        "effect": "DISABLE_INITIAL",
+        "condition": {
+            "type": "FUNC",
+            "ruleFunction": "disableElements",
+            "value": [
+                {
+                    "$ref": "#"
+                }
+            ]
+        }
+    }
+}

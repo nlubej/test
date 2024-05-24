@@ -1,0 +1,8 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	InsuredObjectTemporaryPlates	ui-label	Object Type	Object Type	Object Type	Tip vozila
+DataSchema	InsuredObjectTemporaryPlates	field-title	objectType	objectType	Object Type	Tip vozila
+DataSchema	InsuredObjectTemporaryPlates	field-title	objectSubtype	objectSubtype	Object Subtype	Podtip vozila
+DataSchema	InsuredObjectTemporaryPlates	enum	objectType@vehicle	vehicle	Vehicle	Vozilo
+UiSchema	InsuredObjectTemporaryPlates	ui-label	Premium group	Premium group	Premium group	Premijska skupina
+UiSchema	InsuredObjectTemporaryPlates	ui-label	Vehicle	Vehicle	Vehicle Data	Predmet zavarovanja
+UiSchema	InsuredObjectTemporaryPlates	ui-label	Manual Entry	Manual Entry	Manual Entry	Ročni vnos

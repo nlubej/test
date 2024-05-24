@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": true,
+    "required": [
+        "queryStrings"
+    ],
+    "properties": {
+        "queryStrings": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+                "vinNumber",
+                "idPackage"
+            ],
+            "properties": {
+                "vinNumber": {
+                    "type": "string"
+                },
+                "idPackage": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

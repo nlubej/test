@@ -1,0 +1,10 @@
+{
+    "url": "{environment.triglavIntegrationServiceBaseUrl}/worker-management/workers/{idWorker}/privileges",
+    "httpMethod": "GET",
+    "headers": {
+        "Accept": "application/json",
+        "Ocp-Apim-Subscription-Key": "{environment.triglavIntegrationServiceApiKey}",
+        "X-API-KEY": "{environment.triglavIntegrationServiceXApiKey}"
+    },
+    "version": "1"
+}

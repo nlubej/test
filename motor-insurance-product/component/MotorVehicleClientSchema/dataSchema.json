@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Simple party",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+        "vehicleAndOptionalEquipmentValue": {
+            "description": "Sum of the vehicle value and the optional equipment values.",
+            "type": "number"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "dataProvider": {
+        "type": "ApiDataProvider",
+        "codeName": "FindVehicleOptEquipmentByCatalogueNumberDataProvider",
+        "version": "1"
+    },
+    "outputsList": true,
+    "pageable": false,
+    "isFullText": false,
+    "version": "1",
+    "forceAuthorization": true
+}

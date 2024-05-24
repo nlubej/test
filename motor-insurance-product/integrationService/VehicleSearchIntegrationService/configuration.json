@@ -1,0 +1,19 @@
+{
+    "sinks": [
+        {
+            "name": "GetVehicleSearchData",
+            "fetch": {
+                "configuration": {
+                    "name": "VehicleSearchDataSource"
+                }
+            }
+        },
+        {
+            "ref": "CatalogOptionalEquipmentSinkGroup"
+        }
+    ],
+    "responses": [
+        200,
+        422
+    ]
+}

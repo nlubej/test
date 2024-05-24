@@ -1,0 +1,31 @@
+{
+    "processType": "Quote",
+    "initialState": "Draft",
+    "actors": [
+        "Agent"
+    ],
+    "states": [
+        {
+            "name": "Draft",
+            "operations": [
+                "Save"
+            ]
+        },
+        {
+            "name": "Rejected",
+            "isTerminal": true,
+            "operations": []
+        }
+    ],
+    "transitions": [
+        {
+            "name": "RejectDraft",
+            "from": "Draft",
+            "to": "Rejected",
+            "allowOnValidationErrors": {
+                "all": true
+            },
+            "displayWeight": 10
+        }
+    ]
+}

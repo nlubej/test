@@ -1,0 +1,23 @@
+{
+  "description": "Payment plan additional attributes basic scenario",
+  "input": {
+    "input": {
+      "startDate": "2023-01-01",
+      "coverages": {
+        "mtplPlus": {
+          "isSelected": true,
+          "coverageAttributes": {
+            "sumInsuredSelection": "Basic Sum Insured"
+          }
+        }
+      }
+    }
+  },
+  "expectedResult": {
+    "coverages": {
+      "mtplPlus": {
+        "sumInsured": 100000
+      }
+    }
+  }
+}

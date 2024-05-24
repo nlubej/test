@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "iddQuestionnaire",
+        "client",
+        "insuredObject"
+    ],
+    "aiDeepRequired": [
+        "/insuredObject/vehicle/licensePlate",
+        "/insuredObject/vehicle/vinCode"
+    ],
+    "aiValidation": [
+        {
+            "rule": "MotorApplicationValidations",
+            "scope": "document"
+        }
+    ],
+    "properties": {
+        "client": {
+            "$ref": "component:CommonPartyNaturalPersonOrLegalEntity"
+        },
+        "insuredObject": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "vehicle"
+            ],
+            "properties": {
+                "vehicle": {
+                    "$ref": "component:Vehicle"
+                }
+            }
+        },
+        "contractDuration": {
+            "$ref": "component:ContractDurationMotor"
+        },
+        "product": {
+            "aiTitle": "product",
+            "$ref": "component:TriglavProduct"
+        },
+        "package": {
+            "$ref": "component:MotorCoveragePackage"
+        },
+        "iddQuestionnaire": {
+            "$ref": "component:IDDQuestionnaireMotor"
+        }
+    }
+}

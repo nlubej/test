@@ -1,0 +1,9 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	CoverageExtensionsUi	ui-label	Staying outside EU geographical area	Staying outside EU geographical area	Staying outside EU geographical area	Zadrževanje vozila izven geografskega območja Evrope
+UiSchema	CoverageExtensionsUi	ui-label	Water entrapment in watercourse area	Water entrapment in watercourse area	Water entrapment in watercourse area	Nevarnost vodne ujme na območju vodotokov
+UiSchema	CoverageExtensionsUi	ui-label	Vehicle sinking	Vehicle sinking	Vehicle sinking	Nevarnost pogrezanja vozila
+UiSchema	CoverageExtensionsUi	ui-label	Sanation of avalanches and landslides	Sanation of avalanches and landslides	Sanation of avalanches and landslides	Sanacija snežnih in zemeljskih plazov
+UiSchema	CoverageExtensionsUi	ui-label	Premium	Premium	Premium	Premija
+UiSchema	CoverageExtensionsUi	ui-label	Participation in races	Participation in races	Participation in races	Sodelovanje na dirkah
+UiSchema	CoverageExtensionsUi	ui-label	Risk	Risk	Risk	Nevarnost
+Rule	CoverageExtensionsUiWaterEntrapmentRequiredFieldsValidation	rule	validation@RiskCodeRequired	WaterEntrapmentRequiredFieldsValidation	Risk is required	Vnesite nevarnost

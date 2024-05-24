@@ -1,0 +1,19 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DocumentConfiguration	ExtendedWarrantyQuote	actors	Agent	Agent	Agent	Zastopnik
+DocumentConfiguration	ExtendedWarrantyQuote	actors	System	System	System	Sistem
+DocumentFlowDefinition	ExtendedWarrantyQuoteFlow	transitions	transitions@RejectDraft@Title	RejectDraft	Reject Draft	Zavrzi ponudbo
+DocumentFlowDefinition	ExtendedWarrantyQuoteFlow	operations	operations@Save@Title	Save	Save	Shrani
+DocumentFlowDefinition	ExtendedWarrantyQuoteFlow	states	states@Draft	Draft	Draft	Osnutek
+DocumentFlowDefinition	ExtendedWarrantyQuoteFlow	states	states@Rejected	Rejected	Rejected	Zavrnjeno
+UiSchema	ExtendedWarrantyQuoteMainContent	ui-label	Participants	Participants	Participants	Udeleženci
+UiSchema	ExtendedWarrantyQuoteMainContent	ui-label	Insured Object	Insured Object	Insured Object	Predmet zavarovanja
+UiSchema	ExtendedWarrantyQuoteMainContent	ui-label	Terms	Terms	Terms	Zavarovanje
+UiSchema	ExtendedWarrantyQuoteMainContent	ui-label	Contract Duration	Contract Duration	Contract Duration	Trajanje zavarovanja
+UiSchema	ExtendedWarrantyQuoteMainContent	ui-label	Conditions	Conditions	Conditions	Pogoji
+UiSchema	ExtendedWarrantyQuoteMainContent	ui-label	Ownership	Ownership	Ownership	Organizacija
+UiSchema	ExtendedWarrantyQuoteSummaryContent	ui-label	Coverage package	Coverage package	Coverage package	Paket zavarovanj
+Rule	ExtendedWarrantyQuoteRequiredNotEmptyValidations	rule	validation@InsuredObjectNotDefined	RequiredNotEmptyValidations	Insured object is not defined.	Zavarovani predmet ni opredeljen.
+Rule	ExtendedWarrantyQuoteMinimalPremiumValidation	rule	validation@MinimalPremiumIs5EUR	minimalPremiumValidation	Minimal Premium is 5 EUR.	Minimalna premija je 5 EUR.
+DocumentConfiguration	ExtendedWarrantyQuote	rootConfiguration	ExtendedWarrantyQuote@Title	ExtendedWarrantyQuote	Extended warranty quote	Zavarovanje podaljšanega jamstva
+DataSchema	ExtendedWarrantyQuote	field-title	commentIsRequired	commentIsRequired	comment	Komentar
+DataSchema	ExtendedWarrantyQuote	field-title	commentAuthorIsRequired	commentAuthorIsRequired	Author	Avtor

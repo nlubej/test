@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "selectedPackage": {
+            "type": "string",
+            "aiTitle": "selectedPackage",
+            "enum": [
+                "Small",
+                "CcSmall",
+                "CcLarge",
+                "Large",
+                "LargePlus",
+                "Comfort",
+                "ComfortPlus"
+            ]
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "eMRVL": {
+            "$ref": "component:eMRVL"
+        },
+        "eurotaxMatches": {
+            "type": "array",
+            "items": {
+                "$ref": "component:eurotax"
+            }
+        },
+        "additionalEquipment": {
+            "$ref": "component:OptionalEquipment"
+        }
+    }
+}

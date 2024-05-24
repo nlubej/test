@@ -1,0 +1,30 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DataSchema	OtherParticipants	enum	role@Payer	Payer	Payer	Plačnik
+DataSchema	OtherParticipants	enum	role@VehicleUser	VehicleUser	Vehicle user	Uporabnik vozila
+DataSchema	OtherParticipants	enum	role@Lessor	Lessor	Lessor	Leasingodajalec
+DataSchema	OtherParticipants	enum	role@Lessee	Lessee	Lessee	Leasingojemalec
+DataSchema	OtherParticipants	enum	role@BatteryOwner	BatteryOwner	Battery owner	Lastnik baterije
+DataSchema	OtherParticipants	enum	role@Child	Child	Child	Otrok
+DataSchema	OtherParticipants	enum	role@Lender	Lender	Lender	Kreditodajalec
+DataSchema	OtherParticipants	enum	role@Borrower	Borrower	Borrower	Kreditojemalec
+DataSchema	OtherParticipants	enum	role@ODIC	ODIC	Other domestic insurance company	Druga domača zavarovalnica
+DataSchema	OtherParticipants	enum	role@FIC	FIC	Foreign insurance company	Tuja zavarovalnica
+UiSchema	OtherParticipants	ui-label	Other participants	Other participants	Other participants	Drugi udeleženci
+UiSchema	OtherParticipants	ui-label	Role	Role	Role	Vloga
+UiSchema	OtherParticipants	ui-label	Full name	Full name	Full name	Polno ime
+UiSchema	OtherParticipants	ui-label	Tax number	Tax number	Tax number	Davčna številka
+UiSchema	OtherParticipants	ui-label	Party type	Party type	Party type	Tip osebe
+DataSchema	OtherParticipants	field-title	role	role	role	vlogo
+ClientAction	OtherParticipantsOnBeforeGridAction	ui-message	InvalidInput	onBeforeGridAction	Please fill in all information	Prosimo izpolnite vse podatke
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@PayerNotDefined	OtherParticipantsQuoteHelper	Payer is not defined	Plačnik ni opredeljen
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@VehicleUserNotDefined	OtherParticipantsQuoteHelper	Vehicle user is not defined	Uporabnik vozila ni opredeljen
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@LessorNotDefined	OtherParticipantsQuoteHelper	Lessor not defined	Leasingodajalec ni opredeljen
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@LesseeNotDefined	OtherParticipantsQuoteHelper	Lessee not defined	Leasingojemalec ni opredeljen
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@BatteryOwnerNotDefined	OtherParticipantsQuoteHelper	Battery Owner Not Defined	Lastnik baterije ni opredeljen
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@ChildNotDefined	OtherParticipantsQuoteHelper	Child Not Defined	Otrok ni opredeljen
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@LenderNotDefined	OtherParticipantsQuoteHelper	LenderNotDefined	Kreditodajalec ni opredeljen
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@BorrowerNotDefined	OtherParticipantsQuoteHelper	BorrowerNotDefined	Kreditojemalec ni opredeljen
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@ODICNotDefined	OtherParticipantsQuoteHelper	ODICNotDefined	Druga domača zavarovalnica ni opredeljena
+Library	OtherParticipantsOtherParticipantsQuoteHelper	library	validation@FICNotDefined	OtherParticipantsQuoteHelper	FICNotDefined	Tuja zavarovalnica ni opredeljena
+Rule	OtherParticipantsParticipantRowValidation	rule	validation@PartyNotDefined	ParticipantRowValidation	Please select party	Prosimo izberite osebo
+Rule	OtherParticipantsParticipantRowValidation	rule	validation@RoleNotDefined	ParticipantRowValidation	Role is required	Vnesite Vlogo

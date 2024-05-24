@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "currency": {
+            "type": "string"
+        },
+        "coverages": {
+            "$ref": "component:MotorCoveragesClientSchema"
+        },
+        "vehicle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "vehicleAndOptionalEquipmentValue": {
+                    "description": "Sum of the vehicle value and the optional equipment values.",
+                    "type": "number"
+                },
+                "vehicleAndOptionalEquipmentValuePlusUpgrades": {
+                    "description": "Sum of the vehicle value, optional equipment values and upgrades values.",
+                    "type": "number"
+                }
+            }
+        },
+        "possibleParties": {
+            "type": "array",
+            "items": {
+                "$ref": "component:CommonPartyNaturalPersonOrLegalEntity"
+            }
+        }
+    }
+}

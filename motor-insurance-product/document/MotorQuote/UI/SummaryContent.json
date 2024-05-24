@@ -1,0 +1,104 @@
+{
+    "id": "SummaryContent",
+    "type": "Group",
+    "elements": [
+        {
+            "type": "Component",
+            "name": "OwnershipSummary",
+            "value": {
+                "$ref": "#/properties/Body/properties/organisation"
+            }
+        },
+        {
+            "type": "Component",
+            "name": "ContractDurationSummary",
+            "value": {
+                "$ref": "#/properties/Body/properties/contractDuration"
+            }
+        },
+        {
+            "type": "Component",
+            "name": "UnconfirmedConstraintsSummary",
+            "value": {
+                "$ref": "#/properties/Summary/properties/unconfirmedConstraintsSummary"
+            }
+        },
+        {
+            "type": "OutputText",
+            "label": "Coverage package",
+            "value": {
+                "$ref": "#/properties/Summary/properties/evaluatedCoveragePackage/properties/displayName"
+            },
+            "width": 2
+        },
+        {
+            "type": "Component",
+            "name": "PremiumByCoverageSummary",
+            "value": {
+                "$ref": "#/properties/Summary/properties/premiumByCoverageSummary"
+            }
+        },
+        {
+            "type": "Component",
+            "name": "InstallmentAmountAndTotalPremiumSummary",
+            "value": {
+                "$ref": "#/properties/Summary/properties/installmentAmountAndTotalPremiumSummary"
+            }
+        },
+        {
+            "type": "Group",
+            "rule": {
+                "effect": "HIDE",
+                "condition": {
+                    "type": "LEAF",
+                    "value": {
+                        "$ref": "#/properties/State/properties/Code"
+                    },
+                    "expectedValue": "InformativeCalculation"
+                }
+            },
+            "elements": [
+                {
+                    "type": "OutputText",
+                    "label": "Triglav Komplet package",
+                    "value": {
+                        "$ref": "#/properties/Body/properties/externalData/properties/triglavPackageId"
+                    },
+                    "width": 1
+                },
+                {
+                    "type": "OutputText",
+                    "label": "Triglav Komplet Bonus Class",
+                    "value": {
+                        "$ref": "#/properties/Body/properties/externalData/properties/triglavPackageBonusClass"
+                    },
+                    "width": 1,
+                    "rule": {
+                        "effect": "SHOW",
+                        "condition": {
+                            "type": "FUNC",
+                            "ruleFunction": "showTriglavPackageBonusClass",
+                            "value": [
+                                {
+                                    "$ref": "#/properties/Body/properties/externalData/properties/triglavPackageId"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Group",
+            "elements": [
+                {
+                    "type": "Component",
+                    "name": "QuoteToApplicationLink",
+                    "value": {
+                        "$ref": "#/properties/ExternalData/properties/applicationRelation"
+                    }
+                }
+            ]
+        }
+    ]
+}

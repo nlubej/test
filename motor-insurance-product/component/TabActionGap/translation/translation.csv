@@ -1,0 +1,9 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	TabActionGap	ui-label	Action Avtomobilno	Action Avtomobilno	Action Avtomobilno	Akcija AvtoMobilno
+UiSchema	TabActionGap	ui-label	Luggage Insurance	Luggage Insurance	Additional Equipment Insurance - Luggage	Zavarovanje dodatne opreme - prtljaga
+UiSchema	TabActionGap	ui-label	Micromobility Insurance	Micromobility Insurance	Micromobility Insurance	Zavarovanje odgovornosti, asistence, nezgodno zavarovanje in zavarovanja prtljage uporabnikov mikro prevoznih sredstev - družinsko zavarovanje
+UiSchema	TabActionGap	ui-label	Rehabilitation Traffic	Rehabilitation Traffic	Rehabilitation insurance - traffic, sum insured 7.000,00 EUR	Zavarovanje rehabilitacija - promet, zavarovalna vsota 7.000,00 EUR
+UiSchema	TabActionGap	ui-label	Small animals during transport insurance	Small animals during transport insurance	Additional insurance for small animals during transport	Dodatno zavarovanje za male živale med prevozom
+UiSchema	TabActionGap	ui-label	Gap insurance	Gap insurance	GAP insurance	Zavarovanje GAP
+UiSchema	TabActionGap	ui-label	GAP insurance	GAP insurance	GAP insurance	Zavarovanje GAP
+UiSchema	TabActionGap	ui-label	Action AvtoMobilno - new additional insurance	Action AvtoMobilno - new additional insurance	Action AvtoMobilno - new additional insurance	Akcija AvtoMobilno - novo dodatno zavarovanje

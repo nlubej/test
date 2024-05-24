@@ -1,0 +1,204 @@
+{
+    "type": "DataGrid",
+    "labelType": "H2",
+    "label": "Other participants",
+    "elementId": "other-participants-id",
+    "value": {
+        "$ref": "#"
+    },
+    "mode": "Array",
+    "actions": [
+        "Add",
+        "Edit",
+        "Delete"
+    ],
+    "alternateRowColors": true,
+    "edit": {
+        "mode": "Detached",
+        "onBeforeGridAction": "onBeforeGridAction",
+        "onPrepareAddedRow": "onPrepareRow",
+        "onPrepareEditedRow": "onPrepareRow"
+    },
+    "pagination": {
+        "mode": "None"
+    },
+    "height": "None",
+    "columns": [
+        {
+            "title": "Role",
+            "name": "name",
+            "cellContent": {
+                "type": "OutputText",
+                "value": {
+                    "$ref": "#/properties/role"
+                }
+            }
+        },
+        {
+            "title": "Full name",
+            "name": "name",
+            "cellContent": {
+                "type": "OutputText",
+                "template": "{{#if naturalPerson}}{{#if naturalPerson.fullName}}{{expr naturalPerson.fullName}}{{/if}}{{/if}}{{#if legalEntity}}{{#if legalEntity.fullName}}{{expr legalEntity.fullName}}{{/if}}{{/if}}",
+                "value": {
+                    "$ref": "#/properties/party"
+                }
+            }
+        },
+        {
+            "title": "Tax number",
+            "name": "name",
+            "cellContent": {
+                "type": "OutputText",
+                "template": "{{#if naturalPerson}}{{#if naturalPerson.taxNumber}}{{expr naturalPerson.taxNumber}}{{/if}}{{/if}}{{#if legalEntity}}{{#if legalEntity.taxNumber}}{{expr legalEntity.taxNumber}}{{/if}}{{/if}}",
+                "value": {
+                    "$ref": "#/properties/party"
+                }
+            }
+        },
+        {
+            "title": "Party type",
+            "name": "name",
+            "cellContent": {
+                "type": "OutputText",
+                "value": {
+                    "$ref": "#/properties/party/properties/partyType"
+                }
+            }
+        }
+    ],
+    "detailsTemplates": {
+        "edit": {
+            "content": {
+                "type": "GridLayout",
+                "numberOfColumns": 12,
+                "elements": [
+                    {
+                        "type": "Group",
+                        "width": 6,
+                        "elements": [
+                            {
+                                "type": "Group",
+                                "width": 6,
+                                "elements": [
+                                    {
+                                        "type": "Lookup",
+                                        "value": {
+                                            "$ref": "#/properties/party"
+                                        },
+                                        "width": 6,
+                                        "dialogButton": {
+                                            "icon": {
+                                                "name": "User",
+                                                "color": "Primary"
+                                            }
+                                        },
+                                        "dialog": {
+                                            "size": "Large",
+                                            "viewReference": {
+                                                "configurationCodeName": "CustomPartySearchView",
+                                                "configurationVersion": "1",
+                                                "configurationConceptType": "SearchView"
+                                            }
+                                        },
+                                        "onSelected": "setParticipantFromLookupOrSelection",
+                                        "selectedDisplayValueUISchema": {
+                                            "type": "Input",
+                                            "label": "Full name",
+                                            "readOnly": true,
+                                            "value": {
+                                                "$ref": "#/properties/party/properties/naturalPerson/properties/fullName"
+                                            }
+                                        },
+                                        "dropdown": {
+                                            "displayFieldName": "displayFullName",
+                                            "isRefFromRootContext": true,
+                                            "source": {
+                                                "$ref": "#/properties/ClientViewModel/properties/possibleParties"
+                                            },
+                                            "reloadOnOpen": true
+                                        }
+                                    }
+                                ],
+                                "rule": {
+                                    "effect": "HIDE",
+                                    "condition": {
+                                        "type": "LEAF",
+                                        "expectedValue": "LegalEntity",
+                                        "value": {
+                                            "$ref": "#/properties/party/properties/partyType"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "Group",
+                                "width": 6,
+                                "elements": [
+                                    {
+                                        "type": "Lookup",
+                                        "value": {
+                                            "$ref": "#/properties/party"
+                                        },
+                                        "width": 6,
+                                        "dialogButton": {
+                                            "icon": {
+                                                "name": "User",
+                                                "color": "Primary"
+                                            }
+                                        },
+                                        "dialog": {
+                                            "size": "Large",
+                                            "viewReference": {
+                                                "configurationCodeName": "CustomPartySearchView",
+                                                "configurationVersion": "1",
+                                                "configurationConceptType": "SearchView"
+                                            }
+                                        },
+                                        "onSelected": "setParticipantFromLookupOrSelection",
+                                        "selectedDisplayValueUISchema": {
+                                            "type": "Input",
+                                            "label": "Full name",
+                                            "readOnly": true,
+                                            "value": {
+                                                "$ref": "#/properties/party/properties/legalEntity/properties/fullName"
+                                            }
+                                        },
+                                        "dropdown": {
+                                            "displayFieldName": "displayFullName",
+                                            "isRefFromRootContext": true,
+                                            "source": {
+                                                "$ref": "#/properties/ClientViewModel/properties/possibleParties"
+                                            },
+                                            "reloadOnOpen": true
+                                        }
+                                    }
+                                ],
+                                "rule": {
+                                    "effect": "SHOW",
+                                    "condition": {
+                                        "type": "LEAF",
+                                        "expectedValue": "LegalEntity",
+                                        "value": {
+                                            "$ref": "#/properties/party/properties/partyType"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Input",
+                        "label": "Role",
+                        "control": "Dropdown",
+                        "filter": "filterRoles",
+                        "width": 6,
+                        "value": {
+                            "$ref": "#/properties/role"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

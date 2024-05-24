@@ -1,0 +1,28 @@
+{
+    "targetDocument": "MotorQuote",
+    "targetDocumentVersion": "1",
+    "allowOnValidationErrors": {
+        "all": true
+    },
+    "requiredConfirmedConstraints": {
+        "all": false
+    },
+    "targetState": "Draft",
+    "relationType": "Sibling",
+    "enrichment": {
+        "fields": [
+            "[EnrichMotorQuoteBeforeCopyRelation]"
+        ]
+    },
+    "displayWeight": 1,
+    "sourceDocument": "MotorQuote",
+    "sourceDocumentVersion": "1",
+    "sourceDocumentStates": [
+        {
+            "name": "Draft",
+            "actors": [
+                "Agent"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	CoverageVehicle	ui-label	PremiumGroupIsEmpty	PremiumGroupIsEmpty	The package selection is available once the premium group is defined.	Izbira paketa je na voljo po vnosu premijske skupine.
+UiSchema	CoverageVehicle	ui-label	VehicleMassIsEmpty	VehicleMassIsEmpty	The package selection is available once the vehicle mass is defined.	Izbira paketa je na voljo, ko je določena masa vozila.

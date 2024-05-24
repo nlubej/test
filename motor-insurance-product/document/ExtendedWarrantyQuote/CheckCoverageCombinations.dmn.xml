@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+             xmlns:adi="http://adacta-fintech.com/schema/1.0/dmn"
+             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+             xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi"
+             id="CheckCoverageCombinations_MotorQuote"
+             name="CheckCoverageCombinations"
+             namespace="http://camunda.org/schema/1.0/dmn"
+             exporter="Camunda Modeler"
+             exporterVersion="4.0.0-alpha.2">
+    <decision id="decision_0xe7rvk" name="CheckCoverageCombinations">
+        <variable id="InformationItem_1l2pj30"/>
+        <knowledgeRequirement id="KnowledgeRequirement_0f1bigg">
+            <requiredKnowledge href="#CheckCoverageCombinationsLibrary"/>
+        </knowledgeRequirement>
+        <knowledgeRequirement id="KnowledgeRequirement_05tcznc">
+            <requiredKnowledge href="#CheckCoverageCombinations"/>
+        </knowledgeRequirement>
+        <context id="Context_0ur3ibj">
+            <contextEntry id="ContextEntry_018av2l">
+                <variable id="InformationItem_0okpk4l" name="Mock"/>
+                <literalExpression id="LiteralExpression_1r3pmvb">
+                    <text></text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry id="ContextEntry_1b1npb9">
+                <literalExpression id="LiteralExpression_0zaf2qs">
+                    <text>
+                        CheckCoverageCombinations(get input())
+                    </text>
+                </literalExpression>
+            </contextEntry>
+        </context>
+    </decision>
+    <businessKnowledgeModel id="CheckCoverageCombinations"
+                            name="MotorQuoteCheckCoverageCombinations"
+                            adi:lib="@config-triglav-si/motor-insurance-product/lib/MotorQuoteCheckCoverageCombinations"
+                            adi:object="CheckCoverageCombinations"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="Context_0ur3ibj">
+                        <adiDMNDI:ElementWidth dmnElementRef="Context_0ur3ibj" value="750"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_07v86yz" dmnElementRef="decision_0xe7rvk">
+                <dc:Bounds height="80" width="180" x="490" y="320"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0131oss" dmnElementRef="CheckCoverageCombinations">
+                <dc:Bounds height="46" width="135" x="512" y="527"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0jr38ai" dmnElementRef="KnowledgeRequirement_0f1bigg">
+                <di:waypoint x="569" y="527"/>
+                <di:waypoint x="570" y="400"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="DMNEdge_1h3ekya" dmnElementRef="KnowledgeRequirement_05tcznc">
+                <di:waypoint x="580" y="527"/>
+                <di:waypoint x="580" y="400"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

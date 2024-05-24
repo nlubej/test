@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="MapObjectAttributes_MotorQuote" name="Map object attributes for quote" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="Decision_16fy502" name="MapObjectAttributes">
+        <variable id="InformationItem_1nvaio8" name="MapObjectAttributes"/>
+        <context id="Context_0byg7gl">
+            <contextEntry id="ContextEntry_176fhq1">
+                <variable id="InformationItem_03lojk2" name="mock"/>
+                <literalExpression id="LiteralExpression_0fw91su" expressionLanguage="feel">
+                    <text></text>
+                </literalExpression>
+            </contextEntry>
+        </context>
+    </decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="Context_0byg7gl">
+                        <adiDMNDI:ElementWidth dmnElementRef="Context_0byg7gl" value="750"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_18255ga" dmnElementRef="Decision_16fy502">
+                <dc:Bounds height="80" width="180" x="420" y="200"/>
+            </dmndi:DMNShape>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

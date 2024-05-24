@@ -1,0 +1,179 @@
+{
+    "id": "SummaryContent",
+    "type": "GridLayout",
+    "numberOfColumns": 4,
+    "elements": [
+        {
+            "type": "Section",
+            "label": "Client",
+            "sectionLevel": 2,
+            "width": 4,
+            "elements": [
+                {
+                    "type": "OutputText",
+                    "label": "Client name",
+                    "width": 2,
+                    "value": {
+                        "mapping": "getClientName",
+                        "$ref": "#/properties/Body/properties/client"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "Party Type",
+                    "width": 2,
+                    "value": {
+                        "$ref": "#/properties/Body/properties/client/properties/partyType"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "Address",
+                    "width": 4,
+                    "value": {
+                        "mapping": "getFullAddress",
+                        "$ref": "#/properties/Body/properties/client"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Section",
+            "label": "ClientScore",
+            "sectionLevel": 2,
+            "width": 4,
+            "elements": [
+                {
+                    "type": "OutputText",
+                    "label": "BOS",
+                    "width": 2,
+                    "value": {
+                        "$ref": "#/properties/ExternalData/properties/clientScore/properties/ratings/properties/BOS"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "iTriglav",
+                    "width": 2,
+                    "value": {
+                        "$ref": "#/properties/ExternalData/properties/clientScore/properties/benefits/properties/iTriglav"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "TriglavPackage",
+                    "width": 2,
+                    "value": {
+                        "$ref": "#/properties/ExternalData/properties/clientScore/properties/benefits/properties/triglavPackageId"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Section",
+            "label": "Vehicle",
+            "sectionLevel": 2,
+            "width": 4,
+            "elements": [
+                {
+                    "type": "OutputText",
+                    "label": "Type",
+                    "width": 2,
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/vehicleGroup"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "Brand",
+                    "width": 2,
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/vehicleBrand"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "Model",
+                    "width": 4,
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/vehicleModel"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "Value",
+                    "width": 2,
+                    "template": "{{expr vehicleValue 'n:2'}} EUR",
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "EnginePower",
+                    "width": 2,
+                    "template": "{{expr enginePower }} kW",
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "OptionalEquipment",
+                    "width": 2,
+                    "template": "{{expr value 'n:2'}} EUR",
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/optionalEquipment",
+                        "mapping": "sumOptionalEquipment"
+                    }
+                },
+                {
+                    "type": "OutputText",
+                    "label": "TotalValue",
+                    "width": 2,
+                    "template": "{{expr value 'n:2'}} EUR",
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle",
+                        "mapping": "sumTotalValue"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "SummaryContent",
+            "type": "Group",
+            "elements": [
+                {
+                    "type": "Link",
+                    "label": "Quote",
+                    "targetType": "Entity",
+                    "entityData": {
+                        "entityType": "Contract",
+                        "businessNumber": "{{expr relatedNumber}}"
+                    },
+                    "value": {
+                        "$ref": "#/properties/ClientViewModel/properties/quoteRelation"
+                    },
+                    "content": {
+                        "text": {
+                            "type": "OutputText",
+                            "value": {
+                                "$ref": "#/properties/relatedNumber"
+                            }
+                        }
+                    },
+                    "rule": {
+                        "effect": "SHOW",
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/State/properties/Code"
+                            },
+                            "expectedValue": "QuoteCreated"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

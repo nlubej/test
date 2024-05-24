@@ -1,0 +1,64 @@
+{
+  "body": {
+    "insuredObject": {
+      "vehicle": {
+        "licensePlate": "ljne235",
+        "mrvlCode": 5848455,
+        "vinCode": "YV1MS765272268541",
+        "firstRegistrationDate": "2006-08-24",
+        "maximumAuthorisedMass": 1880,
+        "catalogueNumber": "131075",
+        "vehicleGroup": 10,
+        "vehicleBrand": "Volvo (S)",
+        "vehicleModel": "S40 Diesel (04.2007-06.2012)",
+        "vehicleType": "S40 1,6 D (04.2007-06.2009)",
+        "fuelType": "Diesel",
+        "enginePower": 80,
+        "engineDisplacement": 1560,
+        "numberOfSeats": 5,
+        "numberOfDoors": 4,
+        "vehicleMass": 1388,
+        "vehicleValue": 22900
+      }
+    },
+    "contractDuration": {
+      "issueDate": "2024-05-20",
+      "startDate": "2024-05-20",
+      "startTime": "12:11:20",
+      "endTime": "00:00:00",
+      "endDate": "2025-05-20",
+      "term": 1
+    },
+    "product": {
+      "idMktProd": "VO0450001",
+      "idGenPolicy": "VO48000242190",
+      "idGenPolicyDesc": "NLB Leasing  - 40% kp    Splošni produkt",
+      "idObjType": "AVT001001"
+    },
+    "client": {
+      "partyType": "NaturalPerson",
+      "naturalPerson": {
+        "externalId": 791147,
+        "fullName": "IVANXYZ SIMONOVIĆXYZ",
+        "taxNumber": "79135129",
+        "address": "BERNIKOVA ULICA 15, 1215 MEDVODE",
+        "attributes": {
+          "isPartyValidated": true
+        },
+        "personalNumber": "1112956500210",
+        "dateOfBirth": "1956-12-11"
+      }
+    },
+    "package": "P3",
+    "iddQuestionnaire": {
+      "skipQuestionnaire": true
+    }
+  },
+  "testing": {
+    "skipDataSchemaValidation": false,
+    "skipAiValidate": false,
+    "skipEvaluation": false,
+    "skipRelationValidation": false,
+    "skipAmendmentValidation": false
+  }
+}

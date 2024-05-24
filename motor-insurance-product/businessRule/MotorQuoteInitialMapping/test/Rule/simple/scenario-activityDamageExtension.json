@@ -1,0 +1,22 @@
+{
+    "description": "Payment plan additional attributes basic scenario",
+    "input": {
+        "input": {
+            "startDate": "2023-01-31",
+            "coverages": {
+                "activityDamageExtension": {
+                    "isSelected": true
+                }
+            }
+        },
+        "additionalDataSources": []
+    },
+    "expectedResult": {
+        "coverages": {
+            "activityDamageExtension": {
+                "sumInsured": 200000,
+                "deductible": 200
+            }
+        }
+    }
+}

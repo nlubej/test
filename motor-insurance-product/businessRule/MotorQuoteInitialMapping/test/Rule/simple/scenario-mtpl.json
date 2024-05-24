@@ -1,0 +1,28 @@
+{
+    "description": "Payment plan additional attributes basic scenario",
+    "input": {
+        "input": {
+            "startDate": "2023-01-31",
+            "coverages": {
+                "mtpl": {
+                    "isSelected": true,
+                    "mtplAttributes": {
+                        "materialDamageSumCorrection": ">2",
+                        "nonMaterialDamageSumCorrection": ">2",
+                        "manualInputMaterialDamage": 5,
+                        "manualInputNonMaterialDamage": 3
+                    }
+                }
+            }
+        },
+        "additionalDataSources": []
+    },
+    "expectedResult": {
+        "coverages": {
+            "mtpl": {
+                "materialDamageSumInsured": 5250000,
+                "nonMaterialDamageSumInsured": 15720000
+            }
+        }
+    }
+}

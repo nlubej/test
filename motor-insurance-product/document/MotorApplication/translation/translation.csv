@@ -1,0 +1,39 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DocumentConfiguration	MotorApplication	actors	Agent	Agent	Agent	Agent
+DocumentFlowDefinition	MotorApplicationFlow	operations	operations@Save@Title	Save	Save	Shrani
+DocumentFlowDefinition	MotorApplicationFlow	states	states@Draft	Draft	Draft	Osnutek
+DocumentConfiguration	MotorApplication	rootConfiguration	MotorApplication@Title	MotorApplication	Motor Application	Vloga avtomobilskega zavarovanja
+UiSchema	MotorApplicationMainContent	ui-label	Main information	Main information	Main information	Glavne informacije
+UiSchema	MotorApplicationMainContent	ui-label	Vehicle	Vehicle	Vehicle	Vozilo
+UiSchema	MotorApplicationMainContent	ui-label	Contract Duration	Contract Duration	Contract duration	Trajanje zavarovanja
+UiSchema	MotorApplicationSummaryContent	ui-label	Vehicle	Vehicle	Vehicle	Vozilo
+UiSchema	MotorApplicationSummaryContent	ui-label	Type	Type	Type	Tip
+UiSchema	MotorApplicationSummaryContent	ui-label	Brand	Brand	Brand	Znamka
+UiSchema	MotorApplicationSummaryContent	ui-label	Model	Model	Model	Model
+UiSchema	MotorApplicationSummaryContent	ui-label	Value	Value	Value	Vrednost vozila
+UiSchema	MotorApplicationSummaryContent	ui-label	OptionalEquipment	OptionalEquipment	Optional equipment value	Vrednost opcijske opreme
+UiSchema	MotorApplicationSummaryContent	ui-label	TotalValue	TotalValue	Value with equipment	Vrednost z opremo
+UiSchema	MotorApplicationSummaryContent	ui-label	EnginePower	EnginePower	Engine power	Moč motorja
+UiSchema	MotorApplicationMainContent	ui-label	Client	Client	Client	Stranka
+UiSchema	MotorApplicationSummaryContent	ui-label	Client	Client	Client	Stranka
+UiSchema	MotorApplicationSummaryContent	ui-label	Client name	Client name	Client name	Ime stranke
+UiSchema	MotorApplicationSummaryContent	ui-label	Party Type	Party Type	Party Type	Tip osebe
+UiSchema	MotorApplicationSummaryContent	ui-label	Address	Address	Address	Naslov
+UiSchema	MotorApplicationMainContent	ui-label	Product	Product	Product	Produkt
+Rule	MotorApplicationMotorApplicationValidations	rule	validation@partyNotSelected	MotorApplicationValidations	Please select client	Prosimo izberite stranko
+DataSchema	MotorApplication	field-title	product	product	Product	Produkt
+UiSchema	MotorApplicationMainContent	ui-label	CoveragePackage	CoveragePackage	Coverage package	Kombinacija kritij
+UiSchema	MotorApplicationMainContent	ui-label	IDD Questionnaire	IDD Questionnaire	IDD Questionnaire	IDD Vprašalnik
+DocumentFlowDefinition	MotorApplicationFlow	transitions	transitions@Confirm@Title	Confirm	Confirm	Potrdi
+DocumentFlowDefinition	MotorApplicationFlow	transitions	transitions@CreateQuote@Title	CreateQuote	Create quote	Ustvari ponudbo
+DocumentFlowDefinition	MotorApplicationFlow	transitions	transitions@ReturnToDraft@Title	ReturnToDraft	Return to draft	Nazaj na osnutek
+DocumentFlowDefinition	MotorApplicationFlow	transitions	transitions@Discard@Title	Discard	Discard	Zavrži
+DocumentFlowDefinition	MotorApplicationFlow	states	states@ProductSelection	ProductSelection	Product selection	Izbira produkta
+DocumentFlowDefinition	MotorApplicationFlow	states	states@QuoteCreated	QuoteCreated	Quote created	Ponudba ustvarjena
+DocumentFlowDefinition	MotorApplicationFlow	states	states@Discarded	Discarded	Discarded	Zavrženo
+UiSchema	MotorApplicationSummaryContent	ui-label	ClientScore	ClientScore	Client score	Ugodnosti stranke
+UiSchema	MotorApplicationSummaryContent	ui-label	BOS	BOS	BOS	BOS
+UiSchema	MotorApplicationSummaryContent	ui-label	iTriglav	iTriglav	iTriglav	iTriglav
+UiSchema	MotorApplicationSummaryContent	ui-label	TriglavPackage	TriglavPackage	Triglav package	Triglav komplet
+UiSchema	MotorApplicationSummaryContent	ui-label	Quote	Quote	Quote	Ponudba
+UiSchema	MotorApplicationMainContent	ui-label	CustomerScore	CustomerScore	Client score	Ugodnosti stranke

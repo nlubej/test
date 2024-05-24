@@ -1,0 +1,28 @@
+{
+    "sinks": [
+        {
+            "name": "GetCatalogMakesData",
+            "fetch": {
+                "configuration": {
+                    "name": "FindVehicleMakersByVehicleTypeDataSource"
+                }
+            }
+        },
+        {
+            "name": "GetCatalogModelsData",
+            "fetch": {
+                "configuration": {
+                    "name": "FindVehicleModelsDataSource"
+                }
+            }
+        },
+        {
+            "name": "GetCatalogOptionalEquipmentData",
+            "fetch": {
+                "configuration": {
+                    "name": "FindVehicleOptEquipmentByVehicleTypeDataSource"
+                }
+            }
+        }
+    ]
+}

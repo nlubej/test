@@ -1,0 +1,76 @@
+{
+    "type": "TreeTable",
+    "columns": [
+        {
+            "title": "Description",
+            "cellContent": {
+                "type": "OutputText",
+                "defaultValue": "",
+                "template": "{{expr description}}",
+                "value": {
+                    "$ref": "#"
+                }
+            }
+        },
+        {
+            "title": "Base",
+            "cellContent": {
+                "type": "OutputText",
+                "defaultValue": "",
+                "template": "{{#style 'right'}}{{expr base 'n:2'}}{{/style}}",
+                "value": {
+                    "$ref": "#"
+                }
+            }
+        },
+        {
+            "title": "Rate",
+            "cellContent": {
+                "type": "OutputText",
+                "defaultValue": "",
+                "template": "{{#if rate}}{{#style 'right'}}{{#if unit '==' '\"FixedValue\"'}}{{expr rate 'n:2'}}{{else}}{{#if unit '==' '\"Percent\"'}}{{expr rate 'n:2'}} %{{else}}{{#if unit '==' '\"PerMille\"'}}{{expr rate 'n:2'}} ‰{{else}}{{expr rate 'n:6'}}{{/if}}{{/if}}{{/if}}{{/style}}{{else}} {{/if}}",
+                "value": {
+                    "$ref": "#"
+                }
+            }
+        },
+        {
+            "title": "Amount",
+            "cellContent": {
+                "type": "OutputText",
+                "defaultValue": "",
+                "template": "{{#style 'right'}}{{expr amount 'n:2'}}{{/style}}",
+                "value": {
+                    "$ref": "#"
+                }
+            }
+        },
+        {
+            "title": "Final Amount",
+            "cellContent": {
+                "type": "OutputText",
+                "defaultValue": "",
+                "template": "{{#if finalAmount}}{{#style 'right bold'}}{{expr finalAmount 'n:2'}} {{expr currency}}{{/style}}{{/if}}",
+                "value": {
+                    "$ref": "#"
+                }
+            }
+        }
+    ],
+    "displayGroupName": "{{#style 'bold italic'}} {{expr description}}: {{/style}}",
+    "hide": false,
+    "label": "Premium Breakdown",
+    "metadata": {
+        "autogenerate": true
+    },
+    "mode": "Array",
+    "pagination": {
+        "mode": "Regular"
+    },
+    "subArrayDataPath": "#/properties/steps",
+    "useParentScope": true,
+    "value": {
+        "$ref": "#/properties/coverages"
+    },
+    "width": 4
+}

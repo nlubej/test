@@ -1,0 +1,5 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	TabTemporaryPlates	ui-label	Mtpl	Mtpl	Mtpl	Zavarovanje avtomobilske odgovornosti
+UiSchema	TabTemporaryPlates	ui-label	MtplPlus	MtplPlus	MtplPlus	Zavarovanje voznika za škodo
+UiSchema	TabTemporaryPlates	ui-label	Casco	Casco	Casco	Zavarovanje avtomobilskega kaska
+UiSchema	TabTemporaryPlates	ui-label	Accident Insurance	Accident Insurance	Accident Insurance	Nezgodno zavarovanje

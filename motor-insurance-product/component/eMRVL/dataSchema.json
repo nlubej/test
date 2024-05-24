@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "code": {
+            "type": "integer"
+        },
+        "vin": {
+            "type": "string"
+        },
+        "registration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "number": {
+                    "type": "string"
+                },
+                "firstDate": {
+                    "type": "string",
+                    "aiFormat": "date"
+                }
+            }
+        },
+        "insurancePolicy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "company": {
+                    "type": "string"
+                },
+                "number": {
+                    "type": "string"
+                }
+            }
+        },
+        "maxGrossVehicleWeight": {
+            "type": "number"
+        } 
+    }
+}

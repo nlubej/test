@@ -1,0 +1,17 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	MotorCoveragePackage	ui-label	Package	Package	Package	Paket
+DataSchema	MotorCoveragePackage	enum	motorCoveragePackage@P1	P1	Package 1	Paket 1
+DataSchema	MotorCoveragePackage	enum	motorCoveragePackage@P2	P2	Package 2	Paket 2
+DataSchema	MotorCoveragePackage	enum	motorCoveragePackage@P3	P3	Package 3	Paket 3
+UiSchema	MotorCoveragePackage	ui-label	AO	AO	AO	Avtomobilska odgovornost (AO)
+UiSchema	MotorCoveragePackage	ui-label	AOplus	AOplus	AO+	AO +
+UiSchema	MotorCoveragePackage	ui-label	SAK	SAK	SAK	Splošni avtomobilski kasko (SAK)
+UiSchema	MotorCoveragePackage	ui-label	B	B	B	Kombinacija B
+UiSchema	MotorCoveragePackage	ui-label	K	K	K	Kombinacija K
+UiSchema	MotorCoveragePackage	ui-label	D	D	D	Kombinacija D
+UiSchema	MotorCoveragePackage	ui-label	E	E	E	Kombinacija E
+UiSchema	MotorCoveragePackage	ui-label	H	H	H	Kombinacija H
+UiSchema	MotorCoveragePackage	ui-label	J	J	J	Kombinacija J
+UiSchema	MotorCoveragePackage	ui-label	AASplus	AASplus	AAS+	Avtomobilska assistenca +
+UiSchema	MotorCoveragePackage	ui-label	NMV	NMV	NMV	Nezgodno zavarovanje
+UiSchema	MotorCoveragePackage	ui-label	APZ	APZ	APZ	Pravna zašćita

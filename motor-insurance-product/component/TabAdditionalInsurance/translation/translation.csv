@@ -1,0 +1,5 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	TabAdditionalInsurance	ui-label	Assistance	Assistance	Assistance	Asistenca
+UiSchema	TabAdditionalInsurance	ui-label	Legal Protection	Legal Protection	Legal Protection	Pravna pomoč
+UiSchema	TabAdditionalInsurance	ui-label	Accident insurance	Accident insurance	Accident insurance	Nezgodno zavarovanje
+UiSchema	TabAdditionalInsurance	ui-label	Automobile and legal protection	Automobile and legal protection	Automobile and legal protection	Avtomobilska in pravna zaščita

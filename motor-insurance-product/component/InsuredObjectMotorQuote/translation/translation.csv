@@ -1,0 +1,19 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	InsuredObjectMotorQuote	ui-label	Object Type	Object Type	Object Type	Tip vozila
+DataSchema	InsuredObjectMotorQuote	field-title	objectType	objectType	Object Type	Tip vozila
+DataSchema	InsuredObjectMotorQuote	field-title	objectSubtype	objectSubtype	Object Subtype	Podtip vozila
+DataSchema	InsuredObjectMotorQuote	enum	objectType@vehicle	vehicle	Vehicle	Vozilo
+UiSchema	InsuredObjectMotorQuote	ui-label	Driver data	Driver data	Driver data	Podatki o vozniku
+UiSchema	InsuredObjectMotorQuote	ui-label	Premium group	Premium group	Premium group	Premijska skupina
+UiSchema	InsuredObjectMotorQuote	ui-label	Vehicle	Vehicle	Vehicle Data	Predmet zavarovanja
+Rule	InsuredObjectMotorQuoteObjectValidation	rule	validation@MtplPlusWithMtpl	ObjectValidation	Mtpl Plus can be concluded only if Mtpl is concluded	AO+ lahko sklenete le skupaj z zavarovanjem AO
+Rule	InsuredObjectMotorQuoteObjectValidation	rule	validation@CombinationBWithMtplOrCasco	ObjectValidation	B combination can only be concluded if Mtpl or Casco are concluded	B kombinacijo lahko sklenete le skupaj z zavarovanjem AO ali zavarovanjem splošnega kaska
+Rule	InsuredObjectMotorQuoteCascoValidation	rule	validation@RequiredDeductible	CascoValidation	Please enter Deductible	Vnesite odbitno franšizo
+UiSchema	InsuredObjectMotorQuote	ui-label	Vehicle And Optional Equipment Value	Vehicle And Optional Equipment Value	Vehicle And Optional Equipment Value	Vrednost vozila in opcijske opreme
+UiSchema	InsuredObjectMotorQuote	ui-label	Manual Entry	Manual Entry	Manual Entry	Ročni vnos
+Rule	InsuredObjectMotorQuoteWaterEntrapmentRequiredFieldsValidation	rule	validation@RiskCodeRequired	WaterEntrapmentRequiredFieldsValidation	Risk is required	Vnesite nevarnost
+UiSchema	InsuredObjectMotorQuote	ui-label	vehicle	vehicle	Vehicle	Premijska skupina
+UiSchema	InsuredObjectMotorQuote	ui-label	basicEquipment	basicEquipment	Basic equipment	Serijska oprema
+UiSchema	InsuredObjectMotorQuote	ui-label	optionalEquipment	optionalEquipment	Optional equipment	Opcijska oprema
+UiSchema	InsuredObjectMotorQuote	ui-label	upgrades	upgrades	Upgrades	Nadgradnje
+UiSchema	InsuredObjectMotorQuote	ui-label	Vehicle, Optional Equipment Value And Upgrades	Vehicle, Optional Equipment Value And Upgrades	Vehicle, Optional Equipment Value And Upgrades	Vrednost vozila z opcijsko opremo in nadgradnjami

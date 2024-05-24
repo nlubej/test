@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="CoverageSelection_MotorQuote" name="Coverage Selection Rule" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="decision_0xe7rvk" name="SelectionRule">
+        <informationRequirement id="InformationRequirement_1x9na2n">
+            <requiredInput href="#InputData_1fampo1"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1g9wgzo">
+            <requiredInput href="#InputData_0939t5f"/>
+        </informationRequirement>
+        <decisionTable id="decisionTable_0zw0igc">
+            <input id="InputClause_1inm9pm">
+                <inputExpression id="LiteralExpression_02v39ii" typeRef="string">
+                    <text>
+                        coverageKey
+                    </text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_0ualrk3">
+                <inputExpression id="LiteralExpression_1rmsfss" typeRef="string">
+                    <text>
+                        parentCoverageKey
+                    </text>
+                </inputExpression>
+            </input>
+            <output id="OutputClause_0hfyild" name="tariffCode" typeRef="string"/>
+            <output id="OutputClause_1mtmsws" name="coverageCode" typeRef="string">
+                <description>
+                    main risk / coverage code
+                </description>
+            </output>
+            <annotation name="annotation"/>
+            <rule id="DecisionRule_0gpp4sg">
+                <inputEntry id="UnaryTests_1kqrf1p">
+                    <text>
+                        "mtpl"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_05nqirk">
+                    <text>
+                        -
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_185d4dc">
+                    <text>
+                        "MtplTariff"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_18cd0um">
+                    <text></text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1kg7n8w">
+                <inputEntry id="UnaryTests_0dpbnzl">
+                    <text>
+                        "casco"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1l5kp2b">
+                    <text>
+                        -
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1bm7cs7">
+                    <text>
+                        "Casco"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1kegh8n">
+                    <text></text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0rmpsxc">
+                <inputEntry id="UnaryTests_0oz5hzf">
+                    <text>
+                        "combinationB"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1u8szp5">
+                    <text>
+                        -
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_19mfr3o">
+                    <text>
+                        "CombinationB"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1sqhvsg">
+                    <text></text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1tmtap1">
+                <inputEntry id="UnaryTests_0ubnhrr">
+                    <text>
+                        "mtplPlus"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0mrrhl2">
+                    <text>
+                        -
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0daatkx">
+                    <text>
+                        "MtplPlus"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1ls5r4g">
+                    <text></text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0g6d077">
+                <inputEntry id="UnaryTests_1caas98">
+                    <text>
+                        "additionalEquipmentCoverages"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1kfm0rt">
+                    <text>
+                        "casco"
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_0z5caok">
+                    <text>
+                        "AdditionalEquipment"
+                    </text>
+                </outputEntry>
+                <outputEntry id="UnaryTests_09pry15">
+                    <text>
+                        "MotorCasco"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0poiim6">
+                <inputEntry id="UnaryTests_0npnk78">
+                    <text>
+                        "additionalEquipmentCoverages"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_11p963e">
+                    <text>
+                        "combinationB"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1ual7d4">
+                    <text>
+                        "AdditionalEquipment"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_02ha6sb">
+                    <text>
+                        "CombinationB"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1t0ro04">
+                <inputEntry id="UnaryTests_0apbzhc">
+                    <text>
+                        "outsideEuAreaExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ok59uv">
+                    <text>
+                        "combinationB"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1bi4hcy">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_14anjtc">
+                    <text>
+                        "OutsideEu"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1j1v3gb">
+                <inputEntry id="UnaryTests_1xbeiun">
+                    <text>
+                        "participationInRacesExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0g6eecg">
+                    <text>
+                        "combinationB"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1nadts7">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_12hng7d">
+                    <text>
+                        "ParticipationInRaces"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1a1i58a">
+                <inputEntry id="UnaryTests_0liqc9e">
+                    <text>
+                        "waterEntrapmentExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1w5wujn">
+                    <text>
+                        "combinationB"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1vwg54z">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_051kew9">
+                    <text>
+                        "WaterEntrapment"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1a80q47">
+                <inputEntry id="UnaryTests_111p4w0">
+                    <text>
+                        "vehicleSinkingExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1tgywrk">
+                    <text>
+                        "combinationB"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0741t6e">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0nvieyt">
+                    <text>
+                        "SinkingVehicle"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1dtq1ar">
+                <inputEntry id="UnaryTests_1gnfgtl">
+                    <text>
+                        "sanationAvalanchesAndLandslidesExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0z8cnoo">
+                    <text>
+                        "combinationB"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1hx7xp5">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_128f98e">
+                    <text>
+                        "AvalanchesAndLandslides"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0tymsqs">
+                <inputEntry id="UnaryTests_1tfvspn">
+                    <text>
+                        "outsideEuAreaExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0az9he1">
+                    <text>
+                        "casco"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_078zpbl">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0ei7tax">
+                    <text>
+                        "OutsideEu"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0iafa9j">
+                <inputEntry id="UnaryTests_15gh9ub">
+                    <text>
+                        "participationInRacesExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0v6o2kj">
+                    <text>
+                        "casco"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1hz4okn">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0e61b5d">
+                    <text>
+                        "ParticipationInRaces"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1kimn2q">
+                <inputEntry id="UnaryTests_0br06ny">
+                    <text>
+                        "waterEntrapmentExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ctasda">
+                    <text>
+                        "casco"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1nofubg">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0z4g8uj">
+                    <text>
+                        "WaterEntrapment"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1aowmdw">
+                <inputEntry id="UnaryTests_181wqul">
+                    <text>
+                        "vehicleSinkingExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_07ji14b">
+                    <text>
+                        "casco"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1cnm24p">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_10t04lm">
+                    <text>
+                        "SinkingVehicle"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1uqqlg8">
+                <inputEntry id="UnaryTests_1avdtux">
+                    <text>
+                        "sanationAvalanchesAndLandslidesExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0rocsy1">
+                    <text>
+                        "casco"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1hfwcdm">
+                    <text>
+                        "CoverageExtensions"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_18ejscq">
+                    <text>
+                        "AvalanchesAndLandslides"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0x84aoq">
+                <inputEntry id="UnaryTests_0aqosoz">
+                    <text>
+                        "activityDamageExtension"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0qx751o">
+                    <text>
+                        "mtpl"
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0mchs3t">
+                    <text>
+                        "ActivityDamageExtension"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0l8zxbm">
+                    <text>
+                        "ActivityArisingDamages"
+                    </text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <inputData id="InputData_0939t5f" name="coverageKey"/>
+    <inputData id="InputData_1fampo1" name="parentCoverageKey"/>
+    <decision id="Decision_1seibjf" name="MotorQuoteCoverageSelection">
+        <variable id="InformationItem_17soqz5"/>
+        <informationRequirement id="InformationRequirement_1pckulf">
+            <requiredDecision href="#decision_0xe7rvk"/>
+        </informationRequirement>
+        <context id="Context_1eb5kgd">
+            <contextEntry id="ContextEntry_0qkd8jb">
+                <variable id="InformationItem_1e854rw" name="tariffCode"/>
+                <literalExpression id="LiteralExpression_0bir66z">
+                    <text>
+                        SelectionRule.tariffCode
+                    </text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry id="ContextEntry_1xbjba9">
+                <variable id="InformationItem_0xb35zg" name="coverageCode"/>
+                <literalExpression id="LiteralExpression_0px0dpr">
+                    <text>
+                        SelectionRule.coverageCode
+                    </text>
+                </literalExpression>
+            </contextEntry>
+        </context>
+    </decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="decisionTable_0zw0igc">
+                        <adiDMNDI:ElementWidth dmnElementRef="InputClause_1inm9pm" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="InputClause_0ualrk3" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0hfyild" value="302"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_1mtmsws" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="annotation" value="200"/>
+                    </adiDMNDI:ElementWidths>
+                    <adiDMNDI:ElementWidths dmnElementRef="Context_1eb5kgd">
+                        <adiDMNDI:ElementWidth dmnElementRef="Context_1eb5kgd" value="750"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_1d2dh4y" dmnElementRef="decision_0xe7rvk">
+                <dc:Bounds height="80" width="180" x="150" y="80"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_127xm1i" dmnElementRef="InputData_0939t5f">
+                <dc:Bounds height="45" width="125" x="528" y="98"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0fr0vs1" dmnElementRef="InputData_1fampo1">
+                <dc:Bounds height="45" width="125" x="529" y="48"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0l6lx0s" dmnElementRef="InformationRequirement_1x9na2n">
+                <di:waypoint x="529" y="71"/>
+                <di:waypoint x="350" y="107"/>
+                <di:waypoint x="330" y="107"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="DMNEdge_0dd379d" dmnElementRef="InformationRequirement_1g9wgzo">
+                <di:waypoint x="528" y="121"/>
+                <di:waypoint x="350" y="133"/>
+                <di:waypoint x="330" y="133"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_100gapz" dmnElementRef="Decision_1seibjf">
+                <dc:Bounds height="80" width="180" x="150" y="-60"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_1iwf5uo" dmnElementRef="InformationRequirement_1pckulf">
+                <di:waypoint x="240" y="80"/>
+                <di:waypoint x="240" y="40"/>
+                <di:waypoint x="240" y="20"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

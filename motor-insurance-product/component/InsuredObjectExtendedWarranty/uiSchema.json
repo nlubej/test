@@ -1,0 +1,216 @@
+{
+    "type": "Group",
+    "metadata": {
+        "autogenerate": true
+    },
+    "width": 12,
+    "elements": [
+        {
+            "type": "Section",
+            "labelType": "H1",
+            "label": "Vehicle",
+            "sectionLevel": 1,
+            "collapsing": {
+                "enabled": true
+            },
+            "elements": [
+                {
+                    "type": "Dropdown",
+                    "label": "Premium group",
+                    "width": 1,
+                    "filter": "filterPremiumGroup",
+                    "value": {
+                        "$ref": "#/properties/vehicle/properties/subtype/properties/selectedSubtype"
+                    },
+                    "onValueChanging": "clearVehicleData"
+                },
+                {
+                    "type": "Dropdown",
+                    "label": "Coverage program",
+                    "value": {
+                        "$ref": "#/properties/vehicle/properties/extendedWarranty/properties/coverageProgram"
+                    },
+                    "width": 1
+                },
+                {
+                    "type": "Dropdown",
+                    "label": "Coverage",
+                    "value": {
+                        "$ref": "#/properties/vehicle/properties/extendedWarranty/properties/coverage"
+                    },
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "inValues": [
+                                "RenaultUsedAS1",
+                                "RenaultUsedBS1"
+                            ],
+                            "value": {
+                                "$ref": "#/properties/vehicle/properties/extendedWarranty/properties/coverageProgram"
+                            }
+                        },
+                        "effect": "SHOW_CLEARDATA"
+                    },
+                    "width": 1
+                },
+                {
+                    "type": "Group",
+                    "metadata": {
+                        "autogenerate": false
+                    },
+                    "width": 4,
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "stackContent": "Right",
+                            "width": 4,
+                            "elements": [
+                                {
+                                    "width": 1,
+                                    "type": "Input",
+                                    "control": "Boolean",
+                                    "label": "Manual Entry",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "useParentScope": true,
+                                    "value": {
+                                        "$ref": "#/properties/vehicle/properties/baseData/properties/manualEntry"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Dropdown",
+                            "label": "Object Type",
+                            "showAsRequired": true,
+                            "width": 1,
+                            "value": {
+                                "$ref": "#/properties/objectType"
+                            },
+                            "onValueChanged": [
+                                {
+                                    "commandType": "executeAction",
+                                    "actionName": "clearData"
+                                }
+                            ],
+                            "preSelectFirstItem": true,
+                            "rule": {
+                                "effect": "HIDE",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": "vehicle",
+                                    "value": {
+                                        "$ref": "#/properties/objectType"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "Group",
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": "vehicle",
+                                    "value": {
+                                        "$ref": "#/properties/objectType"
+                                    }
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "name": "Vehicle",
+                                    "value": {
+                                        "$ref": "#/properties/vehicle/properties/baseData"
+                                    }
+                                },
+                                {
+                                    "type": "Group",
+                                    "rule": {
+                                        "effect": "ENABLE_INITIAL",
+                                        "condition": {
+                                            "type": "FUNC",
+                                            "ruleFunction": "enableVehicleSubType",
+                                            "value": [
+                                                {
+                                                    "$ref": "#/properties/vehicle/properties/baseData/properties/manualEntry"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "type": "Group",
+                                            "rule": {
+                                                "effect": "SHOW",
+                                                "condition": {
+                                                    "type": "LEAF",
+                                                    "expectedValue": "vehicleCar",
+                                                    "value": {
+                                                        "$ref": "#/properties/vehicle/properties/subtype/properties/selectedSubtype"
+                                                    }
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "type": "Group",
+                                                    "elements": [
+                                                        {
+                                                            "type": "Component",
+                                                            "name": "VehicleCar",
+                                                            "value": {
+                                                                "$ref": "#/properties/vehicle/properties/subtype/properties/vehicleCar"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Group",
+                                            "rule": {
+                                                "effect": "SHOW",
+                                                "condition": {
+                                                    "type": "LEAF",
+                                                    "expectedValue": "vehicleTruck",
+                                                    "value": {
+                                                        "$ref": "#/properties/vehicle/properties/subtype/properties/selectedSubtype"
+                                                    }
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "type": "Component",
+                                                    "name": "VehicleTruck",
+                                                    "value": {
+                                                        "$ref": "#/properties/vehicle/properties/subtype/properties/vehicleTruck"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Section",
+                                    "label": "Extended warranty",
+                                    "sectionLevel": 2,
+                                    "elements": [
+                                        {
+                                            "type": "Component",
+                                            "name": "ExtendedWarranty",
+                                            "value": {
+                                                "$ref": "#/properties/vehicle/properties/extendedWarranty"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

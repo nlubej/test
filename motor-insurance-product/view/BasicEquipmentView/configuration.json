@@ -1,0 +1,11 @@
+{
+    "entityType": "Contract",
+    "dataSource": "FindVehicleAddEquipmentByCatalogueNumberDataSource",
+    "hideFromDashboard": true,
+    "actors": [
+        {
+            "actor": "Agent"
+        }
+    ],
+    "version": "1"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "string",
+    "enum": [
+        "vehicleCar",
+        "vehicleTruck",
+        "vehicleBus",
+        "vehicleTractor",
+        "vehicleSpecialMotorVehicle",
+        "vehicleMotorcycle",
+        "vehicleTrailerVehicles",
+        "vehicleWorkAndSpecialVehicles",
+        "workshop"
+    ]
+}

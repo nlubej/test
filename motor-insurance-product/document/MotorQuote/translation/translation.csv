@@ -1,0 +1,33 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DocumentConfiguration	MotorQuote	actors	Agent	Agent	Agent	Zastopnik
+DocumentConfiguration	MotorQuote	actors	System	System	System	Sistem
+UiSchema	MotorQuoteMainContent	ui-label	Participants	Participants	Participants	Udeleženci
+UiSchema	MotorQuoteMainContent	ui-label	Terms	Terms	Terms	Zavarovanje
+UiSchema	MotorQuoteMainContent	ui-label	Insured Object	Insured Object	Insured Object	Predmet zavarovanja
+UiSchema	MotorQuoteMainContent	ui-label	Ownership	Ownership	Ownership	Organizacija
+DocumentConfiguration	MotorQuote	rootConfiguration	MotorQuote@Title	MotorQuote	Motor Quote	Ponudba avtomobilskega zavarovanja
+Rule	MotorQuoteRequiredNotEmptyValidations	rule	validation@PolicyholderNotDefined	RequiredNotEmptyValidations	Policyholder is not defined.	Zavarovalec ni opredeljen.
+Rule	MotorQuoteRequiredNotEmptyValidations	rule	validation@InsuredPersonNotDefined	RequiredNotEmptyValidations	Insured person is not defined.	Zavarovana oseba ni opredeljena.
+Rule	MotorQuoteRequiredNotEmptyValidations	rule	validation@OrganisationDataNotDefined	RequiredNotEmptyValidations	Organisation data is missing.	Manjkajo podatki o organizaciji.
+Rule	MotorQuoteRequiredNotEmptyValidations	rule	validation@InsuredObjectNotDefined	RequiredNotEmptyValidations	Insured object is not defined.	Zavarovani predmet ni opredeljen.
+UiSchema	MotorQuoteMainContent	ui-label	Premium breakdown	Premium breakdown	Premium breakdown	Razčlenitev premije
+DataSchema	MotorQuote	field-title	commentIsRequired	commentIsRequired	comment	Komentar
+DataSchema	MotorQuote	field-title	commentAuthorIsRequired	commentAuthorIsRequired	Author	Avtor
+UiSchema	MotorQuoteMainContent	ui-label	Coverages	Coverages	Coverages	Izbira paketa
+UiSchema	MotorQuoteMainContent	ui-label	IddQuestionnaire	IddQuestionnaire	Idd Questionnaire	IDD vprašalnik
+UiSchema	MotorQuoteMainContent	ui-label	Contract Duration	Contract Duration	Contract Duration	Trajanje zavarovanja
+UiSchema	MotorQuoteMainContent	ui-label	Mtpl	Mtpl	Mtpl	AO in AO plus
+UiSchema	MotorQuoteMainContent	ui-label	Casco	Casco	Casco	Kasko
+UiSchema	MotorQuoteSummaryContent	ui-label	Coverage package	Coverage package	Coverage package	Paket zavarovanj
+UiSchema	MotorQuoteMainContent	ui-label	Conditions	Conditions	Conditions	Pogoji
+UiSchema	MotorQuoteSummaryContent	ui-label	Triglav Komplet package	Triglav Komplet package	Triglav komplet package	Triglav komplet paket
+UiSchema	MotorQuoteSummaryContent	ui-label	Triglav Komplet Bonus Class	Triglav Komplet Bonus Class	Triglav komplet bonus class	Triglav komplet razred
+ClientAction	MotorQuoteGetTriglavKompletPackage	ui-message	GetTriglavPackageIntegrationError	getTriglavKompletPackage	An error occurred while fetching Triglav komplet package	Prišlo je do napake pri pridobivanju Triglav komplet paketa
+Rule	MotorQuoteRequiredNotEmptyValidations	rule	validation@TaxNumberValidation	RequiredNotEmptyValidations	Tax number is required.	Davčna številka je obvezna.
+Rule	MotorQuoteMinimalPremiumValidation	rule	validation@MinimalPremiumIs5EUR	minimalPremiumValidation	Minimal Premium is 5 EUR.	Minimalna premija je 5 EUR.
+DocumentFlowDefinition	MotorQuoteFlow	operations	operations@Save@Title	Save	Save	Shrani
+DocumentFlowDefinition	MotorQuoteFlow	states	states@Draft	Draft	Draft	Osnutek
+UiSchema	MotorQuoteMainContent	ui-label	AdditionalInsurance	AdditionalInsurance	AAS, PRZ, NMV, APZ	AAS, PRZ, NMV, APZ
+UiSchema	MotorQuoteMainContent	ui-label	ActionGap	ActionGap	Action, GAP	Akcija, GAP
+DocumentFlowDefinition	MotorQuoteFlow	transitions	transitions@RejectDraft@Title	RejectDraft	Reject Draft	Zavrzi ponudbo
+DocumentFlowDefinition	MotorQuoteFlow	states	states@Rejected	Rejected	Rejected	Zavrnjeno

@@ -1,0 +1,6 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "description": "Returns the last valid emrvl data package and a list of best approx. of the eurotax data",
+    "additionalProperties": true
+}

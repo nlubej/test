@@ -1,0 +1,120 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "aiValidation": {
+        "rule": "ObjectValidation"
+    },
+    "properties": {
+        "objectType": {
+            "type": "string",
+            "enum": [
+                "vehicle"
+            ],
+            "aiTitle": "objectType"
+        },
+        "vehicle": {
+            "type": "object",
+            "additionalProperties": false,
+            "aiDeepRequired": [
+                "/baseData/vehicleBrand",
+                "/baseData/enginePower",
+                "/baseData/fuelType",
+                "/baseData/vinCode",
+                "/baseData/licensePlate",
+                "/baseData/maximumAuthorisedMass",
+                "/baseData/vehicleMass",
+                "/baseData/vehicleValue"
+            ],
+            "properties": {
+                "baseData": {
+                    "$ref": "component:Vehicle"
+                },
+                "subtype": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "selectedSubtype"
+                    ],
+                    "properties": {
+                        "selectedSubtype": {
+                            "$ref": "component:InsuredObjectMotorQuoteSubtype",
+                            "aiTitle": "objectSubtype"
+                        },
+                        "vehicleCar": {
+                            "$ref": "component:VehicleCar"
+                        },
+                        "vehicleMotorcycle": {
+                            "$ref": "component:VehicleMotorcycle"
+                        },
+                        "vehicleTruck": {
+                            "$ref": "component:VehicleTruck"
+                        },
+                        "vehicleBus": {
+                            "$ref": "component:VehicleBus"
+                        },
+                        "vehicleTractor": {
+                            "$ref": "component:VehicleTractor"
+                        },
+                        "vehicleSpecialMotorVehicle": {
+                            "$ref": "component:VehicleSpecialMotorVehicle"
+                        },
+                        "vehicleTrailerVehicles": {
+                            "$ref": "component:VehicleTrailerVehicles"
+                        },
+                        "vehicleWorkAndSpecialVehicles": {
+                            "$ref": "component:VehicleWorkAndSpecialVehicles"
+                        }
+                    }
+                },
+                "mtpl": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "mtplCoverage": {
+                            "$ref": "component:MtplTemporaryPlatesCoverage"
+                        }
+                    }
+                },
+                "mtplPlus": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "mtplPlusCoverage": {
+                            "$ref": "component:MtplPlusTemporaryPlatesCoverage"
+                        }
+                    }
+                },
+                "casco": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "cascoCoverage": {
+                            "$ref": "component:CascoTemporaryPlatesCoverage"
+                        }
+                    }
+                },
+                "accident": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "accidentCoverage": {
+                            "$ref": "component:AccidentTemporaryPlatesCoverage"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

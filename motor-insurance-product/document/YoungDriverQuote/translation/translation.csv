@@ -1,0 +1,22 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DocumentConfiguration	YoungDriverQuote	actors	Agent	Agent	Agent	Zastopnik
+DocumentConfiguration	YoungDriverQuote	actors	System	System	System	Sistem
+DocumentFlowDefinition	YoungDriverQuoteFlow	operations	operations@Save@Title	Save	Save	Shrani
+DocumentFlowDefinition	YoungDriverQuoteFlow	states	states@Draft	Draft	Draft	Osnutek
+UiSchema	YoungDriverQuoteMainContent	ui-label	Participants	Participants	Participants	Udeleženci
+UiSchema	YoungDriverQuoteMainContent	ui-label	IddQuestionnaire	IddQuestionnaire	Idd Questionnaire	IDD vprašalnik
+UiSchema	YoungDriverQuoteMainContent	ui-label	Terms	Terms	Terms	Zavarovanje
+UiSchema	YoungDriverQuoteMainContent	ui-label	Contract Duration	Contract Duration	Contract Duration	Trajanje zavarovanja
+UiSchema	YoungDriverQuoteMainContent	ui-label	Conditions	Conditions	Conditions	Pogoji
+UiSchema	YoungDriverQuoteMainContent	ui-label	Premium breakdown	Premium breakdown	Premium breakdown	Razčlenitev premije
+UiSchema	YoungDriverQuoteMainContent	ui-label	Ownership	Ownership	Ownership	Organizacija
+Rule	YoungDriverQuoteRequiredNotEmptyValidations	rule	validation@PolicyholderNotDefined	RequiredNotEmptyValidations	Policyholder is not defined.	Zavarovalec ni opredeljen.
+Rule	YoungDriverQuoteRequiredNotEmptyValidations	rule	validation@InsuredPersonNotDefined	RequiredNotEmptyValidations	Insured person is not defined.	Zavarovana oseba ni opredeljena.
+Rule	YoungDriverQuoteRequiredNotEmptyValidations	rule	validation@OrganisationDataNotDefined	RequiredNotEmptyValidations	Organisation data is missing.	Manjkajo podatki o organizaciji.
+Rule	YoungDriverQuoteRequiredNotEmptyValidations	rule	validation@InsuredObjectNotDefined	RequiredNotEmptyValidations	Insured object is not defined.	Zavarovani predmet ni opredeljen.
+Rule	YoungDriverQuoteRequiredNotEmptyValidations	rule	validation@TaxNumberValidation	RequiredNotEmptyValidations	Tax number is required.	Davčna številka je obvezna.
+Rule	YoungDriverQuoteMinimalPremiumValidation	rule	validation@MinimalPremiumIs5EUR	minimalPremiumValidation	Minimal Premium is 5 EUR.	Minimalna premija je 5 EUR.
+DocumentConfiguration	YoungDriverQuote	rootConfiguration	YoungDriverQuote@Title	YoungDriverQuote	Young driver Quote	Mladi voznik ponudba
+DataSchema	YoungDriverQuote	field-title	commentIsRequired	commentIsRequired	comment	Komentar
+DataSchema	YoungDriverQuote	field-title	commentAuthorIsRequired	commentAuthorIsRequired	Author	Avtor
+UiSchema	YoungDriverQuoteMainContent	ui-label	Young Driver	Young Driver	Young Driver	Mladi voznik

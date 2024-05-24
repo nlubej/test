@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "aiDataEnrichment": [
+        {
+            "name": "GetCustomerScore",
+            "integrationService": {
+                "name": "CustomerScoreIntegrationService",
+                "version": "1"
+            }
+        }
+    ],
+    "properties": {
+        "clientScore": {
+            "$ref": "component:CustomerScore"
+        }
+    }
+}

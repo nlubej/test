@@ -1,0 +1,105 @@
+{
+    "type": "DataGrid",
+    "columns": [
+        {
+            "title": "Code",
+            "name": "Column 1",
+            "sortable": true,
+            "cellContent": {
+                "type": "OutputText",
+                "value": {
+                    "$ref": "#/properties/resultData/properties/code"
+                }
+            },
+            "style": {},
+            "columnId": 0,
+            "widthClass": "",
+            "styleClass": ""
+        },
+        {
+            "title": "Description",
+            "name": "Column 2",
+            "sortable": true,
+            "cellContent": {
+                "type": "OutputText",
+                "allowMultiLine": true,
+                "value": {
+                    "$ref": "#/properties/resultData/properties/description"
+                },
+                "width": 3
+            },
+            "columnId": 1
+        },
+        {
+            "title": "Price",
+            "name": "Column 3",
+            "sortable": true,
+            "filter": {},
+            "cellContent": {
+                "type": "OutputText",
+                "template": "{{expr price 'n:2'}} {{expr paymentCurrency}}",
+                "value": {
+                    "$ref": "#/properties/resultData",
+                    "mapping": "getCurrencyAndPrice"
+                }
+            },
+            "columnId": 2
+        },
+        {
+            "title": "Valid from",
+            "name": "Column 4",
+            "sortable": true,
+            "filter": {},
+            "cellContent": {
+                "type": "OutputText",
+                "value": {
+                    "$ref": "#/properties/resultData/properties/validFrom"
+                }
+            },
+            "columnId": 3
+        },
+        {
+            "title": "Valid to",
+            "name": "Column 5",
+            "sortable": true,
+            "filter": {},
+            "cellContent": {
+                "type": "OutputText",
+                "value": {
+                    "$ref": "#/properties/resultData/properties/validTo"
+                },
+                "defaultValue": "/"
+            }
+        }
+    ],
+    "metadata": {
+        "autogenerate": false
+    },
+    "value": {
+        "$ref": "#/properties/response/properties/data"
+    },
+    "mode": "DataSource",
+    "defaultPageSize": 5,
+    "pagination": {
+        "mode": "InMemory",
+        "pageSizes": [
+            5,
+            10,
+            15
+        ]
+    },
+    "selection": {
+        "mode": "Single"
+    },
+    "useParentScope": false,
+    "width": 12,
+    "customCSSStyle": {
+        "--grid-header-1-border": "0px"
+    },
+    "header": {
+        "showNumberOfResults": true
+    },
+    "edit": {
+        "mode": "Detached"
+    }
+}

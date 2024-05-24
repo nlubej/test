@@ -1,0 +1,147 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "ConditionalSection",
+            "label": "Mtpl (AO)",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/mtpl/properties/isSelected"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeAction",
+                    "actionName": "mtplSelectionChanged"
+                },
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearMtplCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/mtpl/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "MtplAttributes",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/mtpl/properties/mtplAttributes"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "Mtpl Plus",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/mtplPlus/properties/isSelected"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeAction",
+                    "actionName": "mtplPlusSelectionChanged"
+                },
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearMtplPlusCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/mtplPlus/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "MtplPlusCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/mtplPlus/properties/coverageAttributes"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Section",
+            "label": "Coverage Extensions",
+            "elements": [
+                {
+                    "type": "Group",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "width": 12,
+                    "elements": [
+                        {
+                            "type": "Section",
+                            "metadata": {
+                                "autogenerate": false
+                            },
+                            "sectionLevel": 2,
+                            "width": 12,
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "name": "ActivityDamage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/activityDamageExtension"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "rule": {
+                "effect": "HIDE_CLEARDATA",
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "hideMtplCoverageExtensions",
+                    "clearDataFunction": "clearMtplCoverageExtensions",
+                    "value": [
+                        {
+                            "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/subtype/properties/selectedSubtype"
+                        },
+                        {
+                            "$ref": "#/properties/Body/properties/contractDuration/properties/endDate"
+                        },
+                        {
+                            "$ref": "#/properties/Body/properties/contractDuration/properties/dateSynchronization"
+                        },
+                        {
+                            "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/mtpl/properties/isSelected"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

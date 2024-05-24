@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "aiValidation": {
+        "rule": "RequiredNotEmptyValidations",
+        "scope": "self"
+    },
+    "properties": {
+        "persons": {
+            "$ref": "component:NonLifePolicyholderAndInsuredPerson"
+        },
+        "contractDuration": {
+            "$ref": "component:ContractDurationTemporaryPlates"
+        },
+        "freeTextClauses": {
+            "$ref": "component:FreeTextClausesEntry"
+        },
+        "organisation": {
+            "$ref": "component:ContractOrganisationData"
+        },
+        "insuredObject": {
+            "allOf": [
+                {
+                    "aiAdditionalContext": {
+                        "name": "contractDuration",
+                        "$data": "/contractDuration"
+                    }
+                },
+                {
+                    "$ref": "component:InsuredObjectTemporaryPlates"
+                }
+            ]
+        }
+    }
+}

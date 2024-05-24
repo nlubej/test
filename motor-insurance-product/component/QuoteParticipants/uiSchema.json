@@ -1,0 +1,23 @@
+{
+    "type": "GridLayout",
+    "numberOfColumns": 12,
+    "elements": [
+        {
+            "type": "Component",
+            "name": "NonLifePolicyholderAndInsuredPerson",
+            "value": {
+                "$ref": "#"
+            }
+        },
+        {
+            "type": "GroupSeparator"
+        },
+        {
+            "type": "Component",
+            "name": "OtherParticipants",
+            "value": {
+                "$ref": "#/properties/otherParticipants"
+            }
+        }
+    ]
+}

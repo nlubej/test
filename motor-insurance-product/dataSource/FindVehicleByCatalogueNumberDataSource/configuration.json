@@ -1,0 +1,12 @@
+{
+    "dataProvider": {
+        "type": "ApiDataProvider",
+        "codeName": "FindVehicleByCatalogueNumberDataProvider",
+        "version": "1"
+    },
+    "outputsList": false,
+    "pageable": false,
+    "isFullText": false,
+    "version": "1",
+    "forceAuthorization": true
+}

@@ -1,0 +1,12 @@
+{
+    "dataProvider": {
+        "type": "ApiDataProvider",
+        "codeName": "VehicleSearchDataProvider",
+        "version": "1"
+    },
+    "outputsList": false,
+    "pageable": false,
+    "isFullText": false,
+    "version": "1",
+    "forceAuthorization": false
+}

@@ -1,0 +1,454 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "aiValidation": {
+        "rule": "ObjectValidation"
+    },
+    "properties": {
+        "objectType": {
+            "type": "string",
+            "enum": [
+                "vehicle"
+            ],
+            "aiTitle": "objectType"
+        },
+        "vehicle": {
+            "type": "object",
+            "additionalProperties": false,
+            "aiDeepRequired": [
+                "/baseData/vehicleBrand",
+                "/baseData/enginePower",
+                "/baseData/fuelType",
+                "/baseData/vinCode",
+                "/baseData/licensePlate",
+                "/baseData/maximumAuthorisedMass",
+                "/baseData/vehicleMass",
+                "/baseData/vehicleValue"
+            ],
+            "properties": {
+                "baseData": {
+                    "$ref": "component:Vehicle"
+                },
+                "subtype": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "selectedSubtype"
+                    ],
+                    "properties": {
+                        "selectedSubtype": {
+                            "$ref": "component:InsuredObjectMotorQuoteSubtype",
+                            "aiTitle": "objectSubtype"
+                        },
+                        "vehicleCar": {
+                            "$ref": "component:VehicleCar"
+                        },
+                        "vehicleMotorcycle": {
+                            "$ref": "component:VehicleMotorcycle"
+                        },
+                        "vehicleTruck": {
+                            "$ref": "component:VehicleTruck"
+                        },
+                        "vehicleBus": {
+                            "$ref": "component:VehicleBus"
+                        },
+                        "vehicleTractor": {
+                            "$ref": "component:VehicleTractor"
+                        },
+                        "vehicleSpecialMotorVehicle": {
+                            "$ref": "component:VehicleSpecialMotorVehicle"
+                        },
+                        "vehicleTrailerVehicles": {
+                            "$ref": "component:VehicleTrailerVehicles"
+                        },
+                        "vehicleWorkAndSpecialVehicles": {
+                            "$ref": "component:VehicleWorkAndSpecialVehicles"
+                        },
+                        "workshop": {
+                            "$ref": "component:Workshop"
+                        }
+                    }
+                },
+                "casco": {
+                    "type": "object",
+                    "aiValidation": {
+                        "rule": "CascoValidation"
+                    },
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "cascoCoverage": {
+                            "allOf": [
+                                {
+                                    "aiAdditionalContext": {
+                                        "name": "vehicleVinCode",
+                                        "$data": "/insuredObject/vehicle/baseData/vinCode",
+                                        "source": "Body"
+                                    }
+                                },
+                                {
+                                    "aiAdditionalContext": {
+                                        "name": "startDate",
+                                        "$data": "/contractDuration/startDate",
+                                        "source": "Body"
+                                    }
+                                },
+                                {
+                                    "$ref": "component:CascoCoverage"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "combinationB": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "combinationBCoverage": {
+                            "$ref": "component:CombinationBCoverage"
+                        }
+                    }
+                },
+                "combinationD": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "combinationDCoverage": {
+                            "$ref": "component:CombinationDCoverage"
+                        }
+                    }
+                },
+                "combinationE": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "combinationECoverage": {
+                            "$ref": "component:CombinationECoverage"
+                        }
+                    }
+                },
+                "combinationH": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "combinationHCoverage": {
+                            "$ref": "component:CombinationHCoverage"
+                        }
+                    }
+                },
+                "combinationJ": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "combinationJCoverage": {
+                            "$ref": "component:CombinationJCoverage"
+                        }
+                    }
+                },
+                "combinationK": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "combinationKCoverage": {
+                            "$ref": "component:CombinationKCoverage"
+                        }
+                    }
+                },
+                "cascoCollision": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "cascoCollisionCoverage": {
+                            "$ref": "component:CascoCollisionCoverage"
+                        }
+                    }
+                },
+                "assistance": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "assistanceCoverage": {
+                            "$ref": "component:AssistanceCoverage"
+                        }
+                    }
+                },
+                "legalProtection": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "legalProtectionCoverage": {
+                            "$ref": "component:LegalProtectionCoverage"
+                        }
+                    }
+                },
+                "luggageInsurance": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "luggageCoverage": {
+                            "$ref": "component:LuggageCoverage"
+                        }
+                    }
+                },
+                "micromobilityInsurance": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "micromobilityCoverage": {
+                            "$ref": "component:MicromobilityCoverage"
+                        }
+                    }
+                },
+                "rehabilitationTraffic": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "rehabilitationTrafficCoverage": {
+                            "$ref": "component:RehabilitationTrafficCoverage"
+                        }
+                    }
+                },
+                "smallAnimalsDuringTransport": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "smallAnimalsDuringTransportCoverage": {
+                            "$ref": "component:SmallAnimalsDuringTransportCoverage"
+                        }
+                    }
+                },
+                "gap": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "gapCoverage": {
+                            "$ref": "component:GapCoverage"
+                        }
+                    }
+                },
+                "accidentInsurance": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "accidentInsuranceDriverPassengerCoverage": {
+                            "$ref": "component:AccidentInsuranceDriverPassengerCoverage"
+                        }
+                    }
+                },
+                "automobileAndLegalProtection": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "automobileAndLegalProtectionCoverage": {
+                            "$ref": "component:AutomobileAndLegalProtectionCoverage"
+                        }
+                    }
+                },
+                "mtpl": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "mtplAttributes": {
+                            "allOf": [
+                                {
+                                    "aiAdditionalContext": {
+                                        "name": "vehicleVinCode",
+                                        "$data": "/insuredObject/vehicle/baseData/vinCode",
+                                        "source": "Body"
+                                    }
+                                },
+                                {
+                                    "aiAdditionalContext": {
+                                        "name": "startDate",
+                                        "$data": "/contractDuration/startDate",
+                                        "source": "Body"
+                                    }
+                                },
+                                {
+                                    "aiAdditionalContext": {
+                                        "name": "isSelected",
+                                        "$data": "1/isSelected"
+                                    }
+                                },
+                                {
+                                    "$ref": "component:MtplAttributes"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "mtplPlus": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "coverageAttributes": {
+                            "allOf": [
+                                {
+                                    "aiAdditionalContext": {
+                                        "name": "isSelected",
+                                        "$data": "1/isSelected"
+                                    }
+                                },
+                                {
+                                    "$ref": "component:MtplPlusCoverage"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "additionalEquipmentCoverages": {
+                    "$ref": "component:AdditionalEquipmentCoverages"
+                },
+                "additionalWorkDevicesCoverages": {
+                    "$ref": "component:AdditionalWorkDevicesCoverage"
+                },
+                "radioDevices": {
+                    "$ref": "component:RadioDevices"
+                },
+                "vehicleBreakdown": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "vehicleBreakdownCoverage": {
+                            "$ref": "component:VehicleBreakdownCoverage"
+                        }
+                    }
+                },
+                "outsideEuAreaExtension": {
+                    "$ref": "component:CoverageExtension"
+                },
+                "participationInRacesExtension": {
+                    "$ref": "component:CoverageExtension"
+                },
+                "waterEntrapmentExtension": {
+                    "aiValidation": {
+                        "rule": "WaterEntrapmentRequiredFieldsValidation",
+                        "scope": "self"
+                    },
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "component:CoverageExtension"
+                        }
+                    ]
+                },
+                "vehicleSinkingExtension": {
+                    "$ref": "component:CoverageExtension"
+                },
+                "sanationAvalanchesAndLandslidesExtension": {
+                    "$ref": "component:CoverageExtension"
+                },
+                "activityDamageExtension": {
+                    "$ref": "component:ActivityDamage"
+                },
+                "youngDriver": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "youngDriverInsurance": {
+                            "$ref": "component:YoungDriver"
+                        },
+                        "mtplYoungDriver": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "isSelected": {
+                                    "type": "boolean"
+                                },
+                                "mtplYoungDriverCoverage": {
+                                    "$ref": "component:MtplYoungDriverCoverage"
+                                }
+                            }
+                        },
+                        "mtplPlusYoungDriver": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "isSelected": {
+                                    "type": "boolean"
+                                },
+                                "mtplPlusYoungDriverCoverage": {
+                                    "$ref": "component:MtplPlusYoungDriverCoverage"
+                                }
+                            }
+                        },
+                        "cascoYoungDriver": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "isSelected": {
+                                    "type": "boolean"
+                                },
+                                "cascoYoungDriverCoverage": {
+                                    "$ref": "component:CascoYoungDriverCoverage"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "driverData": {
+            "$ref": "component:DriverData"
+        }
+    }
+}

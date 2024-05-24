@@ -1,0 +1,111 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "Group",
+            "width": 12,
+            "elements": [
+                {
+                    "type": "Component",
+                    "name": "YoungDriver",
+                    "value": {
+                        "$ref": "#/properties/youngDriverInsurance"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "Mtpl",
+            "value": {
+                "$ref": "#/properties/mtplYoungDriver/properties/isSelected"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/mtplYoungDriver/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "MtplYoungDriverCoverage",
+                            "value": {
+                                "$ref": "#/properties/mtplYoungDriver/properties/mtplYoungDriverCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "MtplPlus",
+            "value": {
+                "$ref": "#/properties/mtplPlusYoungDriver/properties/isSelected"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/mtplPlusYoungDriver/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "MtplPlusYoungDriverCoverage",
+                            "value": {
+                                "$ref": "#/properties/mtplPlusYoungDriver/properties/mtplPlusYoungDriverCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "Casco",
+            "value": {
+                "$ref": "#/properties/cascoYoungDriver/properties/isSelected"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/cascoYoungDriver/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CascoYoungDriverCoverage",
+                            "value": {
+                                "$ref": "#/properties/cascoYoungDriver/properties/cascoYoungDriverCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

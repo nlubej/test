@@ -1,0 +1,19 @@
+[
+    {
+        "id": "state_Draft",
+        "bounds": {
+            "x": 134,
+            "y": 659,
+            "width": 36,
+            "height": 36
+        },
+        "label": {
+            "bounds": {
+                "x": 97,
+                "y": 685,
+                "width": 28,
+                "height": 14
+            }
+        }
+    }
+]

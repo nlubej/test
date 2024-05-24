@@ -1,0 +1,23 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	VehicleSearch	ui-label	Details	Details	Details	Podrobnosti
+UiSchema	VehicleSearch	ui-label	LicencePlate	LicencePlate	Licence plate	Registrska označba
+UiSchema	VehicleSearch	ui-label	VIN	VIN	VIN	Številka šasije
+UiSchema	VehicleSearch	ui-label	Type	Type	Type	Tip
+UiSchema	VehicleSearch	ui-label	Brand	Brand	Brand	Znamka
+UiSchema	VehicleSearch	ui-label	Model	Model	Model	Model
+UiSchema	VehicleSearch	ui-label	FuelType	FuelType	FuelType	Tip goriva
+UiSchema	VehicleSearch	ui-label	FirstRegistrationDate	FirstRegistrationDate	First registration date	Datum prve registracije
+UiSchema	VehicleSearch	ui-label	EnginePower	EnginePower	Engine power (kW)	Moč motorja (kW)
+UiSchema	VehicleSearch	ui-label	EngineVolume	EngineVolume	Engine volume (ccm)	Prostornina motorja (ccm)
+UiSchema	VehicleSearch	ui-label	Weight	Weight	Weight (kg)	Masa (kg)
+UiSchema	VehicleSearch	ui-label	Seats	Seats	Seats	Število sedežev
+UiSchema	VehicleSearch	ui-label	Value	Value	Vehicle value	Vrednost vozila
+UiSchema	VehicleSearch	ui-label	AdditionalEquipment	AdditionalEquipment	Additional equipment	Vrednost dodatne opreme
+UiSchema	VehicleSearch	ui-label	emrvlCode	emrvlCode	eMRVL code	eMRVL šifra
+UiSchema	VehicleSearch	ui-label	CatalogueNumber	CatalogueNumber	Catalogue number	Šifra iz kataloga
+UiSchema	VehicleSearch	ui-label	ManualVehicleSelection	ManualVehicleSelection	Manual selection	Ročna izbira
+UiSchema	VehicleSearch	ui-label	YearOfManufacture	YearOfManufacture	Year of manufacture	Leto proizvodnje
+UiSchema	VehicleSearch	ui-label	SelectFromCatalogue	SelectFromCatalogue	Catalogue	Katalog
+UiSchema	VehicleSearch	ui-label	VehicleDetails	VehicleDetails	Information	Informacije
+UiSchema	VehicleSearch	ui-label	BasicEquipment	BasicEquipment	Equipment	Oprema
+UiSchema	VehicleSearch	ui-label	OptionalEquipment	OptionalEquipment	Optional equipment	Dodatna oprema

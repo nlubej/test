@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" xmlns:adi="http://adacta-fintech.com/schema/1.0/dmn" id="MapObjectAttributes_MotorQuote" name="Map Object Attributes" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="Decision_1eekafd" name="ObjectVehicleAttributes">
+        <variable id="InformationItem_0zmhr02"/>
+        <informationRequirement id="InformationRequirement_17l1vwt">
+            <requiredDecision href="#Decision_1n9c9qb"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_0pgnthd">
+            <requiredInput href="#InputData_000rxv7"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1ukz8c2">
+            <requiredDecision href="#Decision_0g860ir"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1urns2j">
+            <requiredInput href="#InputData_0no487d"/>
+        </informationRequirement>
+        <context id="Context_1cn8j02">
+            <contextEntry id="ContextEntry_01mmq1q">
+                <variable id="InformationItem_0cqmehe" name="empty"/>
+                <literalExpression id="LiteralExpression_030o1oq">
+                    <text>
+                        {}
+                    </text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry id="ContextEntry_13nmhne">
+                <variable id="InformationItem_1cqskjh" name="driverData"/>
+                <literalExpression id="LiteralExpression_0h8byid">
+                    <text>
+                        body.insuredObject and body.insuredObject.driverData or empty
+                    </text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry id="ContextEntry_0f6gmq9">
+                <context id="Context_0l57oda">
+                    <contextEntry id="ContextEntry_1qve1ch">
+                        <variable id="InformationItem_03yfj6u" name="ownerDateOfBirth"/>
+                        <literalExpression id="LiteralExpression_1k6aa3p">
+                            <text>
+                                driverData.driver and driverData.driver.dateOfBirth
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                    <contextEntry id="ContextEntry_1lj90sy">
+                        <variable id="InformationItem_1ijjify" name="safeDriveCourseCompleted"/>
+                        <literalExpression id="LiteralExpression_1tqld4z">
+                            <text>
+                                driverData.safeDriveCourseCompleted
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                    <contextEntry id="ContextEntry_1cb55s4">
+                        <variable id="InformationItem_1lnwk42" name="duiSurcharge"/>
+                        <literalExpression id="LiteralExpression_05aexl3">
+                            <text>
+                                driverData.duiSurcharge
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                    <contextEntry id="ContextEntry_072n5ea">
+                        <variable id="InformationItem_1ux2q6b" name="youngFamily"/>
+                        <literalExpression id="LiteralExpression_11irp9a">
+                            <text>
+                                driverData.youngFamily and driverData.youngFamily.isSelected
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                    <contextEntry id="ContextEntry_0ewfoyw">
+                        <variable id="InformationItem_05l8mqh" name="drajvCode"/>
+                        <literalExpression id="LiteralExpression_1ynsovg">
+                            <text>
+                                driverData.drajvCode
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                    <contextEntry id="ContextEntry_173x918">
+                        <variable id="InformationItem_1r27q4e" name="drajvCodeValidity"/>
+                        <literalExpression id="LiteralExpression_02iwh5f">
+                            <text>
+                                driverData.drajvCodeValidity
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                    <contextEntry id="ContextEntry_1e6sr4o">
+                        <variable id="InformationItem_002i2ak" name="tkbClass"/>
+                        <literalExpression id="LiteralExpression_0ho1lal">
+                            <text>
+                                commonBody.attributes and commonBody.attributes.tkbClass
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                    <contextEntry id="ContextEntry_0jb6k2y">
+                        <variable id="InformationItem_05eax42" name="vehicleValue"/>
+                        <literalExpression id="LiteralExpression_17ghu1l">
+                            <text>
+                                VehicleValueTotal
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                    <contextEntry id="ContextEntry_050jcw6">
+                        <variable id="InformationItem_0p03p5l" name="pastYearDrivenMileage"/>
+                        <literalExpression id="LiteralExpression_0z1bcsz">
+                            <text>
+                                PastYearDrivenMileage
+                            </text>
+                        </literalExpression>
+                    </contextEntry>
+                </context>
+            </contextEntry>
+        </context>
+    </decision>
+    <inputData id="InputData_000rxv7" name="body"/>
+    <decision id="Decision_1n9c9qb" name="VehicleValueTotal">
+        <variable id="InformationItem_1jjkd1h"/>
+        <knowledgeRequirement id="KnowledgeRequirement_1n0zmhf">
+            <requiredKnowledge href="#BusinessKnowledgeModel_1m9k87h"/>
+        </knowledgeRequirement>
+        <literalExpression id="LiteralExpression_05kmhst" expressionLanguage="javascript">
+            <text>
+                return getTotalVehicleValuePlusUpgrades(context.attributes);
+            </text>
+        </literalExpression>
+    </decision>
+    <inputData id="InputData_0eg764j" name="attributes"/>
+    <decision id="Decision_1o62ko8" name="ObjectAttributes">
+        <variable id="InformationItem_1w25cqc"/>
+        <informationRequirement id="InformationRequirement_07kmmtn">
+            <requiredInput href="#InputData_0eg764j"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1lq2cvj">
+            <requiredDecision href="#Decision_1eekafd"/>
+        </informationRequirement>
+        <literalExpression id="LiteralExpression_085t4dk">
+            <text>
+                if attributes.objectType = "Vehicle" then ObjectVehicleAttributes
+else {}
+            </text>
+        </literalExpression>
+    </decision>
+    <decision id="Decision_02201jq" name="MapObjectAttributes">
+        <variable id="InformationItem_00jbmrb"/>
+        <informationRequirement id="InformationRequirement_117u1d8">
+            <requiredDecision href="#Decision_1o62ko8"/>
+        </informationRequirement>
+        <context id="Context_1mv3487">
+            <contextEntry id="ContextEntry_0rc463z">
+                <variable id="InformationItem_0g4yjha" name="attributes"/>
+                <literalExpression id="LiteralExpression_113k2xz">
+                    <text>
+                        ObjectAttributes
+                    </text>
+                </literalExpression>
+            </contextEntry>
+        </context>
+    </decision>
+    <decision id="Decision_0g860ir" name="PastYearDrivenMileage">
+        <variable id="InformationItem_152pzh0"/>
+        <literalExpression id="LiteralExpression_0wo34mh" expressionLanguage="javascript">
+            <text>
+                if(context.attributes.objectSubtype == "VehicleTruck") {
+	return context.attributes.pastYearDrivenMileage
+} 
+else if (context.attributes.objectSubtype == "VehicleCar" &amp;&amp; context.attributes.lastMileage !== undefined) {
+	return context.attributes.mileage - context.attributes.lastMileage
+}
+            </text>
+        </literalExpression>
+    </decision>
+    <businessKnowledgeModel id="BusinessKnowledgeModel_1m9k87h" name="VehicleVehicleUtils" adi:lib="@config-triglav-si\i-motor\component\Vehicle\lib\VehicleUtils" adi:object="getTotalVehicleValuePlusUpgrades"/>
+    <inputData id="InputData_0no487d" name="commonBody"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="Context_1mv3487">
+                        <adiDMNDI:ElementWidth dmnElementRef="Context_1mv3487" value="750"/>
+                    </adiDMNDI:ElementWidths>
+                    <adiDMNDI:ElementWidths dmnElementRef="Context_1cn8j02">
+                        <adiDMNDI:ElementWidth dmnElementRef="Context_1cn8j02" value="1555"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_1plwosc" dmnElementRef="Decision_1eekafd">
+                <dc:Bounds height="80" width="180" x="350" y="220"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0pynj1y" dmnElementRef="InputData_000rxv7">
+                <dc:Bounds height="45" width="125" x="577" y="237"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_1fhze06" dmnElementRef="InformationRequirement_17l1vwt">
+                <di:waypoint x="440" y="160"/>
+                <di:waypoint x="410" y="200"/>
+                <di:waypoint x="410" y="220"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_1s2fjzs" dmnElementRef="Decision_1n9c9qb">
+                <dc:Bounds height="80" width="180" x="350" y="80"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_1nkg4hh" dmnElementRef="InputData_0eg764j">
+                <dc:Bounds height="45" width="125" x="137" y="367"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0pc9rkc" dmnElementRef="Decision_1o62ko8">
+                <dc:Bounds height="80" width="180" x="110" y="220"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0mzdovi" dmnElementRef="InformationRequirement_07kmmtn">
+                <di:waypoint x="200" y="367"/>
+                <di:waypoint x="200" y="320"/>
+                <di:waypoint x="200" y="300"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="DMNEdge_1vy880r" dmnElementRef="InformationRequirement_0pgnthd">
+                <di:waypoint x="577" y="260"/>
+                <di:waypoint x="550" y="260"/>
+                <di:waypoint x="530" y="260"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="DMNEdge_1efa4ac" dmnElementRef="InformationRequirement_117u1d8">
+                <di:waypoint x="110" y="260"/>
+                <di:waypoint x="110" y="260"/>
+                <di:waypoint x="90" y="260"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_12yss0y" dmnElementRef="Decision_02201jq">
+                <dc:Bounds height="80" width="180" x="-90" y="220"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_1c3trpc" dmnElementRef="InformationRequirement_1lq2cvj">
+                <di:waypoint x="350" y="260"/>
+                <di:waypoint x="310" y="260"/>
+                <di:waypoint x="290" y="260"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_1iyhnxm" dmnElementRef="Decision_0g860ir">
+                <dc:Bounds height="80" width="180" x="570" y="70"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_1kye0qn" dmnElementRef="InformationRequirement_1ukz8c2">
+                <di:waypoint x="660" y="150"/>
+                <di:waypoint x="470" y="200"/>
+                <di:waypoint x="470" y="220"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_0wntkic" dmnElementRef="BusinessKnowledgeModel_1m9k87h">
+                <dc:Bounds height="46" width="135" x="213" y="-53"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0m26a01" dmnElementRef="KnowledgeRequirement_1n0zmhf">
+                <di:waypoint x="309" y="-7"/>
+                <di:waypoint x="416" y="80"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_0p7ae8y" dmnElementRef="InputData_0no487d">
+                <dc:Bounds height="45" width="125" x="378" y="358"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0yevnzn" dmnElementRef="InformationRequirement_1urns2j">
+                <di:waypoint x="441" y="358"/>
+                <di:waypoint x="440" y="320"/>
+                <di:waypoint x="440" y="300"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

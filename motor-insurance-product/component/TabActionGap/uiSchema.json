@@ -1,0 +1,254 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "Section",
+            "label": "Action Avtomobilno",
+            "metadata": {
+                "autogenerate": true
+            },
+            "value": {
+                "$ref": "#"
+            },
+            "elements": [
+                {
+                    "type": "ConditionalSection",
+                    "label": "Luggage Insurance",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "sectionLevel": 2,
+                    "showContentOnChecked": true,
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/luggageInsurance/properties/isSelected"
+                    },
+                    "width": 12,
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "name": "LuggageCoverage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/luggageInsurance/properties/luggageCoverage"
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "effect": "SHOW_CLEARDATA",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "clearDataFunction": "clearLuggageCoverageData",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/luggageInsurance/properties/isSelected"
+                                    },
+                                    "expectedValue": true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "GroupSeparator"
+                },
+                {
+                    "type": "ConditionalSection",
+                    "label": "Micromobility Insurance",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "sectionLevel": 2,
+                    "showContentOnChecked": true,
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/micromobilityInsurance/properties/isSelected"
+                    },
+                    "width": 4,
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "name": "MicromobilityCoverage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/micromobilityInsurance/properties/micromobilityCoverage"
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "effect": "SHOW_CLEARDATA",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "clearDataFunction": "clearMicromobilityCoverageData",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/micromobilityInsurance/properties/isSelected"
+                                    },
+                                    "expectedValue": true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "GroupSeparator"
+                },
+                {
+                    "type": "ConditionalSection",
+                    "label": "Rehabilitation Traffic",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "sectionLevel": 2,
+                    "showContentOnChecked": true,
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/rehabilitationTraffic/properties/isSelected"
+                    },
+                    "width": 4,
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "name": "RehabilitationTrafficCoverage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/rehabilitationTraffic/properties/rehabilitationTrafficCoverage"
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "effect": "SHOW_CLEARDATA",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "clearDataFunction": "clearRehabilitationTrafficCoverageData",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/rehabilitationTraffic/properties/isSelected"
+                                    },
+                                    "expectedValue": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Section",
+            "collapsing": {
+                "enabled": true
+            },
+            "label": "Action AvtoMobilno - new additional insurance",
+            "sectionLevel": 1,
+            "width": 12,
+            "elements": [
+                {
+                    "type": "ConditionalSection",
+                    "label": "Small animals during transport insurance",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/smallAnimalsDuringTransport/properties/isSelected"
+                    },
+                    "sectionLevel": 2,
+                    "collapsing": {
+                        "enabled": false,
+                        "initial": false
+                    },
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "name": "SmallAnimalsDuringTransportCoverage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/smallAnimalsDuringTransport/properties/smallAnimalsDuringTransportCoverage"
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "effect": "SHOW_CLEARDATA",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "clearDataFunction": "clearSmallAnimalsDuringTransportCoverageData",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/smallAnimalsDuringTransport/properties/isSelected"
+                                    },
+                                    "expectedValue": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Section",
+            "collapsing": {
+                "enabled": true
+            },
+            "label": "GAP insurance",
+            "sectionLevel": 1,
+            "width": 12,
+            "elements": [
+                {
+                    "type": "ConditionalSection",
+                    "label": "Gap insurance",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/gap/properties/isSelected"
+                    },
+                    "sectionLevel": 2,
+                    "collapsing": {
+                        "enabled": false,
+                        "initial": false
+                    },
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "name": "GapCoverage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/gap/properties/gapCoverage"
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "effect": "SHOW_CLEARDATA",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "clearDataFunction": "clearGapCoverageData",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/gap/properties/isSelected"
+                                    },
+                                    "expectedValue": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

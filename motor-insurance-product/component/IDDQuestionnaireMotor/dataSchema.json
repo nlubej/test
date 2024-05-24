@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "aiValidation": [
+        {
+            "rule": "IddValidations",
+            "scope": "self"
+        }
+    ],
+    "properties": {
+        "skipQuestionnaire": {
+            "type": "boolean"
+        },
+        "Q01": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q02": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q03": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q04": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q05": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q06": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q07": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q08": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q09": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q10": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q11": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q12": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q13": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q14": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q15": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q16": {
+            "$ref": "#/definitions/questionRow"
+        },
+        "Q17": {
+            "$ref": "#/definitions/questionRow"
+        }
+    },
+    "definitions": {
+        "questionRow": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "need": {
+                    "type": "boolean"
+                },
+                "requirement": {
+                    "type": "boolean"
+                },
+                "hasCoverage": {
+                    "type": "boolean"
+                },
+                "coverage": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

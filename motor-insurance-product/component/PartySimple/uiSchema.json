@@ -1,0 +1,41 @@
+{
+    "type": "Group",
+    "value": {
+        "$ref": "#"
+    },
+    "width": 2,
+    "elements": [
+        {
+            "type": "Lookup",
+            "value": {
+                "$ref": "#"
+            },
+            "width": 3,
+            "dialogButton": {
+                "icon": {
+                    "name": "User",
+                    "color": "BackgroundColor",
+                    "size": "Medium"
+                }
+            },
+            "dialog": {
+                "viewReference": {
+                    "configurationCodeName": "GeneralPartySearchView",
+                    "configurationVersion": "1",
+                    "configurationConceptType": "SearchView"
+                },
+                "title": "Select Payer"
+            },
+            "onSelected": "setPayerFromPartyLookup",
+            "selectedDisplayValueUISchema": {
+                "type": "Input",
+                "showAsRequired": true,
+                "label": "Payer",
+                "value": {
+                    "$ref": "#/properties/fullName"
+                },
+                "readOnly": true
+            }
+        }
+    ]
+}

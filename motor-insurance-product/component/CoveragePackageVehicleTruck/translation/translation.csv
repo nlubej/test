@@ -1,0 +1,17 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DataSchema	CoveragePackageVehicleTruck	enum	selectedPackage@Small	Small	Small	Mali
+DataSchema	CoveragePackageVehicleTruck	enum	selectedPackage@Large	Large	Large	Veliki
+DataSchema	CoveragePackageVehicleTruck	enum	selectedPackage@Comfort	Comfort	Comfort	Comfort
+UiSchema	CoveragePackageVehicleTruck	ui-label	Mtpl	Mtpl	Mtpl	Avtomobilska odgovornost (AO)
+UiSchema	CoveragePackageVehicleTruck	ui-label	MtplPlus	MtplPlus	Mtpl Plus	Zavarovanje voznika (AO+)
+UiSchema	CoveragePackageVehicleTruck	ui-label	Casco	Casco	Casco	Splošni kasko
+UiSchema	CoveragePackageVehicleTruck	ui-label	CombinationB	CombinationB	Combination B	B kombinacija
+UiSchema	CoveragePackageVehicleTruck	ui-label	CombinationD	CombinationD	Combination D	D kombinacija
+UiSchema	CoveragePackageVehicleTruck	ui-label	CombinationE	CombinationE	Combination E	E kombinacija
+UiSchema	CoveragePackageVehicleTruck	ui-label	CombinationJ	CombinationJ	Combination J	J kombinacija
+UiSchema	CoveragePackageVehicleTruck	ui-label	CombinationK	CombinationK	Combination K	K kombinacija
+UiSchema	CoveragePackageVehicleTruck	ui-label	UnbreakableInsurance	UnbreakableInsurance	Unbreakable Insurance	Strojelomno Zavarovanje
+UiSchema	CoveragePackageVehicleTruck	ui-label	Car Assistance	Car Assistance	Car Assistance	Avtomobilska Asistenca
+UiSchema	CoveragePackageVehicleTruck	ui-label	Legal Protection	Legal Protection	Legal Protection	Pravna Zaščita
+UiSchema	CoveragePackageVehicleTruck	ui-label	Accident Insurance For The Driver And Passengers	Accident Insurance For The Driver And Passengers	Accident Insurance For The Driver And Passengers	Nezgodno Zavarovanje Voznika In Potnikov
+DataSchema	CoveragePackageVehicleTruck	field-title	selectedPackage	selectedPackage	Selected Package	Izbrani Paket

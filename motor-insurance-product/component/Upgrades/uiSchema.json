@@ -1,0 +1,73 @@
+{
+    "type": "DataGrid",
+    "value": {
+        "$ref": "#"
+    },
+    "customCSSStyle": {
+        "--grid-header-1-border": "0px"
+    },
+    "mode": "Array",
+    "pagination": {
+        "mode": "Regular",
+        "pageSizes": [
+            5,
+            10,
+            15
+        ]
+    },
+    "actions": [
+        "Delete"
+    ],
+    "edit": {
+        "mode": "Detached",
+        "onAfterGridAction": "onAfterGridAction"
+    },
+    "height": "None",
+    "columns": [
+        {
+            "title": "Description",
+            "cellContent": {
+                "type": "OutputText",
+                "value": {
+                    "$ref": "#/properties/name"
+                }
+            }
+        },
+        {
+            "title": "Price",
+            "cellContent": {
+                "type": "OutputText",
+                "template": "{{expr price 'n:2'}} EUR",
+                "value": {
+                    "$ref": "#"
+                }
+            }
+        }
+    ],
+    "footer": {
+        "toolbar": {
+            "type": "GridLayout",
+            "numberOfColumns": 4,
+            "elements": [
+                {
+                    "type": "Group",
+                    "width": 2,
+                    "stackContext": "Left",
+                    "elements": [
+                        {
+                            "type": "Button",
+                            "label": "Add",
+                            "fill": "Outline",
+                            "icon": {
+                                "name": "plus",
+                                "color": "Primary",
+                                "size": "Medium"
+                            },
+                            "onClick": "showUpgradeSearch"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	InsuredObjectExtendedWarranty	ui-label	Object Type	Object Type	Object Type	Tip vozila
+DataSchema	InsuredObjectExtendedWarranty	field-title	objectType	objectType	Object Type	Tip vozila
+DataSchema	InsuredObjectExtendedWarranty	field-title	objectSubtype	objectSubtype	Object Subtype	Podtip vozila
+DataSchema	InsuredObjectExtendedWarranty	enum	objectType@vehicle	vehicle	Vehicle	Vozilo
+UiSchema	InsuredObjectExtendedWarranty	ui-label	Premium group	Premium group	Premium group	Premijska skupina
+UiSchema	InsuredObjectExtendedWarranty	ui-label	Vehicle	Vehicle	Vehicle Data	Predmet zavarovanja
+UiSchema	InsuredObjectExtendedWarranty	ui-label	Manual Entry	Manual Entry	Manual Entry	Ročni vnos
+UiSchema	InsuredObjectExtendedWarranty	ui-label	Coverage program	Coverage program	Coverage program	Program kritja
+UiSchema	InsuredObjectExtendedWarranty	ui-label	Coverage	Coverage	Coverage	Kritje
+UiSchema	InsuredObjectExtendedWarranty	ui-label	Extended warranty	Extended warranty	Extended warranty	Podaljšano jamstvo

@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="CoveragesForSelectedSubtypeAndType" name="Coverages For Selected Subtype And Type" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="decision_0xe7rvk" name="CoveragesForSelectedSubtypeAndType">
+        <informationRequirement id="InformationRequirement_1exejgw">
+            <requiredInput href="#InputData_09xfrwf"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1e9phiy">
+            <requiredInput href="#InputData_0zk3sdk"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1gylxvc">
+            <requiredInput href="#InputData_1uda68i"/>
+        </informationRequirement>
+        <decisionTable id="decisionTable_0zw0igc" hitPolicy="COLLECT">
+            <input id="InputClause_0ox8v1h">
+                <inputExpression id="LiteralExpression_0khkto4" typeRef="adinsure:DataSchema:None:ObjectTypeEnum:Component::#">
+                    <text>
+                        objectType
+                    </text>
+                </inputExpression>
+            </input>
+            <input id="input1">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>
+                        isMainCoverage
+                    </text>
+                </inputExpression>
+            </input>
+            <output id="output1" name="coverage" typeRef="string"/>
+            <annotation name="annotation"/>
+            <rule id="DecisionRule_vehicle1casco">
+                <inputEntry id="UnaryTests_vehicle2casco">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_casco017vehicle">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_vehicle8casco">
+                    <text>
+                        "casco"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_vehicle1combinationB">
+                <inputEntry id="UnaryTests_vehicle2combinationB">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_combinationB7vehicle">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_vehicle8combinationB">
+                    <text>
+                        "combinationB"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_04vujyf">
+                <inputEntry id="UnaryTests_0qantmw">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0xqsibr">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0xj34kt">
+                    <text>
+                        "combinationD"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1d66y3b">
+                <inputEntry id="UnaryTests_0p2rv8i">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0kkg1ek">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0jgupx9">
+                    <text>
+                        "combinationE"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1myki71">
+                <inputEntry id="UnaryTests_1d786l1">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1fbm4x8">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1ourqao">
+                    <text>
+                        "combinationH"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0g6a1ey">
+                <inputEntry id="UnaryTests_0xu2m6t">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1dytl0w">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0mseirm">
+                    <text>
+                        "combinationJ"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0e2s58b">
+                <inputEntry id="UnaryTests_0h5ii6g">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ljmvg2">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_03abw3k">
+                    <text>
+                        "combinationK"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0ualjun">
+                <inputEntry id="UnaryTests_00nc1ok">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0symd82">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_03jmt6c">
+                    <text>
+                        "cascoCollision"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_vehicle1mtplTariff">
+                <inputEntry id="UnaryTests_vehicle2mtplTariff">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_mtplTariff7vehicle">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_vehicle8mtplTariff">
+                    <text>
+                        "mtpl"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0pnch61">
+                <inputEntry id="UnaryTests_0ni3jra">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1m3yo92">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1ftfujg">
+                    <text>
+                        "mtplPlus"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1t3y67i">
+                <inputEntry id="UnaryTests_0d8rfi2">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1002zce">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0t9tg09">
+                    <text>
+                        "activityDamageExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0l959g0">
+                <inputEntry id="UnaryTests_1rr8drt">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1cx9mq5">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1656gek">
+                    <text>
+                        "additionalEquipmentCoverages"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0skz4iq">
+                <inputEntry id="UnaryTests_095rgdk">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0169ymf">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_114tnbl">
+                    <text>
+                        "additionalWorkDevicesCoverages"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0tuu2n0">
+                <inputEntry id="UnaryTests_1w5n2sv">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0b2hetd">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0a10pot">
+                    <text>
+                        "outsideEuAreaExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_18hbbt6">
+                <inputEntry id="UnaryTests_0s7j225">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0348rhg">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1y7295x">
+                    <text>
+                        "participationInRacesExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1t59ru2">
+                <inputEntry id="UnaryTests_1pcanjd">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_155ybby">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1yid3x5">
+                    <text>
+                        "waterEntrapmentExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1xpgd5b">
+                <inputEntry id="UnaryTests_1g69cv0">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_08tccc9">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_0iqcryl">
+                    <text>
+                        "vehicleSinkingExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_06e75nm">
+                <inputEntry id="UnaryTests_1iukgjl">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_08e9uow">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1h74fzr">
+                    <text>
+                        "sanationAvalanchesAndLandslidesExtension"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0hsfdik">
+                <inputEntry id="UnaryTests_1q91ntf">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0fuc9im">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1jqpw9m">
+                    <text>
+                        "assistance"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1cf8cvv">
+                <inputEntry id="UnaryTests_1uf4dv5">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0pudc0g">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_0nhpcmg">
+                    <text>
+                        "youngDriver"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0z2dmgs">
+                <inputEntry id="UnaryTests_07uzi8w">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_003j1i2">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1u0e4qy">
+                    <text>
+                        "accidentInsurance"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1n1w1qo">
+                <inputEntry id="UnaryTests_0n2xuxy">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_185on6y">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1s4lew4">
+                    <text>
+                        "legalProtection"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1x24sx5">
+                <inputEntry id="UnaryTests_1wnxi6x">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_107mvp5">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_058ql6h">
+                    <text>
+                        "luggageInsurance"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1ht81ce">
+                <inputEntry id="UnaryTests_1vobfya">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0suzno9">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_17qr9gy">
+                    <text>
+                        "micromobilityInsurance"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_08wv3sg">
+                <inputEntry id="UnaryTests_073zkhv">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0syfur5">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_09znf0w">
+                    <text>
+                        "rehabilitationTraffic"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0lugxl3">
+                <inputEntry id="UnaryTests_1dy01st">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0e040gd">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_09mgfnm">
+                    <text>
+                        "smallAnimalsDuringTransport"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1mplo0d">
+                <inputEntry id="UnaryTests_0bvqy4t">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_097k2s8">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1id38xf">
+                    <text>
+                        "gap"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0j42xbd">
+                <inputEntry id="UnaryTests_184tdz3">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0smpsla">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_1wmihi7">
+                    <text>
+                        "automobileAndLegalProtection"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1tcrnz7">
+                <inputEntry id="UnaryTests_0my244a">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0oyirza">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_112evsp">
+                    <text>
+                        "vehicleBreakdown"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0erigat">
+                <inputEntry id="UnaryTests_1pyu4g3">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1wyfuho">
+                    <text>
+                        null, false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1fztzpm">
+                    <text>
+                        "radioDevices"
+                    </text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <inputData id="InputData_09xfrwf" name="objectType"/>
+    <inputData id="InputData_0zk3sdk" name="objectSubtype"/>
+    <inputData id="InputData_1uda68i" name="isMainCoverage"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_05dd4uz">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="decisionTable_0zw0igc">
+                        <adiDMNDI:ElementWidth dmnElementRef="InputClause_0ox8v1h" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="input1" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="output1" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="annotation" value="200"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_1iit1i0" dmnElementRef="decision_0xe7rvk">
+                <dc:Bounds height="80" width="180" x="150" y="150"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0wpzufh" dmnElementRef="InputData_09xfrwf">
+                <dc:Bounds height="45" width="125" x="97" y="317"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0dslimh" dmnElementRef="InformationRequirement_1exejgw">
+                <di:waypoint x="160" y="317"/>
+                <di:waypoint x="210" y="250"/>
+                <di:waypoint x="210" y="230"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_1jm17yk" dmnElementRef="InputData_0zk3sdk">
+                <dc:Bounds height="45" width="125" x="287" y="317"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0q0jjac" dmnElementRef="InformationRequirement_1e9phiy">
+                <di:waypoint x="350" y="317"/>
+                <di:waypoint x="270" y="250"/>
+                <di:waypoint x="270" y="230"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_0qj2uli" dmnElementRef="InputData_1uda68i">
+                <dc:Bounds height="45" width="125" x="428" y="168"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_1p056or" dmnElementRef="InformationRequirement_1gylxvc">
+                <di:waypoint x="428" y="191"/>
+                <di:waypoint x="350" y="190"/>
+                <di:waypoint x="330" y="190"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,17 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	TabCasco	ui-label	General Casco	General Casco	General Casco	Splošni kasko
+UiSchema	TabCasco	ui-label	CombinationB	CombinationB	B combination	B kombinacija
+UiSchema	TabCasco	ui-label	sub1	sub1	Additional Equipment	Dodatna oprema
+UiSchema	TabCasco	ui-label	sub2	sub2	Additional Equipment	Dodatno strojelomno zavarovanje naprav
+UiSchema	TabCasco	ui-label	sub3	sub3	Additional vehicle breakdown insurance	Dodatno strojelomno zavarovanje vozil
+UiSchema	TabCasco	ui-label	sub4	sub4	Coverage Extension	Razširitve kritja
+UiSchema	TabCasco	ui-label	CombinationD	CombinationD	D combination	D kombinacija
+UiSchema	TabCasco	ui-label	CombinationE	CombinationE	E combination	E kombinacija
+UiSchema	TabCasco	ui-label	CombinationH	CombinationH	H combination	H kombinacija
+UiSchema	TabCasco	ui-label	CombinationJ	CombinationJ	J combination	J kombinacija
+UiSchema	TabCasco	ui-label	CombinationK	CombinationK	K combination	K kombinacija
+UiSchema	TabCasco	ui-label	CascoCollision	CascoCollision	Casco collision	Kasko karambol
+UiSchema	TabCasco	ui-label	Coverage Extension, Additional Equipment, Machinery breakdown	Coverage Extension, Additional Equipment, Machinery breakdown	Coverage Extension, Additional Equipment, Machinery breakdown	Dodatna oprema, strojelomno zavarovanje, razširitve kritja
+UiSchema	TabCasco	ui-label	Machinery breakdown insurance for radio devices	Machinery breakdown insurance for radio devices	Machinery breakdown insurance for radio devices	Dodatno strojelomno zavarovanje radijskih postaj, radarskih naprav ter ostalih delovnih naprav
+UiSchema	TabCasco	ui-label	Machinery breakdown for work devices	Machinery breakdown for work devices	Machinery breakdown for work devices	Dodatno strojelomno zavarovanje delovnih naprav na vozilu
+UiSchema	TabCasco	ui-label	Additional vehicle breakdown insurance	Additional vehicle breakdown insurance	Additional vehicle breakdown insurance	Dodatno strojelomno zavarovanje vozil

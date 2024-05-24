@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "idMktProd": {
+            "type": "string",
+            "aiMeaning": "Marketing product ID"
+        },
+        "idGenPolicy": {
+            "type": "string",
+            "aiMeaning": "General policy ID"
+        },
+        "idGenPolicyDesc": {
+            "type": "string",
+            "aiMeaning": "General policy description"
+        },
+        "idObjType": {
+            "type": "string",
+            "aiMeaning": "Object type ID"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "code": {
+            "type": "string"
+        },
+        "group": {
+            "type": "integer"
+        },
+        "brand": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "fuelType": {
+            "type": "string"
+        },
+        "power": {
+            "type": "integer"
+        },
+        "engineVolume": {
+            "type": "integer"
+        },
+        "seats": {
+            "type": "integer"
+        },
+        "doors": {
+            "type": "integer"
+        },
+        "weight": {
+            "type": "integer"
+        },
+        "price": {
+            "type": "integer"
+        }
+    }
+}

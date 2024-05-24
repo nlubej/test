@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "currency": {
+            "type": "string"
+        },
+        "coverages": {
+            "$ref": "component:MotorCoveragesClientSchema"
+        }
+    }
+}

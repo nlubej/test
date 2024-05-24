@@ -1,0 +1,1307 @@
+{
+    "type": "Section",
+    "label": "IDD",
+    "sectionLevel": 1,
+    "elements": [
+        {
+            "type": "Group",
+            "width": 12,
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "Boolean",
+                    "label": "Skip Quesitonnaire",
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "value": {
+                        "$ref": "#/properties/skipQuestionnaire"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "GridLayout",
+            "numberOfColumns": 12,
+            "elements": [
+                {
+                    "type": "Group",
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "width": 12,
+                    "elements": [
+                        {
+                            "type": "OutputText",
+                            "literalValue": "Needs",
+                            "textProperties": [
+                                "left",
+                                "bold"
+                            ],
+                            "hideLabel": true,
+                            "width": 5
+                        },
+                        {
+                            "type": "OutputText",
+                            "literalValue": "Requirements",
+                            "textProperties": [
+                                "left",
+                                "bold"
+                            ],
+                            "hideLabel": true,
+                            "width": 5
+                        },
+                        {
+                            "type": "OutputText",
+                            "literalValue": "Coverage",
+                            "textProperties": [
+                                "left",
+                                "bold"
+                            ],
+                            "hideLabel": true,
+                            "width": 2
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q01",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q01",
+                            "value": {
+                                "$ref": "#/properties/Q01/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q01",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q01_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q01/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q01/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q01/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q01/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q01/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q02",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q02",
+                            "value": {
+                                "$ref": "#/properties/Q02/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q02",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q02_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q02/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q02/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q02/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q02/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q02/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q03",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q03",
+                            "value": {
+                                "$ref": "#/properties/Q03/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q03",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q03_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q03/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q03/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q03/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q03/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q03/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q04",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q04",
+                            "value": {
+                                "$ref": "#/properties/Q04/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q04",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q04_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q04/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q04/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q04/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q04/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q04/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q05",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q05",
+                            "value": {
+                                "$ref": "#/properties/Q05/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q05",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q05_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q05/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q05/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q05/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q05/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q05/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q06",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q06",
+                            "value": {
+                                "$ref": "#/properties/Q06/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q06",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q06_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q06/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q06/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q06/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q06/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q06/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q07",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q07",
+                            "value": {
+                                "$ref": "#/properties/Q07/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q07",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q07_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q07/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q07/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q07/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q07/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q07/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q08",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q08",
+                            "value": {
+                                "$ref": "#/properties/Q08/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q08",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q08_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q08/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q08/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q08/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q08/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q08/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q09",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q09",
+                            "value": {
+                                "$ref": "#/properties/Q09/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q09",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q09_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q09/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q09/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q09/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q09/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q09/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "53px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q10",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q10",
+                            "value": {
+                                "$ref": "#/properties/Q10/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q10",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q10_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q10/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q10/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q10/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q10/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q10/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "customCSSStyle": {
+                                "height": "53px"
+                            },
+                            "elements": [
+                                {
+                                    "elementId": "Q11",
+                                    "type": "ThreeState",
+                                    "labelPosition": "Right",
+                                    "dropdownMode": false,
+                                    "offset": 0,
+                                    "width": 5,
+                                    "label": "Q11",
+                                    "value": {
+                                        "$ref": "#/properties/Q11/properties/need"
+                                    },
+                                    "onValueChanged": "updateQuestionnaire"
+                                },
+                                {
+                                    "elementId": "Q11",
+                                    "type": "ThreeState",
+                                    "labelPosition": "Right",
+                                    "dropdownMode": false,
+                                    "offset": 0,
+                                    "width": 5,
+                                    "label": "Q11_01",
+                                    "onValueChanged": "updateQuestionnaire",
+                                    "value": {
+                                        "$ref": "#/properties/Q11/properties/requirement"
+                                    },
+                                    "rule": {
+                                        "effect": "SHOW",
+                                        "condition": {
+                                            "type": "LEAF",
+                                            "expectedValue": true,
+                                            "value": {
+                                                "$ref": "#/properties/Q11/properties/need"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "OutputText",
+                                    "width": 1,
+                                    "readOnly": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q11/properties/coverage"
+                                    },
+                                    "rule": {
+                                        "effect": "SHOW",
+                                        "condition": {
+                                            "type": "FUNC",
+                                            "ruleFunction": "show",
+                                            "value": [
+                                                {
+                                                    "$ref": "#/properties/Q11/properties/need"
+                                                },
+                                                {
+                                                    "$ref": "#/properties/Q11/properties/requirement"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "value": {
+                        "$ref": "#/properties/Q10"
+                    },
+                    "rule": {
+                        "effect": "HIDE_CLEARDATA",
+                        "condition": {
+                            "type": "FUNC",
+                            "ruleFunction": "hide",
+                            "clearDataFunction": "clearData",
+                            "value": [
+                                {
+                                    "$ref": "#/properties/Q10/properties/need"
+                                },
+                                {
+                                    "$ref": "#/properties/Q10/properties/requirement"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "customCSSStyle": {
+                                "height": "53px"
+                            },
+                            "elements": [
+                                {
+                                    "elementId": "Q12",
+                                    "type": "ThreeState",
+                                    "labelPosition": "Right",
+                                    "dropdownMode": false,
+                                    "offset": 0,
+                                    "width": 5,
+                                    "label": "Q12",
+                                    "value": {
+                                        "$ref": "#/properties/Q12/properties/need"
+                                    },
+                                    "onValueChanged": "updateQuestionnaire"
+                                },
+                                {
+                                    "elementId": "Q12",
+                                    "type": "ThreeState",
+                                    "labelPosition": "Right",
+                                    "dropdownMode": false,
+                                    "offset": 0,
+                                    "width": 5,
+                                    "label": "Q12_01",
+                                    "onValueChanged": "updateQuestionnaire",
+                                    "value": {
+                                        "$ref": "#/properties/Q12/properties/requirement"
+                                    },
+                                    "rule": {
+                                        "effect": "SHOW",
+                                        "condition": {
+                                            "type": "LEAF",
+                                            "expectedValue": true,
+                                            "value": {
+                                                "$ref": "#/properties/Q12/properties/need"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "OutputText",
+                                    "width": 1,
+                                    "readOnly": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q12/properties/coverage"
+                                    },
+                                    "rule": {
+                                        "effect": "SHOW",
+                                        "condition": {
+                                            "type": "FUNC",
+                                            "ruleFunction": "show",
+                                            "value": [
+                                                {
+                                                    "$ref": "#/properties/Q12/properties/need"
+                                                },
+                                                {
+                                                    "$ref": "#/properties/Q12/properties/requirement"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "value": {
+                        "$ref": "#/properties/Q11"
+                    },
+                    "rule": {
+                        "effect": "HIDE_CLEARDATA",
+                        "condition": {
+                            "type": "FUNC",
+                            "ruleFunction": "hide",
+                            "clearDataFunction": "clearData",
+                            "value": [
+                                {
+                                    "$ref": "#/properties/Q11/properties/need"
+                                },
+                                {
+                                    "$ref": "#/properties/Q11/properties/requirement"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "48px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q13",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q13",
+                            "value": {
+                                "$ref": "#/properties/Q13/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q13",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q13_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q13/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q13/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q13/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q13/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q13/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "53px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q14",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q14",
+                            "value": {
+                                "$ref": "#/properties/Q14/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q14",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q14_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q14/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q14/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q14/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q14/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q14/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "customCSSStyle": {
+                                "height": "53px"
+                            },
+                            "elements": [
+                                {
+                                    "elementId": "Q15",
+                                    "type": "ThreeState",
+                                    "labelPosition": "Right",
+                                    "dropdownMode": false,
+                                    "offset": 0,
+                                    "width": 5,
+                                    "label": "Q15",
+                                    "value": {
+                                        "$ref": "#/properties/Q15/properties/need"
+                                    },
+                                    "onValueChanged": "updateQuestionnaire"
+                                },
+                                {
+                                    "elementId": "Q15",
+                                    "type": "ThreeState",
+                                    "labelPosition": "Right",
+                                    "dropdownMode": false,
+                                    "offset": 0,
+                                    "width": 5,
+                                    "label": "Q15_01",
+                                    "onValueChanged": "updateQuestionnaire",
+                                    "value": {
+                                        "$ref": "#/properties/Q15/properties/requirement"
+                                    },
+                                    "rule": {
+                                        "effect": "SHOW",
+                                        "condition": {
+                                            "type": "LEAF",
+                                            "expectedValue": true,
+                                            "value": {
+                                                "$ref": "#/properties/Q15/properties/need"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "OutputText",
+                                    "width": 1,
+                                    "readOnly": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q15/properties/coverage"
+                                    },
+                                    "rule": {
+                                        "effect": "SHOW",
+                                        "condition": {
+                                            "type": "FUNC",
+                                            "ruleFunction": "show",
+                                            "value": [
+                                                {
+                                                    "$ref": "#/properties/Q15/properties/need"
+                                                },
+                                                {
+                                                    "$ref": "#/properties/Q15/properties/requirement"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "value": {
+                        "$ref": "#/properties/Q14"
+                    },
+                    "rule": {
+                        "effect": "HIDE_CLEARDATA",
+                        "condition": {
+                            "type": "FUNC",
+                            "ruleFunction": "hide",
+                            "clearDataFunction": "clearData",
+                            "value": [
+                                {
+                                    "$ref": "#/properties/Q14/properties/need"
+                                },
+                                {
+                                    "$ref": "#/properties/Q14/properties/requirement"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "53px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q16",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q16",
+                            "value": {
+                                "$ref": "#/properties/Q16/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q16",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q16_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q16/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q16/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q16/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q16/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q16/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Group",
+                    "width": 12,
+                    "customCSSStyle": {
+                        "height": "70px"
+                    },
+                    "elements": [
+                        {
+                            "elementId": "Q17",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q17",
+                            "value": {
+                                "$ref": "#/properties/Q17/properties/need"
+                            },
+                            "onValueChanged": "updateQuestionnaire"
+                        },
+                        {
+                            "elementId": "Q17",
+                            "type": "ThreeState",
+                            "labelPosition": "Right",
+                            "dropdownMode": false,
+                            "offset": 0,
+                            "width": 5,
+                            "label": "Q17_01",
+                            "onValueChanged": "updateQuestionnaire",
+                            "value": {
+                                "$ref": "#/properties/Q17/properties/requirement"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "expectedValue": true,
+                                    "value": {
+                                        "$ref": "#/properties/Q17/properties/need"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "OutputText",
+                            "width": 1,
+                            "readOnly": true,
+                            "value": {
+                                "$ref": "#/properties/Q17/properties/coverage"
+                            },
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "show",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Q17/properties/need"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Q17/properties/requirement"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rule": {
+                "effect": "HIDE",
+                "condition": {
+                    "type": "LEAF",
+                    "expectedValue": true,
+                    "value": {
+                        "$ref": "#/properties/skipQuestionnaire"
+                    }
+                }
+            }
+        }
+    ]
+}

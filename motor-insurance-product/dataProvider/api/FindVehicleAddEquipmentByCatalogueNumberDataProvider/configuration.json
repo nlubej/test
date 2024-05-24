@@ -1,0 +1,10 @@
+{
+    "url": "{environment.triglavIntegrationServiceBaseUrl}/vehicle-catalog/vehicle-type/{typeOfVehicle}/makes/-1/models/-1/types/{idType}/additional-equipment",
+    "httpMethod": "GET",
+    "headers": {
+        "Accept": "application/json",
+        "Ocp-Apim-Subscription-Key": "{environment.triglavIntegrationServiceApiKey}",
+        "X-API-KEY": "{environment.triglavIntegrationServiceXApiKey}"
+    },
+    "version": "1"
+}

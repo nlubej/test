@@ -1,0 +1,46 @@
+{
+    "processType": "Application",
+    "initialState": "Draft",
+    "actors": [
+        "Agent"
+    ],
+    "states": [
+        {
+            "name": "Draft",
+            "operations": [
+                "Save"
+            ]
+        },
+        {
+            "name": "ProductSelection"
+        },
+        {
+            "name": "QuoteCreated"
+        },
+        {
+            "name": "Discarded"
+        }
+    ],
+    "transitions": [
+        {
+            "name": "Confirm",
+            "from": "Draft",
+            "to": "ProductSelection"
+        },
+        {
+            "name": "ReturnToDraft",
+            "from": "ProductSelection",
+            "to": "Draft"
+        },
+        {
+            "name": "CreateQuote",
+            "from": "ProductSelection",
+            "to": "QuoteCreated"
+        },
+        {
+            "name": "Discard",
+            "from": "ProductSelection",
+            "to": "Discarded"
+        }
+    ]
+}

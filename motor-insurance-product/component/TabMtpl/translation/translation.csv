@@ -1,0 +1,4 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	TabMtpl	ui-label	Mtpl (AO)	Mtpl (AO)	Mtpl	Avtomobilska odgovornost (AO)
+UiSchema	TabMtpl	ui-label	Mtpl Plus	Mtpl Plus	Mtpl Plus	Zavarovanje voznika (AO+)
+UiSchema	TabMtpl	ui-label	Coverage Extensions	Coverage Extensions	Coverage Extensions	Razširitve kritja

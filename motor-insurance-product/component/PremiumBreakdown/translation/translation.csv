@@ -1,0 +1,11 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	PremiumBreakdown	ui-label	Premium Breakdown	Premium Breakdown	Premium breakdown	Razčlenitev premije
+UiSchema	PremiumBreakdown	ui-label	Description	Description	Description	Opis
+UiSchema	PremiumBreakdown	ui-label	Base	Base	Base	Osnova
+UiSchema	PremiumBreakdown	ui-label	Rate	Rate	Rate	Stopnja
+UiSchema	PremiumBreakdown	ui-label	Amount	Amount	Amount	Vrednost
+UiSchema	PremiumBreakdown	ui-label	Final Amount	Final Amount	Final amount	Končna premija
+DataSchema	PremiumBreakdown	enum	unit@FixedValue	FixedValue	Fixed value	Absolutna vrednost
+DataSchema	PremiumBreakdown	enum	unit@Percentage	Percentage	Percentage	Odstotek
+DataSchema	PremiumBreakdown	enum	unit@PerMille	PerMille	Per mille	Promil
+DataSchema	PremiumBreakdown	enum	unit@Factor	Factor	Factor	Faktor

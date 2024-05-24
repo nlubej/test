@@ -1,0 +1,80 @@
+{
+    "dimensions": {
+        "contractType": "Quote",
+        "numberPrefix": "MOTQ",
+        "productCode": "MotorInsuranceProduct",
+        "paymentCalculation": "Nonrecurring",
+        "productLine": "motor"
+    },
+    "entityType": "Contract",
+    "version": "1",
+    "validFrom": "2022-01-01",
+    "transitions": {},
+    "states": [
+        {
+            "name": "Draft",
+            "actors": [
+                {
+                    "actor": "Agent",
+                    "operations": [
+                        {
+                            "name": "Save",
+                            "exclusiveToAssignedUser": false
+                        }
+                    ],
+                    "transitions": [
+                        "RejectDraft"
+                    ],
+                    "allowComments": true
+                },
+                {
+                    "actor": "System",
+                    "transitions": [],
+                    "attachmentsRestrictions": []
+                }
+            ]
+        },
+        {
+            "name": "Rejected",
+            "actors": [
+                {
+                    "actor": "Agent",
+                    "attachmentsRestrictions": []
+                },
+                {
+                    "actor": "System",
+                    "transitions": [],
+                    "attachmentsRestrictions": []
+                }
+            ]
+        }
+    ],
+    "hideFromDashboard": false,
+    "components": [
+        "ActivityDamage",
+        "ClausesSummary",
+        "Comments",
+        "ConditionsSummary",
+        "ContractDurationMotor",
+        "DeductiblesSummary",
+        "FreeTextClausesEntry",
+        "InstallmentAmountAndTotalPremiumSummary",
+        "LimitsSummary",
+        "PaymentPlanSummaryWithStateAndChangeAmounts",
+        "PremiumBreakdown",
+        "PremiumByCoverageSummary",
+        "TabActionGap",
+        "TabAdditionalInsurance",
+        "TabCasco",
+        "TabMtpl",
+        "UnconfirmedConstraintsSummary",
+        "QuoteParticipants"
+    ],
+    "ui": {
+        "layout": "VersionedDocumentLayoutWithAttachments",
+        "composition": {
+            "MainContent": "MainContent",
+            "SummaryContent": "SummaryContent"
+        }
+    }
+}

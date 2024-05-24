@@ -1,0 +1,61 @@
+{
+    "dimensions": {
+        "contractType": "Quote",
+        "numberPrefix": "YDQ",
+        "productCode": "MotorInsuranceProduct",
+        "paymentCalculation": "Nonrecurring",
+        "productLine": "motor"
+    },
+    "entityType": "Contract",
+    "version": "1",
+    "validFrom": "2022-01-01",
+    "transitions": {},
+    "states": [
+        {
+            "name": "Draft",
+            "actors": [
+                {
+                    "actor": "Agent",
+                    "operations": [
+                        {
+                            "name": "Save",
+                            "exclusiveToAssignedUser": false
+                        }
+                    ],
+                    "transitions": [],
+                    "allowComments": true
+                },
+                {
+                    "actor": "System",
+                    "transitions": [],
+                    "attachmentsRestrictions": []
+                }
+            ]
+        }
+    ],
+    "hideFromDashboard": false,
+    "components": [
+        "ClausesSummary",
+        "Comments",
+        "ConditionsSummary",
+        "ContractDurationMotor",
+        "DeductiblesSummary",
+        "FreeTextClausesEntry",
+        "InstallmentAmountAndTotalPremiumSummary",
+        "LimitsSummary",
+        "ActivityDamage",
+        "PaymentPlanSummaryWithStateAndChangeAmounts",
+        "PremiumBreakdown",
+        "PremiumByCoverageSummary",
+        "UnconfirmedConstraintsSummary",
+        "TabMtpl",
+        "TabCasco"
+    ],
+    "ui": {
+        "layout": "VersionedDocumentLayoutWithAttachments",
+        "composition": {
+            "MainContent": "MainContent",
+            "SummaryContent": "SummaryContent"
+        }
+    }
+}

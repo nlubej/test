@@ -1,0 +1,16 @@
+{
+    "processType": "Quote",
+    "initialState": "Draft",
+    "actors": [
+        "Agent"
+    ],
+    "states": [
+        {
+            "name": "Draft",
+            "operations": [
+                "Save"
+            ]
+        }
+    ],
+    "transitions": []
+}

@@ -1,0 +1,17 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+Library	MotorObjectValidations	library	validation@InsuredObjectTypeRequired	MotorObjectValidations	Please enter Insured Object Type.	Prosim vnesite zavarovani tip vozila.
+Library	MotorObjectValidations	library	validation@YearOfManufactureValidation	MotorObjectValidations	The year of manufacture cannot be after the date of first registration	Leto izdelave ne more biti po datumu prve registracije
+Library	MotorObjectValidations	library	validation@YearOfManufactureInitialAndFinalProductionYearValidation	MotorObjectValidations	The year of manufacture needs to be between initial and final production year	Leto izdelave more biti med začetnim in končnim letom izdelave
+Library	MotorObjectValidations	library	validation@FirstRegistrationDateValidation	MotorObjectValidations	The date of first registration cannot be before the year of manufacture	Datum prve registracije ne more biti pred letom izdelave
+Library	MotorObjectValidations	library	validation@UnsupportedCoverageForSelectedObjectTypeAndSubtype	MotorObjectValidations	Unsupported coverage for selected object type and subtype	Nepodprta pokritost za izbrano vrsto in podvrsto predmeta
+Library	MotorObjectValidations	library	validation@LoadCapacityRequired	MotorObjectValidations	Load capacity is mandatory	Vnesite Nosilnost
+Library	MotorObjectValidations	library	validation@VehicleAgeMustBeMoreThan30ForOldTimer	MotorObjectValidations	Vehicle age must be 30 or more for oldtimer.	Starost vozila za starodobnika mora biti 30 let ali več.
+Library	MotorObjectValidations	library	validation@VehicleAgeMustBeLessThan30AndMoreThan20ForYoungtimer	MotorObjectValidations	Vehicle age must be 20 or more and less than 30 for youngtimer.	Starost vozila za mladodobnika mora biti večja kot 20 let in manjša od 30 let.
+Library	MotorObjectValidations	library	validation@licensePlateValidation	MotorObjectValidations	Licence plate needs to be at least 5 characters long.	Registrska tablica mora biti dolga vsaj 5 znakov.
+Library	MotorObjectValidations	library	validation@InsertYearOfManufacture	MotorObjectValidations	Please enter Year of manufacture	Vnesite letnik izdelave
+Library	MotorObjectValidations	library	validation@ChildNotDefined	MotorObjectValidations	Child is not defined.	Otrok ni opredeljen.
+Library	MotorObjectValidations	library	validation@ChildTooOld	MotorObjectValidations	Child must not be older than 7 years	Otrok ne sme biti starejši od 7 let
+Library	MotorObjectValidations	library	validation@MileageRequired	MotorObjectValidations	Please enter Mileage	Vnesite Število prevoženih kilometrov
+Library	MotorObjectValidations	library	validation@ChildBirthDateValidation	MotorObjectValidations	Please enter the child's date of birth	Vnesite datum rojstva otroka
+Library	MotorObjectValidations	library	validation@NoMainCoverageSelected	MotorObjectValidations	At least one coverage must be selected	Izbrano mora biti vsaj eno kritje
+Library	MotorQuoteIntegrationHelper	ui-message	GetBestPremiumClassIntegrationError	MotorQuoteIntegrationHelper	An error occurd while fetching bonus premium class for Triglav komplet	Prišlo je do napake pri pridobivanju premijskega bonus razreda za Triglav komplet

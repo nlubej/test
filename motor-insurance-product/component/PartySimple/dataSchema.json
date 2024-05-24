@@ -1,0 +1,21 @@
+{           
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Simple party",
+    "additionalProperties": false,
+    "type": "object",
+    "aiValidation": {
+        "rule": "RequiredFieldsValidation",
+        "scope": "self"
+    },
+    "properties": {
+        "code": {
+            "type": "string",
+            "description": "Party code of the party"
+        },
+        "fullName": {
+            "type": "string",
+            "description": "Full name of the party",
+            "aiTitle": "FullName"
+        }
+    }
+}

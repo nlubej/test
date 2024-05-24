@@ -1,0 +1,18 @@
+{
+    "targetDocument": "MotorQuote",
+    "targetDocumentVersion": "1",
+    "targetState": "Draft",
+    "relationType": "Child",
+    "whenBlocked": "Hide",
+    "displayWeight": 10,
+    "sourceDocument": "MotorApplication",
+    "sourceDocumentVersion": "1",
+    "sourceDocumentStates": [
+        {
+            "name": "ProductSelection",
+            "actors": [
+                "Agent"
+            ]
+        }
+    ]
+}

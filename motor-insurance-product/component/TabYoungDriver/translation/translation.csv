@@ -1,0 +1,4 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	TabYoungDriver	ui-label	Mtpl	Mtpl	Mtpl	Zavarovanje avtomobilske odgovornosti
+UiSchema	TabYoungDriver	ui-label	MtplPlus	MtplPlus	MtplPlus	Zavarovanje voznika za škodo zaradi telesnih poškodb
+UiSchema	TabYoungDriver	ui-label	Casco	Casco	Casco	Zavarovanje avtomobilskega kaska

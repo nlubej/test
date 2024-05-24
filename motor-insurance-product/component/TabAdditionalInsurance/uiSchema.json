@@ -1,0 +1,200 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "Group",
+            "rule": {
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "hideAssistance",
+                    "value": [
+                        {
+                            "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/subtype/properties/selectedSubtype"
+                        }
+                    ]
+                },
+                "effect": "HIDE_CLEARDATA"
+            },
+            "width": 12,
+            "elements": [
+                {
+                    "type": "ConditionalSection",
+                    "label": "Assistance",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/assistance/properties/isSelected"
+                    },
+                    "rule": {
+                        "condition": {
+                            "type": "FUNC",
+                            "ruleFunction": "disableAssistance",
+                            "value": [
+                                {
+                                    "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/mtpl/properties/isSelected"
+                                }
+                            ]
+                        },
+                        "effect": "DISABLE_INITIAL"
+                    },
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "rule": {
+                                "effect": "SHOW_CLEARDATA",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "clearDataFunction": "clearAssistanceCoverageData",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/assistance/properties/isSelected"
+                                    },
+                                    "expectedValue": true
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "name": "AssistanceCoverage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/assistance/properties/assistanceCoverage"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "Legal Protection",
+            "metadata": {
+                "autogenerate": true
+            },
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/legalProtection/properties/isSelected"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearLegalProtectionCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/legalProtection/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "metadata": {
+                                "autogenerate": true
+                            },
+                            "name": "LegalProtectionCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/legalProtection/properties/legalProtectionCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "Accident insurance",
+            "metadata": {
+                "autogenerate": true
+            },
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/accidentInsurance/properties/isSelected"
+            },
+            "onValueChanged": "preselectSumInsured",
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearAccidentInsuranceDriverPassengerCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/accidentInsurance/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "metadata": {
+                                "autogenerate": true
+                            },
+                            "name": "AccidentInsuranceDriverPassengerCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/accidentInsurance/properties/accidentInsuranceDriverPassengerCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "Automobile and legal protection",
+            "metadata": {
+                "autogenerate": true
+            },
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/automobileAndLegalProtection/properties/isSelected"
+            },
+            "rule": {
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "disableAutomobileAndLegalProtection",
+                    "value": [
+                        {
+                            "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/assistance/properties/isSelected"
+                        }
+                    ]
+                },
+                "effect": "DISABLE_INITIAL"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearAutomobileAndLegalProtectionCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/automobileAndLegalProtection/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "metadata": {
+                                "autogenerate": true
+                            },
+                            "name": "AutomobileAndLegalProtectionCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/automobileAndLegalProtection/properties/automobileAndLegalProtectionCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

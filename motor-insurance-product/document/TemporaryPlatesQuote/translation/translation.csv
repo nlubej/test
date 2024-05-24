@@ -1,0 +1,26 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DocumentConfiguration	TemporaryPlatesQuote	actors	Agent	Agent	Agent	Zastopnik
+DocumentConfiguration	TemporaryPlatesQuote	actors	System	System	System	Sistem
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	Participants	Participants	Participants	Udeleženci
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	Terms	Terms	Terms	Zavarovanje
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	Insured Object	Insured Object	Insured Object	Predmet zavarovanja
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	Ownership	Ownership	Ownership	Organizacija
+DocumentConfiguration	TemporaryPlatesQuote	rootConfiguration	TemporaryPlatesQuote@Title	TemporaryPlatesQuote	Temporary plates Quote	Ponudba zavarovanja motornih vozil s preskusnimi tablicami
+Rule	TemporaryPlatesQuoteRequiredNotEmptyValidations	rule	validation@PolicyholderNotDefined	RequiredNotEmptyValidations	Policyholder is not defined.	Zavarovalec ni opredeljen.
+Rule	TemporaryPlatesQuoteRequiredNotEmptyValidations	rule	validation@InsuredPersonNotDefined	RequiredNotEmptyValidations	Insured person is not defined.	Zavarovana oseba ni opredeljena.
+Rule	TemporaryPlatesQuoteRequiredNotEmptyValidations	rule	validation@OrganisationDataNotDefined	RequiredNotEmptyValidations	Organisation data is missing.	Manjkajo podatki o organizaciji.
+Rule	TemporaryPlatesQuoteRequiredNotEmptyValidations	rule	validation@InsuredObjectNotDefined	RequiredNotEmptyValidations	Insured object is not defined.	Zavarovani predmet ni opredeljen.
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	Premium breakdown	Premium breakdown	Premium breakdown	Razčlenitev premije
+DataSchema	TemporaryPlatesQuote	field-title	commentIsRequired	commentIsRequired	comment	Komentar
+DataSchema	TemporaryPlatesQuote	field-title	commentAuthorIsRequired	commentAuthorIsRequired	Author	Avtor
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	IddQuestionnaire	IddQuestionnaire	Idd Questionnaire	IDD vprašalnik
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	Contract Duration	Contract Duration	Contract Duration	Trajanje zavarovanja
+UiSchema	TemporaryPlatesQuoteSummaryContent	ui-label	Coverage package	Coverage package	Coverage package	Paket zavarovanj
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	Conditions	Conditions	Conditions	Pogoji
+Rule	TemporaryPlatesQuoteRequiredNotEmptyValidations	rule	validation@TaxNumberValidation	RequiredNotEmptyValidations	Tax number is required.	Davčna številka je obvezna.
+Rule	TemporaryPlatesQuoteMinimalPremiumValidation	rule	validation@MinimalPremiumIs5EUR	minimalPremiumValidation	Minimal Premium is 5 EUR.	Minimalna premija je 5 EUR.
+DocumentFlowDefinition	TemporaryPlatesQuoteFlow	operations	operations@Save@Title	Save	Save	Shrani
+DocumentFlowDefinition	TemporaryPlatesQuoteFlow	states	states@Draft	Draft	Draft	Osnutek
+DocumentFlowDefinition	TemporaryPlatesQuoteFlow	transitions	transitions@RejectDraft@Title	RejectDraft	Reject Draft	Zavrzi ponudbo
+DocumentFlowDefinition	TemporaryPlatesQuoteFlow	states	states@Rejected	Rejected	Rejected	Zavrnjeno
+UiSchema	TemporaryPlatesQuoteMainContent	ui-label	TemporaryPlates	TemporaryPlates	Temporary plates	Poskusne tablice

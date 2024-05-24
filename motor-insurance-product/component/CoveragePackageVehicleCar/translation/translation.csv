@@ -1,0 +1,24 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DataSchema	CoveragePackageVehicleCar	enum	selectedPackage@Small	Small	Small	Mali
+DataSchema	CoveragePackageVehicleCar	enum	selectedPackage@CcSmall	CcSmall	CC Small	KK mali
+DataSchema	CoveragePackageVehicleCar	enum	selectedPackage@CcLarge	CcLarge	CC Large	KK veliki
+DataSchema	CoveragePackageVehicleCar	enum	selectedPackage@Large	Large	Large	Veliki
+DataSchema	CoveragePackageVehicleCar	enum	selectedPackage@LargePlus	LargePlus	Large Plus	Veliki plus
+DataSchema	CoveragePackageVehicleCar	enum	selectedPackage@Comfort	Comfort	Comfort	Comfort
+DataSchema	CoveragePackageVehicleCar	enum	selectedPackage@ComfortPlus	ComfortPlus	Comfort Plus	Comfort plus
+UiSchema	CoveragePackageVehicleCar	ui-label	Mtpl	Mtpl	Mtpl	Avtomobilska odgovornost (AO)
+UiSchema	CoveragePackageVehicleCar	ui-label	MtplPlus	MtplPlus	Mtpl Plus	Zavarovanje voznika (AO+)
+UiSchema	CoveragePackageVehicleCar	ui-label	Casco	Casco	General Casco	Splošni kasko
+UiSchema	CoveragePackageVehicleCar	ui-label	CombinationB	CombinationB	Combination B	B kombinacija
+UiSchema	CoveragePackageVehicleCar	ui-label	CombinationD	CombinationD	Combination D	D kombinacija
+UiSchema	CoveragePackageVehicleCar	ui-label	CombinationE	CombinationE	Combination E	E kombinacija
+UiSchema	CoveragePackageVehicleCar	ui-label	CombinationH	CombinationH	Combination H	H kombinacija
+UiSchema	CoveragePackageVehicleCar	ui-label	CombinationJ	CombinationJ	Combination J	J kombinacija
+UiSchema	CoveragePackageVehicleCar	ui-label	CombinationK	CombinationK	Combination K	K kombinacija
+UiSchema	CoveragePackageVehicleCar	ui-label	Casco Crash Basic	Casco Crash Basic	Casco Crash Basic	Kasko karambol osnovni
+UiSchema	CoveragePackageVehicleCar	ui-label	Casco Crash Plus	Casco Crash Plus	Casco Crash Plus	Kasko karambol plus
+UiSchema	CoveragePackageVehicleCar	ui-label	Car Assistance	Car Assistance	Car Assistance	Avtomobilska asistenca
+UiSchema	CoveragePackageVehicleCar	ui-label	Legal Protection	Legal Protection	Legal Protection	Pravna zaščita
+UiSchema	CoveragePackageVehicleCar	ui-label	Car And Legal Protection	Car And Legal Protection	Car And Legal Protection	Avtomobilska in pravna zaščita
+UiSchema	CoveragePackageVehicleCar	ui-label	Accident Insurance For The Driver And Passengers	Accident Insurance For The Driver And Passengers	Accident Insurance For The Driver And Passengers	Nezgodno zavarovanje voznika in potnikov
+DataSchema	CoveragePackageVehicleCar	field-title	selectedPackage	selectedPackage	Selected Package	Izbrani paket

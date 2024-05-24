@@ -1,0 +1,9 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+ViewConfiguration	OptionalEquipmentView	actors	Agent	Agent	Agent	Agent
+UiSchema	OptionalEquipmentViewUiSchema	ui-label	Code	Code	Code	Šifra
+UiSchema	OptionalEquipmentViewUiSchema	ui-label	Description	Description	Description	Opis
+UiSchema	OptionalEquipmentViewUiSchema	ui-label	Price	Price	Price	Cena
+UiSchema	OptionalEquipmentViewUiSchema	ui-label	Valid from	Valid from	Valid from	Velja od
+UiSchema	OptionalEquipmentViewUiSchema	ui-label	Valid to	Valid to	Valid to	Velja do
+ViewConfiguration	OptionalEquipmentView	rootConfiguration	OptionalEquipmentView@Title	OptionalEquipmentView	Optional Equipment View	Pogled dodatne opreme
+UiSchema	OptionalEquipmentViewUiSchema	ui-label	/	/	/	/

@@ -1,0 +1,3 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DocumentRelation	CopyDraftMotorQuote	rootConfiguration	CopyDraftMotorQuote@Title	CopyDraftMotorQuote	Copy	Kopiraj
+DocumentRelation	CopyDraftMotorQuote	relations	relations@CopyDraftMotorQuote@Title	CopyDraftMotorQuote	Copy	Kopiraj

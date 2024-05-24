@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="TruckCoveragePackageDefinition_1c7sinr" name="TruckCoveragePackageDefinition" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="decision_0xe7rvk" name="TruckCoveragePackageDefinition">
+        <informationRequirement id="InformationRequirement_0q4bjaq">
+            <requiredInput href="#InputData_0t0ps97"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_0we3153">
+            <requiredInput href="#InputData_056x60c"/>
+        </informationRequirement>
+        <decisionTable id="decisionTable_0zw0igc">
+            <input id="input1">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>
+                        packageName
+                    </text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_0t23v13">
+                <inputExpression id="LiteralExpression_0j1xyxw" typeRef="string">
+                    <text>
+                        massAboveLimit
+                    </text>
+                </inputExpression>
+            </input>
+            <output id="output1" name="mtpl" typeRef="string"/>
+            <output id="OutputClause_0x70mne" name="mtplPlus" typeRef="string"/>
+            <output id="OutputClause_0s1pjxp" name="casco" typeRef="string"/>
+            <output id="OutputClause_12z9w3v" name="combinationB" typeRef="string"/>
+            <output id="OutputClause_0lfuq96" name="combinationD" typeRef="string"/>
+            <output id="OutputClause_0huopwv" name="combinationE" typeRef="string"/>
+            <output id="OutputClause_1s2v4at" name="combinationJ" typeRef="string"/>
+            <output id="OutputClause_0xgveug" name="combinationK" typeRef="string"/>
+            <output id="OutputClause_0zxgnoa" name="unbreakableInsurance" typeRef="string"/>
+            <output id="OutputClause_19k550h" name="carAssistance" typeRef="string"/>
+            <output id="OutputClause_0bxg00p" name="legalProtection" typeRef="string"/>
+            <output id="OutputClause_1dewqja" name="accidentInsurance" typeRef="string"/>
+            <annotation name="annotation"/>
+            <rule id="DecisionRule_16ncs8f">
+                <inputEntry id="UnaryTests_0y793y5">
+                    <text>
+                        "Small"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_13yg3gr">
+                    <text>
+                        true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0ojf5dt">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1szlegc">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0m49451">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0124271">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1f4tn9l">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_04gxzvd">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0hupjc7">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_11nx99y">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1ancbu3">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0zuj4db">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1ud7zil">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_04cnnb9">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_11t0z6d">
+                <inputEntry id="UnaryTests_1krjaf9">
+                    <text>
+                        "Small"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1xklaio">
+                    <text>
+                        false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0x9ty5w">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1kuoycy">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0i6sssg">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1az69mt">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_11g28wa">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_186gtg9">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0a7tg2h">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1nu5nb2">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0p252cg">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1izd6dk">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_10xtkew">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1si4xuo">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0t35q28">
+                <inputEntry id="UnaryTests_0u2ia9q">
+                    <text>
+                        "Large"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_03vh1bp">
+                    <text>
+                        true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0tcwgwg">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1nej8b0">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0ysr1vl">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1snf82i">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_13yebyg">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1m3n531">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_05pa3k1">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0bg5a6h">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1f4g7js">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0jepznd">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_19igrou">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1dq7lwi">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0af6e89">
+                <inputEntry id="UnaryTests_0j9zaop">
+                    <text>
+                        "Large"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0229tb2">
+                    <text>
+                        false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_05q1842">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1mosqeo">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1dueor8">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0q9sob0">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0adnjo8">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1hm9u7u">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_193flhv">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1u55q1i">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0l7gq49">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1m3ouvc">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_09k2g8a">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0vq6opd">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1x5ve8l">
+                <inputEntry id="UnaryTests_0a5r313">
+                    <text>
+                        "Comfort"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1cg1t0c">
+                    <text>
+                        true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0v5vmjx">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0wgpe8t">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1s59ofu">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_04evrn8">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0fhpu9y">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1l7m3ut">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1x7m6rl">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_13ry1xy">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1ohh9aj">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_021ihsw">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0z1381l">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0k0oh9e">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1j42qe2">
+                <inputEntry id="UnaryTests_00lmest">
+                    <text>
+                        "Comfort"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ap3ylg">
+                    <text>
+                        false
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_10bdlk9">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0a8c2o7">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1fw5qxg">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_07zvh9c">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1cqhiut">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0wll6vf">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0qljnjp">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1g161rj">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0ir7erk">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1x1bdnr">
+                    <text>
+                        true
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1ifelen">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1pvr4w7">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1h9s73t">
+                <inputEntry id="UnaryTests_1s5domz">
+                    <text>
+                        -
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ukat6w">
+                    <text>
+                        -
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0p6bonv">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0yqrvco">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1ut2qep">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_15cab10">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0asv8bq">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1fful5a">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1i8vmcy">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0kf8n03">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0iv405u">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_1ktdtwf">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0hw02c8">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0q3nysb">
+                    <text>
+                        false
+                    </text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <inputData id="InputData_0t0ps97" name="packageName"/>
+    <inputData id="InputData_056x60c" name="massAboveLimit"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="decisionTable_0zw0igc">
+                        <adiDMNDI:ElementWidth dmnElementRef="input1" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="InputClause_0t23v13" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="output1" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0x70mne" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0s1pjxp" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_12z9w3v" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0lfuq96" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0huopwv" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_1s2v4at" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0xgveug" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0zxgnoa" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_19k550h" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_0bxg00p" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_1dewqja" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="annotation" value="200"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_1d2dh4y" dmnElementRef="decision_0xe7rvk">
+                <dc:Bounds height="80" width="180" x="180" y="140"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0k5yl8b" dmnElementRef="InputData_0t0ps97">
+                <dc:Bounds height="45" width="125" x="187" y="297"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0tqzz6x" dmnElementRef="InformationRequirement_0q4bjaq">
+                <di:waypoint x="250" y="297"/>
+                <di:waypoint x="240" y="240"/>
+                <di:waypoint x="240" y="220"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_1x69p20" dmnElementRef="InputData_056x60c">
+                <dc:Bounds height="45" width="125" x="368" y="288"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0ib5b39" dmnElementRef="InformationRequirement_0we3153">
+                <di:waypoint x="431" y="288"/>
+                <di:waypoint x="300" y="240"/>
+                <di:waypoint x="300" y="220"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

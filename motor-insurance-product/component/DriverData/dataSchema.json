@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "driver": {
+            "$ref": "component:CommonPartyNaturalPerson"
+        },
+        "safeDriveCourseCompleted": {
+            "type": "boolean",
+            "aiTitle": "safeDriveCourseCompleted"
+        },
+        "duiSurcharge": {
+            "type": "boolean",
+            "aiTitle": "duiSurcharge"
+        },
+        "youngFamily": {
+            "type": "object",
+            "properties": {
+                "isSelected": {
+                    "type": "boolean",
+                    "aiTitle": "youngFamily"
+                },
+                "child": {
+                    "$ref": "component:CommonPartyNaturalPerson"
+                }
+            }
+            
+        },
+        "drajvCode": {
+            "type": "string",
+            "aiTitle": "drajvCode"
+        },
+        "drajvCodeValidity": {
+            "type": "string",
+            "enum": [
+                "Issued before 31.12.2018",
+                "Issued after 1.1.2019"
+            ],
+            "aiTitle": "drajvCodeValidity"
+        }
+    }
+}

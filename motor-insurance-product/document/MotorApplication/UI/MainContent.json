@@ -1,0 +1,187 @@
+{
+    "id": "MainContent",
+    "type": "GridLayout",
+    "numberOfColumns": 4,
+    "formProperties": {
+        "events": {
+            "onLoad": [
+                "onLoadDocument"
+            ]
+        }
+    },
+    "elements": [
+        {
+            "type": "TabLayout",
+            "elementId": "tabs",
+            "lazyTabLoading": true,
+            "options": {
+                "fixedPosition": true,
+                "scrollableTabs": true,
+                "buttonsForSwitchingTabs": true,
+                "stickyButtonsForSwitchingTabs": true
+            },
+            "elements": [
+                {
+                    "type": "Tab",
+                    "elementId": "tab-MainInformation",
+                    "title": "Main information",
+                    "elements": [
+                        {
+                            "type": "Section",
+                            "label": "Client",
+                            "sectionLevel": 1,
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "name": "CommonPartyNaturalPersonOrLegalEntity",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/client"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Section",
+                            "label": "Vehicle",
+                            "sectionLevel": 1,
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "name": "VehicleSearch",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Section",
+                            "label": "Contract Duration",
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "name": "ContractDurationMotor",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/contractDuration"
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "effect": "DISABLE_INITIAL",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "disableElements",
+                                    "value": [
+                                        {
+                                            "$ref": "#"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "type": "Section",
+                            "label": "Product",
+                            "sectionLevel": 1,
+                            "elements": [
+                                {
+                                    "type": "Group",
+                                    "elements": [
+                                        {
+                                            "type": "Component",
+                                            "name": "TriglavProduct",
+                                            "value": {
+                                                "$ref": "#/properties/Body/properties/product"
+                                            }
+                                        }
+                                    ],
+                                    "rule": {
+                                        "effect": "DISABLE_INITIAL",
+                                        "condition": {
+                                            "type": "FUNC",
+                                            "ruleFunction": "disableElements",
+                                            "value": [
+                                                {
+                                                    "$ref": "#"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Body/properties/vehicle"
+                                        }
+                                    ],
+                                    "ruleFunction": "showProductSelection"
+                                }
+                            }
+                        },
+                        {
+                            "type": "Section",
+                            "label": "CoveragePackage",
+                            "sectionLevel": 1,
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "name": "MotorCoveragePackage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/package"
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "effect": "SHOW",
+                                "condition": {
+                                    "type": "FUNC",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Body/properties/vehicle"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Body/properties/product"
+                                        }
+                                    ],
+                                    "ruleFunction": "showCoveragePackages"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Tab",
+                    "elementId": "tab-customer-score",
+                    "title": "CustomerScore",
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CustomerScore",
+                            "value": {
+                                "$ref": "#/properties/ExternalData/properties/clientScore"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Tab",
+                    "elementId": "tab-IDD",
+                    "title": "IDD Questionnaire",
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "IDDQuestionnaireMotor",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/iddQuestionnaire"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

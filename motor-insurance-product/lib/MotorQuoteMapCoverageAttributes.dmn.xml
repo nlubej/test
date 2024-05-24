@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="MapCoverageAttributes_MotorQuote" name="Map Coverage Attributes" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="decision_0xe7rvk" name="MapCoverageAttributes">
+        <variable id="InformationItem_0zmmcdc" name="MapCoverageAttributes"/>
+        <context id="Context_0dpt2vj">
+            <contextEntry id="ContextEntry_0wpab04">
+                <variable id="InformationItem_0yn960c" name="mock"/>
+                <literalExpression id="LiteralExpression_17qfnwq" expressionLanguage="feel">
+                    <text>
+                        0
+                    </text>
+                </literalExpression>
+            </contextEntry>
+        </context>
+    </decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="Context_0dpt2vj">
+                        <adiDMNDI:ElementWidth dmnElementRef="Context_0dpt2vj" value="750"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_1j9i8mz" dmnElementRef="decision_0xe7rvk">
+                <dc:Bounds height="80" width="180" x="330" y="180"/>
+            </dmndi:DMNShape>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

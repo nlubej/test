@@ -1,0 +1,5 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DataSchema	PartySimple	field-title	FullName	FullName	Full Name	Polno ime
+UiSchema	PartySimple	ui-label	Select Payer	Select Payer	Select Payer	Izberite Plačnik
+UiSchema	PartySimple	ui-label	Payer	Payer	Payer	Plačnik
+Rule	PartySimpleRequiredFieldsValidation	rule	validation@PayerFullNameMissing	RequiredFieldsValidation	Payer Full Name Is Missing	Manjka polno ime plačnika

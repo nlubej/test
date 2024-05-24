@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="CheckCoverageCombinations_MotorQuote" name="CheckCoverageCombinations" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="decision_0xe7rvk" name="CheckCoverageCombinations">
+        <decisionTable id="DecisionTable_0ru86fk" hitPolicy="COLLECT">
+            <output id="OutputClause_tariffCode" name="tariffCode" typeRef="string"/>
+            <output id="OutputClause_coverageAvailability" name="coverageAvailability" typeRef="adinsure:DataSchema:None:CoverageAvailability:Component::#"/>
+            <annotation name="annotation"/>
+            <rule id="DecisionRule_mainCoverage_Casco">
+                <outputEntry id="UnaryTests_tariffCode_Casco">
+                    <text>
+                        "Casco"
+                    </text>
+                </outputEntry>
+                <outputEntry id="UnaryTests_coverageAvailability_Casco">
+                    <text>
+                        "optional"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_mainCoverage_CombinationB">
+                <outputEntry id="UnaryTests_tariffCode_CombinationB">
+                    <text>
+                        "CombinationB"
+                    </text>
+                </outputEntry>
+                <outputEntry id="UnaryTests_coverageAvailability_CombinationB">
+                    <text>
+                        "optional"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_mainCoverage_mtplTariff">
+                <outputEntry id="UnaryTests_tariffCode_mtplTariff">
+                    <text>
+                        "MtplTariff"
+                    </text>
+                </outputEntry>
+                <outputEntry id="UnaryTests_coverageAvailability_mtplTariff">
+                    <text>
+                        "optional"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_04qavhx">
+                <outputEntry id="LiteralExpression_0xrnomx">
+                    <text>
+                        "MtplPlus"
+                    </text>
+                </outputEntry>
+                <outputEntry id="LiteralExpression_0o2540g">
+                    <text>
+                        "optional"
+                    </text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="DecisionTable_0ru86fk">
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_tariffCode" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="OutputClause_coverageAvailability" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="annotation" value="200"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_1twafhx" dmnElementRef="decision_0xe7rvk">
+                <dc:Bounds height="80" width="180" x="400" y="270"/>
+            </dmndi:DMNShape>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

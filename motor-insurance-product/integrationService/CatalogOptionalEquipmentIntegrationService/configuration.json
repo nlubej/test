@@ -1,0 +1,11 @@
+{
+    "sinks": [
+        {
+            "ref": "CatalogOptionalEquipmentSinkGroup"
+        }
+    ],
+    "responses": [
+        200,
+        422
+    ]
+}

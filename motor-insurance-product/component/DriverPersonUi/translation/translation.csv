@@ -1,0 +1,5 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	DriverPersonUi	ui-label	Full name	Full name	Full name	Naziv
+UiSchema	DriverPersonUi	ui-label	Address	Address	Address	Naslov
+UiSchema	DriverPersonUi	ui-label	National Id	National Id	National Id	EMŠO
+UiSchema	DriverPersonUi	ui-label	Date of Birth	Date of Birth	Date of Birth	Datum rojstva

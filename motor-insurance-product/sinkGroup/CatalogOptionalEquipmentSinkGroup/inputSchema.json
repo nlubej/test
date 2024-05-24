@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "code",
+        "typeId",
+        "make",
+        "model"
+    ],
+    "properties": {
+        "code": {
+            "type": "integer"
+        },
+        "typeId": {
+            "type": "integer"
+        },
+        "make": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        }
+    }
+}

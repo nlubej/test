@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "aiValidation": {
+        "rule": "RequiredNotEmptyValidations",
+        "scope": "self"
+    },
+    "aiDataEnrichment": [
+        {
+            "name": "EnrichMotorQuoteBeforeCopyRelation"
+        }
+    ],
+    "properties": {
+        "persons": {
+            "$ref": "component:QuoteParticipants"
+        },
+        "contractDuration": {
+            "$ref": "component:ContractDurationMotor"
+        },
+        "freeTextClauses": {
+            "$ref": "component:FreeTextClausesEntry"
+        },
+        "organisation": {
+            "$ref": "component:ContractOrganisationData"
+        },
+        "insuredObject": {
+            "allOf": [
+                {
+                    "aiAdditionalContext": {
+                        "name": "contractDuration",
+                        "$data": "/contractDuration"
+                    }
+                },
+                {
+                    "$ref": "component:InsuredObjectMotorQuote"
+                }
+            ]
+        },
+        "iddQuestionnaire": {
+            "$ref": "component:IDDQuestionnaireMotor"
+        },
+        "externalData": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "triglavPackageBonusClass": {
+                    "type": "string"
+                },
+                "triglavPackageId": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

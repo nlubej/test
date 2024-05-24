@@ -1,0 +1,34 @@
+{
+    "id": "SummaryContent",
+    "type": "Group",
+    "elements": [
+        {
+            "type": "Component",
+            "name": "ContractDurationSummary",
+            "value": {
+                "$ref": "#/properties/Body/properties/contractDuration"
+            }
+        },
+        {
+            "type": "Component",
+            "name": "UnconfirmedConstraintsSummary",
+            "value": {
+                "$ref": "#/properties/Summary/properties/unconfirmedConstraintsSummary"
+            }
+        },
+        {
+            "type": "Component",
+            "name": "PremiumByCoverageSummary",
+            "value": {
+                "$ref": "#/properties/Summary/properties/premiumByCoverageSummary"
+            }
+        },
+        {
+            "type": "Component",
+            "name": "InstallmentAmountAndTotalPremiumSummary",
+            "value": {
+                "$ref": "#/properties/Summary/properties/installmentAmountAndTotalPremiumSummary"
+            }
+        }
+    ]
+}

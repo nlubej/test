@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="MapContractAttributes_MotorQuote" name="Map Contract Attributes" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="Decision_16fy502" name="MapContractAttributes">
+        <variable id="InformationItem_1nvaio8" name="MapContractAttributes"/>
+        <informationRequirement id="InformationRequirement_1dd5fu5">
+            <requiredInput href="#InputData_0itiyc4"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_0bavhtf">
+            <requiredInput href="#InputData_18shsw7"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1gyu455">
+            <requiredInput href="#InputData_0fa5cvk"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_0h27zj2">
+            <requiredInput href="#InputData_0b20twj"/>
+        </informationRequirement>
+        <context id="Context_0byg7gl">
+            <contextEntry id="ContextEntry_1pysed2">
+                <variable id="InformationItem_1psx7la" name="correctionType"/>
+                <literalExpression id="LiteralExpression_0qeby4b" expressionLanguage="feel">
+                    <text>
+                        uwCorrections and uwCorrections.correctionType
+                    </text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry id="ContextEntry_0rvpkcd">
+                <variable id="InformationItem_00lbtv3" name="manualRiskAdjustment"/>
+                <literalExpression id="LiteralExpression_12dxv73">
+                    <text>
+                        uwCorrections and uwCorrections.manualRiskAdjustment
+                    </text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry id="ContextEntry_0r9r11t">
+                <variable id="InformationItem_09spd64" name="startDate"/>
+                <literalExpression id="LiteralExpression_0xfr8av">
+                    <text>
+                        contractDuration and contractDuration.startDate
+                    </text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry id="ContextEntry_08furn1">
+                <variable id="InformationItem_1mu8di1" name="dateSynchronization"/>
+                <literalExpression id="LiteralExpression_03ojifs">
+                    <text>
+                        contractDuration and contractDuration.dateSynchronization
+                    </text>
+                </literalExpression>
+            </contextEntry>
+        </context>
+    </decision>
+    <inputData id="InputData_0itiyc4" name="uwCorrections"/>
+    <inputData id="InputData_18shsw7" name="persons"/>
+    <inputData id="InputData_0fa5cvk" name="contractDuration"/>
+    <inputData id="InputData_0b20twj" name="documentSignature"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_16c1gnn">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="Context_0byg7gl">
+                        <adiDMNDI:ElementWidth dmnElementRef="Context_0byg7gl" value="750"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_18255ga" dmnElementRef="Decision_16fy502">
+                <dc:Bounds height="80" width="180" x="420" y="200"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0wkskey" dmnElementRef="InputData_0itiyc4">
+                <dc:Bounds height="45" width="125" x="677" y="287"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0tp82r4" dmnElementRef="InformationRequirement_1dd5fu5">
+                <di:waypoint x="740" y="287"/>
+                <di:waypoint x="510" y="300"/>
+                <di:waypoint x="510" y="280"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_03rj8cr" dmnElementRef="InputData_18shsw7">
+                <dc:Bounds height="45" width="125" x="677" y="187"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_18uvj8m" dmnElementRef="InformationRequirement_0bavhtf">
+                <di:waypoint x="677" y="210"/>
+                <di:waypoint x="620" y="227"/>
+                <di:waypoint x="600" y="227"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_0r2pze0" dmnElementRef="InputData_0fa5cvk">
+                <dc:Bounds height="45" width="125" x="677" y="137"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0dcyf4k" dmnElementRef="InformationRequirement_1gyu455">
+                <di:waypoint x="740" y="182"/>
+                <di:waypoint x="510" y="180"/>
+                <di:waypoint x="510" y="200"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_1w0wbwy" dmnElementRef="InputData_0b20twj">
+                <dc:Bounds height="45" width="125" x="678" y="237"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0xsn6pz" dmnElementRef="InformationRequirement_0h27zj2">
+                <di:waypoint x="678" y="260"/>
+                <di:waypoint x="620" y="253"/>
+                <di:waypoint x="600" y="253"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

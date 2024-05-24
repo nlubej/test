@@ -1,0 +1,10 @@
+{
+    "url": "{environment.triglavIntegrationServiceBaseUrl}/triglav-package/packages/find",
+    "httpMethod": "GET",
+    "headers": {
+        "Accept": "application/json",
+        "Ocp-Apim-Subscription-Key": "{environment.triglavIntegrationServiceApiKey}",
+        "X-API-KEY": "{environment.triglavIntegrationServiceXApiKey}"
+    },
+    "version": "1"
+}

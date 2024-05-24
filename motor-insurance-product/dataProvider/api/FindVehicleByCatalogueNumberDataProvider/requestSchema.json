@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "urlSegments"
+    ],
+    "properties": {
+        "urlSegments": {
+            "type": "object",
+            "properties": {
+                "typeOfVehicle": {
+                    "type": "integer"
+                },
+                "idType": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "typeOfVehicle",
+                "idType"
+            ]
+        }
+    }
+}

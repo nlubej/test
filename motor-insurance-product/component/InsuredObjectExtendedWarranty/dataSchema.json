@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "aiValidation": {
+        "rule": "ObjectValidation"
+    },
+    "properties": {
+        "objectType": {
+            "type": "string",
+            "enum": [
+                "vehicle"
+            ],
+            "aiTitle": "objectType"
+        },
+        "vehicle": {
+            "type": "object",
+            "additionalProperties": false,
+            "aiDeepRequired": [
+                "/baseData/vehicleBrand",
+                "/baseData/enginePower",
+                "/baseData/fuelType",
+                "/baseData/vinCode",
+                "/baseData/licensePlate",
+                "/baseData/maximumAuthorisedMass",
+                "/baseData/vehicleMass",
+                "/baseData/vehicleValue"
+            ],
+            "properties": {
+                "baseData": {
+                    "$ref": "component:Vehicle"
+                },
+                "subtype": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "selectedSubtype"
+                    ],
+                    "properties": {
+                        "selectedSubtype": {
+                            "$ref": "component:InsuredObjectMotorQuoteSubtype",
+                            "aiTitle": "objectSubtype"
+                        },
+                        "vehicleCar": {
+                            "$ref": "component:VehicleCar"
+                        },
+                        "vehicleTruck": {
+                            "$ref": "component:VehicleTruck"
+                        }
+                    }
+                },
+                "extendedWarranty": {
+                    "$ref": "component:ExtendedWarranty"
+                }
+            }
+        }
+    }
+}

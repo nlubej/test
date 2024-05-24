@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "maknatcode": {
+                "type": "integer"
+            },
+            "makname": {
+                "type": "string"
+            }
+        }
+    }
+}

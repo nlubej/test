@@ -1,0 +1,612 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "ConditionalSection",
+            "label": "General Casco",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/casco/properties/isSelected"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeAction",
+                    "actionName": "autoselectCombinationB"
+                },
+                {
+                    "commandType": "executeAction",
+                    "actionName": "setDefaultValuesTabCasco"
+                },
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "rule": {
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "disableGeneralCasco",
+                    "value": [
+                        {
+                            "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/cascoCollision/properties/isSelected"
+                        }
+                    ]
+                },
+                "effect": "DISABLE_INITIAL"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearCascoCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/casco/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CascoCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/casco/properties/cascoCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "CombinationB",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationB/properties/isSelected"
+            },
+            "rule": {
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "disableCombinationB",
+                    "value": [
+                        {
+                            "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/cascoCollision/properties/cascoCollisionCoverage/properties/package"
+                        }
+                    ]
+                },
+                "effect": "DISABLE_INITIAL"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearCombinationBCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationB/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CombinationBCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationB/properties/combinationBCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "CombinationD",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationD/properties/isSelected"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearCombinationDCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationD/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CombinationDCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationD/properties/combinationDCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "CombinationE",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationE/properties/isSelected"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearCombinationECoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationE/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CombinationECoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationE/properties/combinationECoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "CombinationH",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationH/properties/isSelected"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearCombinationHCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationH/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CombinationHCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationH/properties/combinationHCoverage"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rule": {
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "hideCoveragesForWorkshops",
+                    "value": [
+                        {
+                            "$ref": "#"
+                        }
+                    ]
+                },
+                "effect": "HIDE_CLEARDATA"
+            }
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "CombinationJ",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationJ/properties/isSelected"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearCombinationJCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationJ/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CombinationJCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationJ/properties/combinationJCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ConditionalSection",
+            "label": "CombinationK",
+            "value": {
+                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationK/properties/isSelected"
+            },
+            "onValueChanged": [
+                {
+                    "commandType": "executeOperation",
+                    "operation": "CALCULATE",
+                    "errorHandling": "silent",
+                    "blockUI": false
+                }
+            ],
+            
+            "rule": {
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "disableCombinationK",
+                    "value": [
+                        {
+                            "$ref": "#"
+                        }
+                    ]
+                },
+                "effect": "DISABLE_INITIAL"
+            },
+            "elements": [
+                {
+                    "type": "Group",
+                    "rule": {
+                        "effect": "SHOW_CLEARDATA",
+                        "condition": {
+                            "type": "LEAF",
+                            "clearDataFunction": "clearCombinationKCoverageData",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationK/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "type": "Component",
+                            "name": "CombinationKCoverage",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationK/properties/combinationKCoverage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Group",
+            "rule": {
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "showCascoCollision",
+                    "value": [
+                        {
+                            "$ref": "#"
+                        }
+                    ]
+                },
+                "effect": "SHOW_CLEARDATA"
+            },
+            "width": 12,
+            "elements": [
+                {
+                    "type": "ConditionalSection",
+                    "label": "CascoCollision",
+                    "value": {
+                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/cascoCollision/properties/isSelected"
+                    },
+                    "onValueChanged": [
+                        {
+                            "commandType": "executeOperation",
+                            "operation": "CALCULATE",
+                            "errorHandling": "silent",
+                            "blockUI": false
+                        },
+                        {
+                            "commandType": "executeAction",
+                            "actionName": "disableCascoCollisionPlus"
+                        }
+                    ],
+                    "rule": {
+                        "condition": {
+                            "type": "LEAF",
+                            "value": {
+                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/casco/properties/isSelected"
+                            },
+                            "expectedValue": true
+                        },
+                        "effect": "DISABLE_INITIAL"
+                    },
+                    "elements": [
+                        {
+                            "type": "Group",
+                            "rule": {
+                                "effect": "SHOW_CLEARDATA",
+                                "condition": {
+                                    "type": "LEAF",
+                                    "clearDataFunction": "clearCascoCollisionCoverageData",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/cascoCollision/properties/isSelected"
+                                    },
+                                    "expectedValue": true
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "name": "CascoCollisionCoverage",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/cascoCollision/properties/cascoCollisionCoverage"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Section",
+            "label": "Coverage Extension, Additional Equipment, Machinery breakdown",
+            "rule": {
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "hideCascoTabAdditionalCoverages",
+                    "clearDataFunction": "clearCascoTabAdditionalCoverages",
+                    "value": [
+                        {
+                            "$ref": "#"
+                        }
+                    ]
+                },
+                "effect": "HIDE_CLEARDATA"
+            },
+            "elements": [
+                {
+                    "type": "TabLayout",
+                    "elementId": "tabs",
+                    "options": {
+                        "fixedPosition": false,
+                        "scrollableTabs": false
+                    },
+                    "elements": [
+                        {
+                            "type": "Tab",
+                            "label": "Additional Equipment Coverages",
+                            "width": 4,
+                            "elementId": "tab-Sub1",
+                            "title": "sub1",
+                            "elements": [
+                                {
+                                    "type": "Component",
+                                    "name": "AdditionalEquipmentCoverages",
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/additionalEquipmentCoverages"
+                                    }
+                                }
+                            ],
+                            "rule": {
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "showAdditionalEquipment",
+                                    "value": [
+                                        {
+                                            "$ref": "#"
+                                        }
+                                    ]
+                                },
+                                "effect": "SHOW_CLEARDATA"
+                            }
+                        },
+                        {
+                            "type": "Tab",
+                            "label": "Additional work devices coverages",
+                            "width": 4,
+                            "elementId": "tab-Sub2",
+                            "title": "sub2",
+                            "elements": [
+                                {
+                                    "type": "Section",
+                                    "label": "Machinery breakdown for work devices",
+                                    "sectionLevel": 2,
+                                    "width": 4,
+                                    "elements": [
+                                        {
+                                            "type": "Component",
+                                            "name": "AdditionalWorkDevicesCoverage",
+                                            "value": {
+                                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/additionalWorkDevicesCoverages"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Section",
+                                    "label": "Machinery breakdown insurance for radio devices",
+                                    "sectionLevel": 2,
+                                    "width": 4,
+                                    "elements": [
+                                        {
+                                            "type": "Component",
+                                            "name": "RadioDevices",
+                                            "value": {
+                                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/radioDevices"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "rule": {
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "showMachineryBreakdownWorkDevices",
+                                    "value": [
+                                        {
+                                            "$ref": "#"
+                                        }
+                                    ]
+                                },
+                                "effect": "SHOW_CLEARDATA"
+                            }
+                        },
+                        {
+                            "type": "Tab",
+                            "label": "Additional vehicle breakdown insurance",
+                            "width": 4,
+                            "elementId": "tab-Sub3",
+                            "title": "sub3",
+                            "elements": [
+                                {
+                                    "type": "ConditionalSection",
+                                    "metadata": {
+                                        "autogenerate": true
+                                    },
+                                    "sectionLevel": 2,
+                                    "showContentOnChecked": true,
+                                    "value": {
+                                        "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/vehicleBreakdown/properties/isSelected"
+                                    },
+                                    "width": 4,
+                                    "label": "Additional vehicle breakdown insurance",
+                                    "collapsing": {
+                                        "enabled": false,
+                                        "initial": false
+                                    },
+                                    "elements": [
+                                        {
+                                            "type": "Component",
+                                            "name": "VehicleBreakdownCoverage",
+                                            "value": {
+                                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/vehicleBreakdown/properties/vehicleBreakdownCoverage"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "rule": {
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "showMachineryBreakdown",
+                                    "value": [
+                                        {
+                                            "$ref": "#"
+                                        }
+                                    ]
+                                },
+                                "effect": "SHOW_CLEARDATA"
+                            }
+                        },
+                        {
+                            "type": "Tab",
+                            "rule": {
+                                "condition": {
+                                    "type": "FUNC",
+                                    "ruleFunction": "hideCascoTabCoverageExtensions",
+                                    "clearDataFunction": "clearCascoTabCoverageExtensions",
+                                    "value": [
+                                        {
+                                            "$ref": "#/properties/Body/properties/contractDuration/properties/endDate"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Body/properties/contractDuration/properties/dateSynchronization"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/combinationB/properties/isSelected"
+                                        },
+                                        {
+                                            "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle/properties/casco/properties/isSelected"
+                                        }
+                                    ]
+                                },
+                                "effect": "HIDE_CLEARDATA"
+                            },
+                            "label": "Coverage extensions",
+                            "width": 4,
+                            "elementId": "tab-Sub4",
+                            "title": "sub4",
+                            "elements": [
+                                {
+                                    "type": "Group",
+                                    "elements": [
+                                        {
+                                            "type": "Component",
+                                            "name": "CoverageExtensionsUi",
+                                            "value": {
+                                                "$ref": "#/properties/Body/properties/insuredObject/properties/vehicle"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

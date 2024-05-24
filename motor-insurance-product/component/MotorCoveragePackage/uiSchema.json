@@ -1,0 +1,161 @@
+{
+    "type": "Group",
+    "width": 4,
+    "elements": [
+        {
+            "type": "SelectWithDetails",
+            "label": "Package",
+            "width": 4,
+            "columnWidth": "Large",
+            "disableCollapsing": true,
+            "value": {
+                "$ref": "#"
+            },
+            "onLoad": "getCoveragePackages",
+            "rowDefinitions": [
+                {
+                    "title": "AO",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/AO"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "AOplus",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/AOplus"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "SAK",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/SAK"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "B",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/B"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "K",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/K"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "D",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/D"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "E",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/E"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "H",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/H"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "J",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/J"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "AASplus",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/AASplus"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "NMV",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/NMV"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "APZ",
+                    "cellContent": {
+                        "type": "Icon",
+                        "value": {
+                            "$ref": "#/properties/APZ"
+                        },
+                        "iconStyleFunction": "setIconStyle"
+                    }
+                },
+                {
+                    "title": "",
+                    "cellContent": {
+                        "type": "OutputText",
+                        "template": "<b>{{expr premium 'n:2'}} EUR</b>",
+                        "value": {
+                            "$ref": "#"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "rule": {
+        "effect": "DISABLE_INITIAL",
+        "condition": {
+            "type": "FUNC",
+            "ruleFunction": "disableElements",
+            "value": [
+                {
+                    "$ref": "#"
+                }
+            ]
+        }
+    }
+}

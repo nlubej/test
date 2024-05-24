@@ -1,0 +1,99 @@
+{
+    "type": "GridLayout",
+    "numberOfColumns": 4,
+    "elements": [
+        {
+            "type": "Lookup",
+            "value": {
+                "$ref": "#"
+            },
+            "width": 1,
+            "clearButton": {
+                "clearAction": "clearLookup",
+                "icon": {
+                    "name": "Times",
+                    "size": "Medium",
+                    "color": "BackgroundColor"
+                }
+            },
+            "dialogButton": {
+                "icon": {
+                    "name": "User",
+                    "color": "BackgroundColor",
+                    "size": "Medium"
+                }
+            },
+            "dialog": {
+                "viewReference": {
+                    "configurationCodeName": "CustomPartySearchView",
+                    "configurationVersion": "1",
+                    "configurationConceptType": "SearchView"
+                }
+            },
+            "onSelected": "setPartyFromLookupOrDropdown",
+            "dropdown": {
+                "displayFieldName": "displayFullName",
+                "source": {
+                    "$ref": "#/properties/ClientViewModel/properties/possibleParties"
+                },
+                "valueFieldName": "code",
+                "icon": {
+                    "name": "Caret-Down",
+                    "size": "Medium",
+                    "color": "BackgroundColor"
+                }
+            },
+            "selectedDisplayValueUISchema": {
+                "type": "Input",
+                "label": "Full name",
+                "value": {
+                    "$ref": "#/properties/fullName"
+                },
+                "readOnly": true
+            }
+        },
+        {
+            "type": "Group",
+            "width": 1,
+            "elements": [
+                {
+                    "type": "Input",
+                    "label": "Address",
+                    "readOnly": true,
+                    "value": {
+                        "$ref": "#/properties/address"
+                    },
+                    "width": 2
+                }
+            ]
+        },
+        {
+            "type": "Group",
+            "width": 1,
+            "elements": [
+                {
+                    "type": "Input",
+                    "label": "National Id",
+                    "readOnly": true,
+                    "value": {
+                        "$ref": "#/properties/personalNumber"
+                    },
+                    "width": 2
+                }
+            ]
+        },
+        {
+            "type": "DatetimePicker",
+            "label": "Date of Birth",
+            "readOnly": true,
+            "metadata": {
+                "autogenerate": true
+            },
+            "useParentScope": true,
+            "value": {
+                "$ref": "#/properties/dateOfBirth"
+            },
+            "width": 1
+        }
+    ]
+}

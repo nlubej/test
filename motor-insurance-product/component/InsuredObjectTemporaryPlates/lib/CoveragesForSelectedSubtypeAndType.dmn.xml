@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:adiDMNDI="http://adacta-fintech.com/schema/1.0/dmndi" id="CoveragesForSelectedSubtypeAndType" name="Coverages For Selected Subtype And Type" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0-alpha.2">
+    <decision id="decision_0xe7rvk" name="CoveragesForSelectedSubtypeAndType">
+        <informationRequirement id="InformationRequirement_1exejgw">
+            <requiredInput href="#InputData_09xfrwf"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1e9phiy">
+            <requiredInput href="#InputData_0zk3sdk"/>
+        </informationRequirement>
+        <informationRequirement id="InformationRequirement_1gylxvc">
+            <requiredInput href="#InputData_1uda68i"/>
+        </informationRequirement>
+        <decisionTable id="decisionTable_0zw0igc" hitPolicy="COLLECT">
+            <input id="InputClause_0ox8v1h">
+                <inputExpression id="LiteralExpression_0khkto4" typeRef="adinsure:DataSchema:None:ObjectTypeEnum:Component::#">
+                    <text>
+                        objectType
+                    </text>
+                </inputExpression>
+            </input>
+            <input id="input1">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>
+                        isMainCoverage
+                    </text>
+                </inputExpression>
+            </input>
+            <output id="output1" name="coverage" typeRef="string"/>
+            <annotation name="annotation"/>
+            <rule id="DecisionRule_0e2s58b">
+                <inputEntry id="UnaryTests_0h5ii6g">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ljmvg2">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_03abw3k">
+                    <text>
+                        "mtpl"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0ualjun">
+                <inputEntry id="UnaryTests_00nc1ok">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0symd82">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_03jmt6c">
+                    <text>
+                        "mtplPlus"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_vehicle1mtplTariff">
+                <inputEntry id="UnaryTests_vehicle2mtplTariff">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_mtplTariff7vehicle">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="UnaryTests_vehicle8mtplTariff">
+                    <text>
+                        "casco"
+                    </text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0pnch61">
+                <inputEntry id="UnaryTests_0ni3jra">
+                    <text>
+                        "vehicle"
+                    </text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1m3yo92">
+                    <text>
+                        null, true
+                    </text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1ftfujg">
+                    <text>
+                        "accident"
+                    </text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <inputData id="InputData_09xfrwf" name="objectType"/>
+    <inputData id="InputData_0zk3sdk" name="objectSubtype"/>
+    <inputData id="InputData_1uda68i" name="isMainCoverage"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="DMNDiagram_05dd4uz">
+            <di:extension>
+                <adiDMNDI:ElementsWidthsExtension>
+                    <adiDMNDI:ElementWidths dmnElementRef="decisionTable_0zw0igc">
+                        <adiDMNDI:ElementWidth dmnElementRef="InputClause_0ox8v1h" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="input1" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="output1" value="200"/>
+                        <adiDMNDI:ElementWidth dmnElementRef="annotation" value="200"/>
+                    </adiDMNDI:ElementWidths>
+                </adiDMNDI:ElementsWidthsExtension>
+            </di:extension>
+            <dmndi:DMNShape id="DMNShape_1iit1i0" dmnElementRef="decision_0xe7rvk">
+                <dc:Bounds height="80" width="180" x="150" y="150"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="DMNShape_0wpzufh" dmnElementRef="InputData_09xfrwf">
+                <dc:Bounds height="45" width="125" x="97" y="317"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0dslimh" dmnElementRef="InformationRequirement_1exejgw">
+                <di:waypoint x="160" y="317"/>
+                <di:waypoint x="210" y="250"/>
+                <di:waypoint x="210" y="230"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_1jm17yk" dmnElementRef="InputData_0zk3sdk">
+                <dc:Bounds height="45" width="125" x="287" y="317"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_0q0jjac" dmnElementRef="InformationRequirement_1e9phiy">
+                <di:waypoint x="350" y="317"/>
+                <di:waypoint x="270" y="250"/>
+                <di:waypoint x="270" y="230"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNShape id="DMNShape_0qj2uli" dmnElementRef="InputData_1uda68i">
+                <dc:Bounds height="45" width="125" x="428" y="168"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="DMNEdge_1p056or" dmnElementRef="InformationRequirement_1gylxvc">
+                <di:waypoint x="428" y="191"/>
+                <di:waypoint x="350" y="190"/>
+                <di:waypoint x="330" y="190"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>

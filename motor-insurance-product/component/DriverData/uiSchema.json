@@ -1,0 +1,221 @@
+{
+    "type": "GridLayout",
+    "numberOfColumns": 4,
+    "elements": [
+        {
+            "type": "Component",
+            "metadata": {
+                "autogenerate": true
+            },
+            "name": "DriverPersonUi",
+            "value": {
+                "$ref": "#/properties/driver"
+            }
+        },
+        {
+            "type": "Group",
+            "rule": {
+                "effect": "HIDE_CLEARDATA",
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "isPremiumGroupTruck",
+                    "clearDataFunction": "clearDriverData",
+                    "value": [
+                        {
+                            "$ref": "#"
+                        }
+                    ]
+                }
+            },
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "Boolean",
+                    "label": "Safe drive course completed",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/safeDriveCourseCompleted"
+                    },
+                    "width": 1
+                },
+                {
+                    "type": "Input",
+                    "control": "String",
+                    "label": "Drajv code",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/drajvCode"
+                    },
+                    "width": 1
+                },
+                {
+                    "type": "Dropdown",
+                    "label": "Drajv code validity",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/drajvCodeValidity"
+                    },
+                    "width": 1
+                }
+            ]
+        },
+        {
+            "type": "Input",
+            "control": "Boolean",
+            "label": "DUI surcharge",
+            "metadata": {
+                "autogenerate": true
+            },
+            "useParentScope": true,
+            "value": {
+                "$ref": "#/properties/duiSurcharge"
+            },
+            "width": 1,
+            "rule": {
+                "effect": "SHOW_CLEARDATA",
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "isInsuredPersonLegalEntity",
+                    "value": [
+                        {
+                            "$ref": "#"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Group",
+            "metadata": {
+                "autogenerate": true
+            },
+            "width": 4,
+            "elements": [
+                {
+                    "type": "Input",
+                    "control": "Boolean",
+                    "label": "Young family",
+                    "metadata": {
+                        "autogenerate": true
+                    },
+                    "useParentScope": true,
+                    "value": {
+                        "$ref": "#/properties/youngFamily/properties/isSelected"
+                    },
+                    "width": 1
+                },
+                {
+                    "type": "Group",
+                    "width": 2,
+                    "elements": [
+                        {
+                            "type": "Lookup",
+                            "value": {
+                                "$ref": "#/properties/youngFamily/properties/child"
+                            },
+                            "width": 1,
+                            "clearButton": {
+                                "clearAction": "clearLookup",
+                                "icon": {
+                                    "name": "Times",
+                                    "size": "Medium",
+                                    "color": "BackgroundColor"
+                                }
+                            },
+                            "dialogButton": {
+                                "icon": {
+                                    "name": "User",
+                                    "color": "BackgroundColor",
+                                    "size": "Medium"
+                                }
+                            },
+                            "dialog": {
+                                "viewReference": {
+                                    "configurationCodeName": "GeneralPartySearchWithEditView",
+                                    "configurationVersion": "1",
+                                    "configurationConceptType": "SearchView"
+                                }
+                            },
+                            "onSelected": "setPartyFromLookupOrDropdown",
+                            "selectedDisplayValueUISchema": {
+                                "type": "Input",
+                                "label": "Full name",
+                                "value": {
+                                    "$ref": "#/properties/youngFamily/properties/child/properties/fullName"
+                                },
+                                "readOnly": true
+                            }
+                        },
+                        {
+                            "type": "DatetimePicker",
+                            "label": "Date of Birth",
+                            "readOnly": true,
+                            "metadata": {
+                                "autogenerate": true
+                            },
+                            "useParentScope": true,
+                            "value": {
+                                "$ref": "#/properties/youngFamily/properties/child/properties/dateOfBirth"
+                            },
+                            "width": 1
+                        }
+                    ],
+                    "rule": {
+                        "effect": "HIDE_CLEARDATA",
+                        "condition": {
+                            "type": "FUNC",
+                            "clearDataFunction": "clearYoungFamily",
+                            "ruleFunction": "hideChild",
+                            "value": [
+                                {
+                                    "$ref": "#/properties/youngFamily/properties/isSelected"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "rule": {
+                "effect": "HIDE",
+                "condition": {
+                    "type": "FUNC",
+                    "ruleFunction": "isPremiumGroupTruck",
+                    "clearDataFunction": "clearDriverData",
+                    "value": [
+                        {
+                            "$ref": "#"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "studioMetadata": {
+        "autogeneratedNodes": [
+            {
+                "path": "#/properties/drajvCodeValidity"
+            },
+            {
+                "path": "#/properties/drajvCode"
+            },
+            {
+                "path": "#/properties/youngFamily"
+            },
+            {
+                "path": "#/properties/duiSurcharge"
+            },
+            {
+                "path": "#/properties/safeDriveCourseCompleted"
+            }
+        ]
+    }
+}

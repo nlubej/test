@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "paymentPlanSummary": {
+            "$ref": "component:PaymentPlanSummaryWithStateAndChangeAmounts"
+        },
+        "conditions": {
+            "$ref": "component:ConditionsSummary"
+        },
+        "clauses": {
+            "$ref": "component:ClausesSummary"
+        },
+        "unconfirmedConstraintsSummary": {
+            "$ref": "component:UnconfirmedConstraintsSummary"
+        },
+        "limits": {
+            "$ref": "component:LimitsSummary"
+        },
+        "deductibles": {
+            "$ref": "component:DeductiblesSummary"
+        },
+        "premiumByCoverageSummary": {
+            "$ref": "component:PremiumByCoverageSummary"
+        },
+        "premiumBreakdown": {
+            "$ref": "component:PremiumBreakdown"
+        },
+        "installmentAmountAndTotalPremiumSummary": {
+            "$ref": "component:InstallmentAmountAndTotalPremiumSummary"
+        },
+        "coverageCombinationsRestrictions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "objectRef": {
+                        "type": "string"
+                    },
+                    "coverageCombinations": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "coverageAvailability": {
+                                    "$ref": "component:CoverageAvailability"
+                                },
+                                "tariffCode": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "dimensions": {
+        "contractType": "Application",
+        "numberPrefix": "MOTA",
+        "productCode": "MotorInsuranceProduct",
+        "productLine": "motor"
+    },
+    "entityType": "Contract",
+    "attachments": [],
+    "ui": {
+        "layout": "DocumentLayoutMainAndSummaryOnly",
+        "composition": {
+            "MainContent": "MainContent",
+            "SummaryContent": "SummaryContent"
+        }
+    },
+    "states": [
+        {
+            "name": "Draft",
+            "actors": [
+                {
+                    "actor": "Agent",
+                    "transitions": [
+                        "Confirm"
+                    ],
+                    "operations": [
+                        {
+                            "name": "Save",
+                            "exclusiveToAssignedUser": false
+                        }
+                    ],
+                    "relations": []
+                }
+            ]
+        },
+        {
+            "name": "QuoteCreated",
+            "actors": [
+                {
+                    "actor": "Agent"
+                }
+            ]
+        },
+        {
+            "name": "ProductSelection",
+            "actors": [
+                {
+                    "actor": "Agent",
+                    "transitions": [
+                        "ReturnToDraft",
+                        "Discard"
+                    ],
+                    "operations": [
+                        "Save"
+                    ],
+                    "relations": [],
+                    "attachmentsRestrictions": []
+                }
+            ]
+        },
+        {
+            "name": "QuoteCreated",
+            "actors": [
+                {
+                    "actor": "Agent",
+                    "transitions": [],
+                    "operations": [],
+                    "relations": [],
+                    "attachmentsRestrictions": []
+                }
+            ]
+        },
+        {
+            "name": "Discarded",
+            "actors": [
+                {
+                    "actor": "Agent",
+                    "transitions": [],
+                    "operations": [],
+                    "relations": [],
+                    "attachmentsRestrictions": []
+                }
+            ]
+        }
+    ],
+    "transitions": {
+        "Confirm": {
+            "transitionEffects": {
+                "enrich": [
+                    "external-data:[GetCustomerScore]"
+                ]
+            }
+        }
+    },
+    "version": "1",
+    "validFrom": "2024-04-01",
+    "keywords": [],
+    "components": [
+        "CommonPartyNaturalPersonOrLegalEntity",
+        "ContractDurationMotor",
+        "IDDQuestionnaireMotor"
+    ]
+}

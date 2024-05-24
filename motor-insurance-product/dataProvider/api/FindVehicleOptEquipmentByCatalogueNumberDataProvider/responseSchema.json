@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "code": {
+                "type": "integer"
+            },
+            "text": {
+                "type": "string"
+            },
+            "price": {
+                "type": "number"
+            },
+            "validFrom": {
+                "type": "string"
+            },
+            "validUntil": {
+                "type": "string"
+            }
+        }
+    }
+}

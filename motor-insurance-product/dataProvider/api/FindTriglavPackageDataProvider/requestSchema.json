@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "required": [
+        "queryStrings"
+    ],
+    "properties": {
+        "queryStrings": {
+            "type": "object",
+            "anyOf": [
+                {
+                    "required": [
+                        "taxNumber"
+                    ]
+                }
+            ],
+            "properties": {
+                "taxNumber": {
+                  "type": "integer"
+              }
+            }
+        }
+    }
+}

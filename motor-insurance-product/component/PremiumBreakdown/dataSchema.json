@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "coverages": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Coverage code"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Coverage description"
+                    },
+                    "steps": {
+                        "type": "array",
+                        "description": "Breakdown of premium calculation steps for specific coverage",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "unit": {
+                                    "type": "string",
+                                    "description": "Step value/rate unit",
+                                    "enum": [
+                                        "FixedValue",
+                                        "Percentage",
+                                        "PerMille",
+                                        "Factor"
+                                    ]
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "description": "Step description"
+                                },
+                                "base": {
+                                    "type": "number",
+                                    "description": "Step base amount"
+                                },
+                                "rate": {
+                                    "type": "number",
+                                    "description": "Step value/rate"
+                                },
+                                "amount": {
+                                    "type": "number",
+                                    "description": "Step amount (delta)"
+                                },
+                                "finalAmount": {
+                                    "type": "number",
+                                    "description": "Final amount, should be defined on coverage level but due to limitation of treetable UI element cannot be."
+                                },
+                                "currency": {
+                                    "type": "number",
+                                    "description": "Premium currency, should be defined on coverage level but due to limitation of treetable UI element cannot be."
+                                }                   
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

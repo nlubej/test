@@ -1,0 +1,15 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+DataSchema	DriverData	field-title	safeDriveCourseCompleted	safeDriveCourseCompleted	Safe Drive Course Completed	Opravljen tečaj varne vožnje
+DataSchema	DriverData	field-title	duiSurcharge	duiSurcharge	DUI Surcharge	Odkup posledic izključitve zaradi vožnje pod vplivom drog pri službenih vožnjah
+DataSchema	DriverData	field-title	youngFamily	youngFamily	Young Family	Mlada družina
+UiSchema	DriverData	ui-label	Date of Birth	Date of Birth	Date of Birth	Datum rojstva
+UiSchema	DriverData	ui-label	Young family	Young family	Young family	Mlada družina
+UiSchema	DriverData	ui-label	Safe drive course completed	Safe drive course completed	Safe drive course completed	Opravljen tečaj varne vožnje
+UiSchema	DriverData	ui-label	DUI surcharge	DUI surcharge	DUI surcharge	Odkup posledic izključitve zaradi vožnje pod vplivom drog pri službenih vožnjah
+UiSchema	DriverData	ui-label	Full name	Full name	Full Name	Naziv
+DataSchema	DriverData	field-title	drajvCode	drajvCode	Drajv code	Drajv koda
+DataSchema	DriverData	field-title	drajvCodeValidity	drajvCodeValidity	Drajv code validity	Veljavnost Drajv kode
+DataSchema	DriverData	enum	drajvCodeValidity@Issued before 31.12.2018	Issued before 31.12.2018	Issued before 31.12.2018	Izdana do 31.12.2018
+DataSchema	DriverData	enum	drajvCodeValidity@Issued after 1.1.2019	Issued after 1.1.2019	Issued after 1.1.2019	Izdana po 1.1.2019
+UiSchema	DriverData	ui-label	Drajv code	Drajv code	Drajv code	Drajv koda
+UiSchema	DriverData	ui-label	Drajv code validity	Drajv code validity	Drajv code validity	Veljavnost Drajv kode

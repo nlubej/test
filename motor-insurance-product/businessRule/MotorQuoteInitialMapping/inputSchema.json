@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "startDate": {
+            "type": "string",
+            "aiFormat": "date"
+        },
+        "coverages": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "mtpl": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "mtplAttributes": {
+                            "type": "object",
+                            "additionalProperties": true,
+                            "properties": {
+                                "materialDamageSumCorrection": {
+                                    "type": "string"
+                                },
+                                "nonMaterialDamageSumCorrection": {
+                                    "type": "string"
+                                },
+                                "manualInputMaterialDamage": {
+                                    "type": "number"
+                                },
+                                "manualInputNonMaterialDamage": {
+                                    "type": "number"
+                                }
+                            }
+                        }
+                    }
+                },
+                "mtplPlus": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        },
+                        "coverageAttributes": {
+                            "$ref": "component:MtplPlusCoverage"
+                        }
+                    }
+                },
+                "activityDamageExtension": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "isSelected": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

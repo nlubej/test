@@ -1,0 +1,7 @@
+ConfigurationType	ConfigurationName	ItemType	TranslationKey	Expression	Translation_en-US	Translation_sl-SI
+UiSchema	Upgrades	ui-label	Description	Description	Description	Opis
+UiSchema	Upgrades	ui-label	Price	Price	Price	Cena
+UiSchema	Upgrades	ui-label	Add	Add	Add	Dodaj
+ClientAction	UpgradesShowUpgradeSearch	ui-message	VehicleUpgradeSelection	showUpgradeSearch	Vehicle Upgrade Selection	Izbira Nadgradnje
+ClientAction	UpgradesCanSelect	ui-message	DataIsNotSelected	canSelect	Upgrade is not selected.	Nadgradnja ni izbrana.
+ClientAction	UpgradesCanSelect	ui-message	UpgradeAlreadyExist	canSelect	Selected upgrade already exists.	Izbrana nadgradnja že obstaja.

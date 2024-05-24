@@ -1,0 +1,41 @@
+{
+    "type": "GridLayout",
+    "numberOfColumns": 4,
+    "width": 4,
+    "elements": [
+        {
+            "type": "Group",
+            "elements": [
+                {
+                    "type": "Dropdown",
+                    "label": "Product",
+                    "value": {
+                        "$ref": "#"
+                    },
+                    "preSelectFirstItem": true,
+                    "source": {
+                        "displayValueTemplate": "{{#style 'bold'}}{{expr idMktProd}}{{/style}}  -  {{expr idGenPolicyDesc}}",
+                        "dataSource": {
+                            "name": "GetTriglavProductsDataSource",
+                            "searchFieldPath": "queryString",
+                            "requestMapping": "getRequestMapping",
+                            "responseMapping": "getResponseMapping"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "rule": {
+        "effect": "DISABLE_INITIAL",
+        "condition": {
+            "type": "FUNC",
+            "ruleFunction": "disableElements",
+            "value": [
+                {
+                    "$ref": "#"
+                }
+            ]
+        }
+    }
+}

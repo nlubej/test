@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "typimpbegin": {
+                "type": "string"
+            },
+            "typimpend": {
+                "type": "string"
+            },
+            "typnatcode": {
+                "type": "string"
+            },
+            "typname": {
+                "type": "string"
+            },
+            "typkw": {
+                "type": "number"
+            },
+            "typhp": {
+                "type": "number"
+            },
+            "typcaptech": {
+                "type": "number"
+            },
+            "typwheelb1": {
+                "type": "integer"
+            },
+            "typcurbwgt": {
+                "type": "integer"
+            },
+            "typdoor": {
+                "type": "integer"
+            },
+            "typseat": {
+                "type": "integer"
+            },
+            "price": {
+                "type": "number"
+            },
+            "typmodcd": {
+                "type": "integer"
+            },
+            "typmakcd": {
+                "type": "integer"
+            },
+            "typtotwgt": {
+                "type": "integer"
+            }
+        }
+    }
+}
